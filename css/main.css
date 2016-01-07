@@ -1,0 +1,1862 @@
+
+/*	Reset & Defaults
+----------------------------*/
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background: url(http://www.silverpop.com/img/bg_white.png); overflow-x: hidden; overflow-y: auto; }
+body { height: 100%; width: 100%; margin: 0; font: normal 0.75em/1.5 Arial, Helvetica, sans-serif; color: #666; overflow: scroll; }
+html, button, input, select, textarea { font-family: sans-serif; color: #222; }
+*, :focus { outline: none; }
+a { color: #00b1e3; text-decoration: none; }
+a:hover { color: #06e; }
+a:hover, a:active { outline: 0; }
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: normal; font-family: 'Avenir LT W01 85 Heavy'; }
+blockquote { margin: 1em 40px; }
+dfn { font-style: italic; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ddd; margin: 1em 0; padding: 0; clear: both; }
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+small { font-size: 85%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+ul, ol { margin: 1em 0; padding: 0 0 0 18px; }
+ul { list-style: disc; }
+ul ul { margin: 0; list-style: circle; }
+li { padding: 3px 0; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+svg:not(:root) { overflow: hidden; }
+figure { margin: 0; }
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+label { cursor: pointer; }
+legend { border: 0; padding: 0; white-space: normal; position: absolute; left: -9999em; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; }
+button, input { line-height: normal; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+button[disabled], input[disabled] { cursor: default; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+input[type=image] { background: 0; border: 0; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+input:valid, textarea:valid { }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+.chromeframe { margin: 0; font: bold 14px/1.5 arial; background: #c66; color: #fff; padding: 15px 0; text-align: center; position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; }
+.chromeframe a { text-decoration: underline; color: #fff; }
+.jobs iframe { width: 700px; height: 1000px!important; }
+
+/*	Headings
+----------------------------*/
+h1 { font: normal 3em/1.2 'Avenir LT W01 35 Light'; letter-spacing: -1px; color: #999; }
+h2 { font: normal 2.250em/1.2 'Avenir LT W01 35 Light'; letter-spacing: -1px; color: #999; }
+h3 { font: normal 1.5em 'Avenir LT W01 85 Heavy'; color: #333; margin: 0; }
+h4 { font: bold 1.167em Arial; color: #333; margin: 0; }
+h5 { font: bold 1em Arial; color: #333; margin: 0; text-transform: uppercase; }
+h3 + p, h4 + p, h5 + p { margin-top: 5px; }
+
+
+/*	Buttons  
+----------------------------*/
+.btn, input[type=submit] { cursor: pointer; display: inline-block; color: #fff; font: bold 13px/28px arial; height: 28px; padding: 0 15px; margin-right: 8px; text-align: center; text-shadow: 1px 1px 1px rgba(0,0,0,.2); border: 1px solid; border-color: #75d8f9 #008ab7 #107899 #68bbd6; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.4); -moz-box-shadow: 1px 1px 2px rgba(0,0,0,.4); box-shadow: 1px 1px 2px rgba(0,0,0,.4); background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYjdmMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUyJSIgc3RvcC1jb2xvcj0iIzAwOTBiZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjgxJSIgc3RvcC1jb2xvcj0iIzAwOGZiZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijk3JSIgc3RvcC1jb2xvcj0iIzAwOTdjNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDk3YzYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); background: -moz-linear-gradient(top, #00b7f1 0%, #0090be 52%, #008fbd 81%, #0097c7 97%, #0097c6 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00b7f1), color-stop(52%,#0090be), color-stop(81%,#008fbd), color-stop(97%,#0097c7), color-stop(100%,#0097c6)); background: -webkit-linear-gradient(top, #00b7f1 0%,#0090be 52%,#008fbd 81%,#0097c7 97%,#0097c6 100%); background: -o-linear-gradient(top, #00b7f1 0%,#0090be 52%,#008fbd 81%,#0097c7 97%,#0097c6 100%); background: -ms-linear-gradient(top, #00b7f1 0%,#0090be 52%,#008fbd 81%,#0097c7 97%,#0097c6 100%); background: linear-gradient(to bottom, #00b7f1 0%,#0090be 52%,#008fbd 81%,#0097c7 97%,#0097c6 100%); }
+.btn:hover, input[type=submit]:hover { color: #fff; border-color: #acf3fd #227387 #227387 #acf3fd; background: #69e7f9; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY5ZTdmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDkyYjgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); background: -moz-linear-gradient(top, #69e7f9 0%, #0092b8 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#69e7f9), color-stop(100%,#0092b8)); background: -webkit-linear-gradient(top, #69e7f9 0%,#0092b8 100%); background: -o-linear-gradient(top, #69e7f9 0%,#0092b8 100%); background: -ms-linear-gradient(top, #69e7f9 0%,#0092b8 100%); background: linear-gradient(to bottom, #69e7f9 0%,#0092b8 100%); }
+.no-cssgradients .btn, .no-cssgradients input[type=submit] { background: url(http://www.silverpop.com/img/fallbacks/bg_submit.png) repeat-x; }
+.no-cssgradients .btn:hover, .no-cssgradients input[type=submit]:hover { background-position: 0 -31px; }
+
+.btnGray, input[type=submit].disabled, input[type=submit].disabled:hover { cursor: pointer; display: inline-block; color: #00b1e3; font: bold 13px/28px arial; height: 28px; padding: 0 15px; margin-right: 8px; text-align: center; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.1); -moz-box-shadow: 1px 1px 1px rgba(0,0,0,.1); box-shadow: 1px 1px 1px rgba(0,0,0,.1); border: 1px solid #c4c4c4; background: #feffff; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIyMyUiIHN0b3AtY29sb3I9IiNmZWZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI2MCUiIHN0b3AtY29sb3I9IiNlZmVmZWYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZThlOGU4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==); background: -moz-linear-gradient(top, #feffff 23%, #efefef 60%, #e8e8e8 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(23%,#feffff), color-stop(60%,#efefef), color-stop(100%,#e8e8e8)); background: -webkit-linear-gradient(top, #feffff 23%,#efefef 60%,#e8e8e8 100%); background: -o-linear-gradient(top, #feffff 23%,#efefef 60%,#e8e8e8 100%); background: -ms-linear-gradient(top, #feffff 23%,#efefef 60%,#e8e8e8 100%); background: linear-gradient(to bottom, #feffff 23%,#efefef 60%,#e8e8e8 100%); }
+input[type=submit].disabled, input[type=submit].disabled:hover { color: #ccc; text-shadow: none; margin-right: 0; }
+.btnGray:hover { color: #04b1e6; background: #fff; }
+.no-cssgradients .btnGray { background: url(http://www.silverpop.com/img/fallbacks/bg_btnGray.png); }
+.no-cssgradients .btnGray:hover { background: #fff; }
+
+.btnPill { cursor: pointer; display: inline-block; color: #fff; padding: 0 30px; font: bold 15px/28px Arial; -webkit-border-radius: 28px; -moz-border-radius: 28px; border-radius: 28px; box-shadow: 1px 2px 2px rgba(0,0,0,.3); background: #00b4e1; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYjRlMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzA0YmVlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iIzAwYTJkNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwNGJlZWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMTNhNWNiIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==); background: -moz-linear-gradient(top, #00b4e1 0%, #04beee 50%, #00a2d7 51%, #04beee 100%, #13a5cb 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00b4e1), color-stop(50%,#04beee), color-stop(51%,#00a2d7), color-stop(100%,#04beee), color-stop(100%,#13a5cb)); background: -webkit-linear-gradient(top, #00b4e1 0%,#04beee 50%,#00a2d7 51%,#04beee 100%,#13a5cb 100%); background: -o-linear-gradient(top, #00b4e1 0%,#04beee 50%,#00a2d7 51%,#04beee 100%,#13a5cb 100%); background: -ms-linear-gradient(top, #00b4e1 0%,#04beee 50%,#00a2d7 51%,#04beee 100%,#13a5cb 100%); background: linear-gradient(to bottom, #00b4e1 0%,#04beee 50%,#00a2d7 51%,#04beee 100%,#13a5cb 100%); }
+.btnPill:hover { color: #fff; text-shadow: none; background: #69e7f9; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY5ZTdmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDkyYjgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); background: -moz-linear-gradient(top, #69e7f9 0%, #0092b8 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#69e7f9), color-stop(100%,#0092b8)); background: -webkit-linear-gradient(top, #69e7f9 0%,#0092b8 100%); background: -o-linear-gradient(top, #69e7f9 0%,#0092b8 100%); background: -ms-linear-gradient(top, #69e7f9 0%,#0092b8 100%); background: linear-gradient(to bottom, #69e7f9 0%,#0092b8 100%); }
+.no-cssgradients .btnPill { background: url(http://www.silverpop.com/img/fallbacks/bg_btnPill.png) repeat-x; }
+.no-cssgradients .btnPill:hover { background-position: 0 -28px; }
+
+.btnPillGray { cursor: pointer; display: inline-block; color: #666; padding: 0 30px; font: bold 15px/28px Arial; -webkit-border-radius: 28px; -moz-border-radius: 28px; border-radius: 28px; box-shadow: 1px 2px 2px rgba(0,0,0,.3); background: #f4f4f4; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y0ZjRmNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ5JSIgc3RvcC1jb2xvcj0iI2U3ZTVlNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjU4JSIgc3RvcC1jb2xvcj0iI2RiZGJkYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjZWNlY2UiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); background: -moz-linear-gradient(top, #f4f4f4 0%, #e7e5e5 49%, #dbdbdb 58%, #cecece 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f4f4f4), color-stop(49%,#e7e5e5), color-stop(58%,#dbdbdb), color-stop(100%,#cecece)); background: -webkit-linear-gradient(top, #f4f4f4 0%,#e7e5e5 49%,#dbdbdb 58%,#cecece 100%); background: -o-linear-gradient(top, #f4f4f4 0%,#e7e5e5 49%,#dbdbdb 58%,#cecece 100%); background: -ms-linear-gradient(top, #f4f4f4 0%,#e7e5e5 49%,#dbdbdb 58%,#cecece 100%); background: linear-gradient(to bottom, #f4f4f4 0%,#e7e5e5 49%,#dbdbdb 58%,#cecece 100%); }
+.btnPillGray:hover { background: #fff; color: #00a2d7; text-shadow: none; }
+.no-cssgradients .btnPillGray { background: #e8e8e8 url(http://www.silverpop.com/img/fallbacks/bg_btnPillGray.png) repeat-x; }
+.no-cssgradients .btnPillGray:hover { background: #fff; }
+
+.btnGrid { color: #000 !important; }
+.btnGrid:after { content: "\f00a"; font-family: FontAwesome; font-weight: normal; font-size: 14px; float: left; padding: 1px 10px 0 0; }
+.btnRow { color: #000 !important; }
+.btnRow:after { content: "\f0c9"; font-family: FontAwesome; font-weight: normal; font-size: 14px; float: left; padding: 1px 10px 0 0; }
+
+.btnMore, .btnMore:visited { cursor: pointer; display: inline-block; position: relative; font: bold 13px/33px Arial; border: 1px solid #c4c4c4; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; padding: 0 35px; color: #333; background: #feffff; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZlZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijg1JSIgc3RvcC1jb2xvcj0iI2U0ZTRlNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlYWVhZWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); background: -moz-linear-gradient(top, #feffff 0%, #e4e4e4 85%, #eaeaea 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#feffff), color-stop(85%,#e4e4e4), color-stop(100%,#eaeaea)); background: -webkit-linear-gradient(top, #feffff 0%,#e4e4e4 85%,#eaeaea 100%); background: -o-linear-gradient(top, #feffff 0%,#e4e4e4 85%,#eaeaea 100%); background: -ms-linear-gradient(top, #feffff 0%,#e4e4e4 85%,#eaeaea 100%); background: linear-gradient(to bottom, #feffff 0%,#e4e4e4 85%,#eaeaea 100%); }
+.btnMore:hover { background: #fff; }
+.btnMore:before { content: "\f0d8"; position: absolute; bottom: 3px; right: 3px; height: 16px; width: 18px; overflow: hidden; color: #00b7f1; font-family: FontAwesome; font-size: 75px; text-shadow: -1px -1px 1px #ccc; }
+.btnMore:hover:before { color: #00b7f1; text-shadow: -1px -1px 1px #0295c3; }
+.no-cssgradients .btnMore { background: url(http://www.silverpop.com/img/fallbacks/bg_btnMore.png) repeat-x; }
+.no-cssgradients .btnMore:hover { background: #fff; }
+
+.btnMoreBlue, .btnMoreBlue:visited { cursor: pointer; display: inline-block; position: relative; font: bold 13px/33px Arial; border: 1px solid #c4c4c4; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; padding: 0 35px; color: #fff; background: #00b7f1; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYjdmMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjU4JSIgc3RvcC1jb2xvcj0iIzAwOWRjNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDkyYzAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); background: -moz-linear-gradient(top, #00b7f1 0%, #009dc4 58%, #0092c0 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00b7f1), color-stop(58%,#009dc4), color-stop(100%,#0092c0)); background: -webkit-linear-gradient(top, #00b7f1 0%,#009dc4 58%,#0092c0 100%); background: -o-linear-gradient(top, #00b7f1 0%,#009dc4 58%,#0092c0 100%); background: -ms-linear-gradient(top, #00b7f1 0%,#009dc4 58%,#0092c0 100%); background: linear-gradient(to bottom, #00b7f1 0%,#009dc4 58%,#0092c0 100%); }
+.btnMoreBlue:hover { background: #fff; color: #00b1e3; }
+.btnMoreBlue:before { content: "\f0d8"; position: absolute; bottom: 3px; right: 3px; height: 16px; width: 18px; overflow: hidden; color: #fff; font-family: FontAwesome; font-size: 75px; overflow: hidden; text-shadow: -1px -1px 1px #ccc; }
+.btnMoreBlue:hover:before { color: #00b7f1; text-shadow: -1px -1px 1px #0295c3; }
+.no-cssgradients .btnMoreBlue { background: url(http://www.silverpop.com/img/fallbacks/bg_btnMoreBlue.png) repeat-x; }
+.no-cssgradients .btnMoreBlue:hover { background: #fff; }
+
+.btnDetail { cursor: pointer; font: 11px/22px Arial, Verdana, Sans-Serif; font-weight: bold; text-transform: uppercase; color: #666; letter-spacing: 1px; }
+.btnDetail:after { content: "\f04b"; font-family: FontAwesome; font-size: 10px; font-weight: normal; padding-left: 6px; }
+.btnDetail + .btnDetail { margin-left: 15px; }
+
+.btnPlay { cursor: pointer; position: absolute; display: block; width: 100%; height: 85%; margin: 0; padding: 0; background: url(http://www.silverpop.com/img/btn_play.png) center center no-repeat; }
+.btnPlay:hover, .btnPlay:focus { background: url(http://www.silverpop.com/img/btn_play_over.png) center center no-repeat; }
+
+.btnCircle { font: normal 18px Arial, Verdana, Sans-serif !important; display: block !important; width: 50px !important; height: 50px !important; padding: 0 !important; margin: 0 !important; text-align: center !important; -webkit-border-radius: 25px !important; border-radius: 25px !important; }
+
+.btnPunched { text-align: center; }
+.btnPunched a { position: relative; display: inline-block; white-space: nowrap; padding: 0 10px 0 5px; text-align: center; color: #fff; margin: 0 auto; background: url(http://www.silverpop.com/img/btn_transparent_more.png) 100% 0 no-repeat; color: #fff; font: normal 0.833em/26px 'Avenir LT W01 85 Heavy'; text-transform: uppercase; }
+.btnPunched a:before { content: ''; display: block; width: 5px; height: 26px; left: -5px; top: 0; position: absolute; background: url(http://www.silverpop.com/img/btn_transparent_more.png) 0 0 no-repeat; }
+.btnPunched a:hover { background-position: 100% -26px; color: #fff; }
+.btnPunched a:hover:before { background-position: 0 -26px; }
+
+
+/*	Modals
+----------------------------*/
+
+#divDownloadForm { display: none; }
+.ui-dialog { position: absolute; z-index: 9998; }
+.ui-widget-overlay { z-index: 9995; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,.6); }
+.ui-button { border: 0; width: 0; height: 0; padding: 0; margin: 0; }
+.ui-button-text { display: none; }
+.ui-icon-closethick { z-index: 9997; position: absolute; top: 0px; right: -18px; font-size: 0px; width: 37px; height: 36px; border: 0; background: url(http://www.silverpop.com/img/closeModal.png); }
+.modal { z-index: 9996; -webkit-box-shadow: 0 0 15px #222; -moz-box-shadow: 0 0 15px #222; box-shadow: 0 0 15px #222; background: #fff; }
+.backdrop { z-index: 9995; height: 100%; width: 100%; background: rgba(0,0,0,0.6); }
+.no-rgba .backdrop { background: url(http://www.silverpop.com/img/fallback/bg_000000_60.png); }
+.videoPreview { padding: 15px; }
+.resourceDownload { overflow: hidden; background: white url(http://www.silverpop.com/img/ajaxSpinner.gif) no-repeat center; }
+.resourceDownload .desc { vertical-align: top; float: left; width: 249px; /*height: 556px;*/ clear: none; padding: 20px 25px; }
+.resourceDownload .desc h1 { margin: 0; color: #333; font: normal 2.466em/1.2 'Avenir LT W01 35 Light'; }
+.resourceDownload .desc img { display: block; margin: 20px auto; max-width: 200px; }
+.resourceDownload .desc p { font: normal 1.333em 'Avenir LT W01 65 Medium'; }
+.resourceDownload .formBox { vertical-align: top; float: right; clear: none; margin: 0; background: 0; border: 0; width: 340px; /*height: 556px;*/ padding: 20px 25px; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+.resourceDownload .formBox label { padding-top: 10px; }
+.resourceDownload .formBox .textContent p:first-child { margin-top: 0; }
+.resourceDownload .formBox .xformSocial, .landingPage .formBox.xformSocial { position: relative; width: 100%; background: #f0f0f0; border: 1px solid #d3d3d3; display: inline-block; padding: 10px; margin: 20px 0 -6px -10px; }
+.resourceDownload .formBox .xformSocial p, .landingPage .formBox.xformSocial p { color: #666; margin: 0; padding: 0; }
+.resourceDownload .formBox .xformSocial ul, .landingPage .formBox.xformSocial ul { list-style: none; float: left; margin: 0; padding: 0; }
+.resourceDownload .formBox .xformSocial ul li, .landingPage .formBox.xformSocial ul li { float: left; padding: 8px 8px 0 0; }
+.resourceDownload .formBox .btn { font: bold 15px/40px arial; height: 40px; }
+.resourceDownload .downloadComplete { width: auto; }
+.resourceDownload .downloadComplete #iframeDiv { display: none; }
+.resourceDownload .downloadComplete h4 { padding: 0 0 20px; }
+.resourceDownload .downloadComplete em { display: block; padding: 0 0 5px; }
+.resourceDownload .downloadComplete .forceDownload { text-align: center; min-width: 500px; padding: 5px 0; }
+.resourceDownload .share { display: block; width: 32px; height: 32px; text-decoration: none; background-repeat: no-repeat; background-position: center; }
+.resourceDownload .share.facebook { background: url(http://www.silverpop.com/img/facebook_xform.png); }
+.resourceDownload .share.linkedin { background: url(http://www.silverpop.com/img/linkedin_xform.png); }
+.resourceDownload .share.google { background: url(http://www.silverpop.com/img/google_xform.png); }
+.resourceDownload .share.yahoomail { background: url(http://www.silverpop.com/img/yahoo_xform.png); }
+.resourceDownload .share.twitter { background: url(http://www.silverpop.com/img/twitter_xform.png); }
+
+.genericModalInner { padding: 1em; font-size: 1.1em; }
+.fakeLink { color: #00b1e3; }
+.fakeLink:hover { color: #06e; cursor: pointer; }
+.cancelEmailEntry { display: inline-block; margin-top: 12px; }
+.fieldAjaxIndicator { display: inline-block; margin-top: 12px; }
+.emailAjaxIndicator { display: inline-block; margin: 12px 0; }
+.emailAjaxIndicator img { display: inline-block; margin-right: 10px; }
+.downloadComplete.formBox { background: #f7f7f7; float: none; width: auto; }
+.finish { display: none; clear: both; }
+.finish.redirect { display: block; background: url(http://www.silverpop.com/img/ajaxSpinnerSmall.gif) no-repeat center; height: 25px; width: 25px; text-indent: -9999px; }
+#janrainEngageEmbed { position: absolute; top: 0; left: 0; z-index: 9000; display: none; }
+.registerFieldsWrap a.notUser { cursor: pointer; }
+
+
+
+/*	Modal forms
+----------------------------*/
+.modal .form select, .modal .formBox select { background: #fff; padding: 5px; border: 1px solid #d1d1d1; -webkit-box-shadow: inset 0 1px 3px #ccc; -moz-box-shadow: inset 0 1px 3px #ccc; box-shadow: inset 0 1px 3px #ccc; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; }
+.modal .error { color: red; }
+
+
+/*	Classes
+----------------------------*/
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clear { clear: both; }
+.left { float: left; }
+.right { float: right; }
+.imgLeft { float: left; margin: 20px 20px 20px 0; }
+.imgRight { float: right; margin: 20px 0 20px 20px; }
+.raisedBox { -webkit-box-shadow: 0 0 5px rgba(0,0,0,.4); -moz-box-shadow: 0 0 5px rgba(0,0,0,.4); box-shadow: 0 0 5px rgba(0,0,0,.4); }
+.raisedPaddedBox { -webkit-box-shadow: 0 0 5px rgba(0,0,0,.4); -moz-box-shadow: 0 0 5px rgba(0,0,0,.4); box-shadow: 0 0 5px rgba(0,0,0,.4); padding: 15px; }
+.textContent { clear: both; }
+
+
+/*	Site Msg (Cookie Compliance)
+----------------------------*/
+.siteMsg { position: fixed; top: 100%; margin-top: 20px; left: 0; width: 100%; z-index: 9999; -webkit-box-shadow: 0 -5px 15px rgba(0,0,0,.4); -moz-box-shadow: 0 -5px 15px rgba(0,0,0,.4); box-shadow: 0 -5px 15px rgba(0,0,0,.4); background: #218cbf; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIxOGNiZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3ZGI5ZTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); background: -moz-linear-gradient(top, #218cbf 0%, #7db9e8 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #218cbf), color-stop(100%, #7db9e8)); background: -webkit-linear-gradient(top, #218cbf 0%, #7db9e8 100%); background: -o-linear-gradient(top, #218cbf 0%, #7db9e8 100%); background: -ms-linear-gradient(top, #218cbf 0%, #7db9e8 100%); background: linear-gradient(to bottom, #218cbf 0%, #7db9e8 100%); }
+.siteMsg > div { position: relative; width: 960px; margin: 0 auto; padding: 25px 0 15px; }
+.siteMsg h3, .siteMsg p { color: #fff; margin-right: 100px; }
+.siteMsg p a { color: #fff; text-decoration: underline; }
+.siteMsg .close { cursor: pointer; display: block; position: absolute; right: 0; top: 50%; height: 60px; width: 60px; margin-top: -40px; padding: 14px 10px 6px; font: normal 10px 'Avenir LT W01 85 Heavy'; color: #c5e4fc; text-align: center; text-transform: uppercase; background: #218cbf; -webkit-border-radius: 50px; -moz-border-radius: 50px; border-radius: 50px; box-shadow: 0 0 20px rgba(255,255,255,.5); box-shadow: 0 0 20px rgba(255,255,255,.5); box-shadow: 0 0 20px rgba(255,255,255,.5); -webkit-transition: all .1s ease; -moz-transition: all .1s ease; -ms-transition: all .1s ease; -o-transition: all .1s ease; transition: all .1s ease; }
+.siteMsg .close:before { display: block; text-align: center; font-family: FontAwesome; content: "\f063"; font-size: 38px; line-height: normal; position: relative; left: 1px; text-shadow: 1px 1px 1px rgba(0,0,0,.3), -1px -1px -1px rgba(255,255,255,.3); }
+.siteMsg .close:hover { color: #fff; box-shadow: 0 0 30px rgba(255,255,255,.9); box-shadow: 0 0 30px rgba(255,255,255,.9); box-shadow: 0 0 30px rgba(255,255,255,.9); -webkit-transition: all .1s ease; -moz-transition: all .1s ease; -ms-transition: all .1s ease; -o-transition: all .1s ease; transition: all .1s ease; }
+
+
+/*	Collapse Tracking Pixel
+----------------------------*/
+[id*="PixelScript"] { position: absolute; height: 0; width: 0; left: 0; top: 0; }
+
+
+/*	EPi Composer
+----------------------------*/
+.cols p { margin: 0; }
+.cols { clear: both; }
+.cols > div { float: left; width: 100%; margin-left: 3.5%; }
+.cols > div:first-child { margin-left: 0; }
+.col2 > div { width: 48.25%; }
+.col3 > div { width: 31%; }
+.col2313 > div { width: 31.5%; }
+.col2313 > div:first-child { width: 65%; }
+.col3414 > div { width: 73.25%; }
+.col3414 > div:first-child { width: 23.25%; }
+.cols .cols > div { margin-top: 0; }
+
+
+/*	Forms: Shared Styles
+---------------------------- */
+label { width: 100%; cursor: pointer; display: inline-block; padding-bottom: 2px; font-family: 'Avenir LT W01 85 Heavy'; font-size: 1.083em; color: #333; }
+select { cursor: pointer; width: 99%; padding: 4px; border: 1px solid #ccc; font-size: 12px; }
+input[type=text], textarea, select, .selector { width: 98.4%; border: 0; padding: 5px 0; }
+input[type=text], textarea { background: #fff; padding: 5px; border: 1px solid #d1d1d1; -webkit-box-shadow: inset 0 1px 3px #ccc; -moz-box-shadow: inset 0 1px 3px #ccc; box-shadow: inset 0 1px 3px #ccc; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; }
+input[type=text].round { float: none; padding: 5px 12px; background: #f1f1f1; -webkit-border-radius: 32px; -moz-border-radius: 32px; border-radius: 32px; border: 1px solid #ccc; -webkit-box-shadow: inset 1px 2px 3px #777; -moz-box-shadow: inset 1px 2px 3px #777; box-shadow: inset 1px 2px 3px #777; }
+input[type=text].inline { float: none; background: 0; padding: 0; width: auto; padding: 0; border: 0; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; -webkit-transition: width 100ms linear; -moz-transition: width 100ms linear; -ms-transition: width 100ms linear; -o-transition: width 100ms linear; transition: width 100ms linear; }
+.selector { overflow: hidden; position: relative; width: 95%; background: #fff url(http://www.silverpop.com/img/bg_select.png) 100% 0 no-repeat; padding: 0 5px; margin-bottom: 10px; height: 26px; border: 1px solid #d1d1d1; -webkit-box-shadow: inset 0 1px 3px #ccc; -moz-box-shadow: inset 0 1px 3px #ccc; box-shadow: inset 0 1px 3px #ccc; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; }
+.selector:hover { background-position: 100% 100%; }
+.selector > span { display: block; margin-right: 15px; line-height: 26px; width: auto !important; }
+.selector select { padding: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; }
+.dkBlueGradient { color: #fff; padding: 15px; background: #226eba; background: -moz-linear-gradient(left, #226eba 0%, #3bafe5 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%, #226eba), color-stop(100%, #3bafe5)); background: -webkit-linear-gradient(left, #226eba 0%, #3bafe5 100%); background: -o-linear-gradient(left, #226eba 0%, #3bafe5 100%); background: -ms-linear-gradient(left, #226eba 0%, #3bafe5 100%); background: linear-gradient(to right, #226eba 0%, #3bafe5 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#226eba', endColorstr='#3bafe5', GradientType=1 ); }
+.ltBlueGradient { background: #49a2da; background: -moz-linear-gradient(left, #49a2da 0%, #59c5f3 99%); background: -webkit-gradient(linear, left top, right top, color-stop(0%, #49a2da), color-stop(99%, #59c5f3)); background: -webkit-linear-gradient(left, #49a2da 0%, #59c5f3 99%); background: -o-linear-gradient(left, #49a2da 0%, #59c5f3 99%); background: -ms-linear-gradient(left, #49a2da 0%, #59c5f3 99%); background: linear-gradient(to right, #49a2da 0%, #59c5f3 99%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49a2da', endColorstr='#59c5f3', GradientType=1 ); }
+
+
+/* Composer Engage Form Fields */
+[data-form="engageField"] { float: left; width: 100%; padding-bottom: 15px; position: relative; }
+[data-form="engageField"] .multiOption { clear: both; width: 100%; margin: 0; padding: 7px 0 0; list-style: none; }
+[data-form="engageField"] .multiOption li { display: block; float: left; width: 100%; padding: 1px 0; position: relative; }
+[data-form="engageField"] .multiOption input { position: absolute; top: 3px; left: 0; }
+[data-form="engageField"] .multiOption label { margin: 0 5px 0 18px; width: auto; line-height: 12px; font: normal 1em Arial; }
+[data-form="engageField"] .multiOption.cols2 li { width: 50%; }
+[data-form="engageField"] .multiOption.cols3 li { width: 33.33%; }
+[data-form="engageField"] .multiOption.cols4 li { width: 25%; }
+[data-form="engageField"] .multiOption.cols5 li { width: 20%; }
+[data-form="engageField"] .multiOption.cols6 li { width: 16.66%; }
+[data-form="engageField"] .multiOption.cols7 li { width: 14.28%; }
+[data-form="engageField"] .multiOption.cols8 li { width: 12.5%; }
+[data-form="engageField"] .multiOption.cols9 li { width: 11.11%; }
+[data-form="engageField"] .multiOption.cols10 li { width: 10%; }
+[data-form="engageField"] .error { float: left; position: relative; top: 4px; }
+[data-form="engageField"] .req { float: none; position: absolute; top: -4px; left: -11px; font-weight: bold; font-size: 20px; }
+input.invalid { background: #fed6d6; }
+
+[data-form="engageField"].leftLabel > label { float: left; width: 25%; line-height: 1.1; padding: 0; }
+[data-form="engageField"].leftLabel > label[style*="right"] > * { padding-right: 10px; }
+/*[data-form="engageField"].leftLabel .req { top: 20px; }*/
+
+[data-form="engageField"].topicsOfInterest { clear: both; float: none; padding: 10px 0 20px; width: 75%; }
+[data-form="engageField"].topicsOfInterest ul { margin: 0; padding: 5px 0 0; list-style: none; }
+[data-form="engageField"].topicsOfInterest li { display: inline-block; vertical-align: top; float: none; width: 32.5%; margin-top: 5px; }
+[data-form="engageField"] span[id*="rfv"] { float: left; clear: left; }
+
+[data-form="engageField"].unsubscribeArea ul { margin: 0; padding: 0; list-style: none; }
+
+/* Remove Composer White BG when building landing page forms on blue backgrounds. Style validators differently */
+.landingPage [data-form="engageField"] .error-msg { background: red; color: #fff !important; padding: 0 4px; }
+.landingPage .Ext3ContentFunction .Ext3ContentFunctionHeader, .landingPage .Ext3ContentFunction .Ext3ContainerFunction, .landingPage .Ext3ContentFunctionHover .Ext3ContainerFunction, .landingPage .Ext3ContentFunctionDragged .Ext3ContainerFunction, .landingPage .Ext3ContentAreaBase .Ext3ContentArea { background: 0 !important; }
+
+
+/* Composer Social Sign-in */
+.engageForm .composerSocialSignIn { float: none; width: auto; margin-left: 0; }
+.engageForm .composerSocialSignIn p { margin-top: 0; }
+.engageForm .composerSocialSignIn .socialSignIn { margin: 0; padding: 0; }
+.engageForm .composerSocialSignIn .socialSignIn li { display: inline; margin-right: 10px; }
+
+
+/* 
+Composer Engage Form - Fields in the main content column
+    Many potential layout configurations so the CSS is long-winded.
+    Use the commented-out colors if you need help 
+    determining what uses what lines of CSS.
+*/
+.mainContent input[type=text], .mainContent textarea, .mainContent select, .mainContent .selector { width: 98.5%; /* background: purple; */ }
+.mainContent .leftLabel input[type=text], .mainContent .leftLabel textarea, .mainContent .leftLabel select, .mainContent .leftLabel .selector { width: 73%; /* background: goldenrod; */ }
+
+.col2 input[type=text], .col2 textarea, .col2 select, .col2 .selector { width: 96.3%; /* background: red; */ }
+.col2 .leftLabel input[type=text], .col2 .leftLabel textarea, .col2 .leftLabel select, .col2 .leftLabel .selector { width: 71.3%; /* background: yellow; */ }
+
+.col3 input[type=text], .col3 textarea, .col3 select, .col3 .selector { width: 94%; /* background: orange; */ }
+.col3 .leftLabel input[type=text], .col3 .leftLabel textarea, .col3 .leftLabel select, .col3 .leftLabel .selector { width: 69%; /* background: green; */ }
+
+.col2313 > div:first-child input[type=text], .col2313 > div:first-child textarea, .col2313 > div:first-child select, .col2313 > div:first-child .selector { width: 97.5%; /* background: blue; */ }
+.col2313 > div:first-child .leftLabel input[type=text], .col2313 > div:first-child .leftLabel textarea, .col2313 > div:first-child .leftLabel select, .col2313 > div:first-child .leftLabel .selector { width: 72.3%; /* background: red; */ }
+
+.col2313 input[type=text], .col2313 textarea, .col2313 select, .col2313 .selector { width: 94.5%; /* background: orange; */ }
+.col2313 .leftLabel input[type=text], .col2313 .leftLabel textarea, .col2313 .leftLabel select, .col2313 .leftLabel .selector { width: 69.3%; /* background: yellow; */ }
+
+.col3414 > div:first-child input[type=text], .col3414 > div:first-child textarea, .col3414 > div:first-child select, .col3414 > div:first-child .selector { width: 93%; /* background: red;*/ }
+.col3414 > div:first-child .leftLabel input[type=text], .col3414 > div:first-child .leftLabel textarea, .col3414 > div:first-child .leftLabel select, .col3414 > div:first-child .leftLabel .selector { width: 67.5%; /* background: orange; */ }
+
+.col3414 input[type=text], .col3414 textarea, .col3414 select, .col3414 .selector { width: 97.5%; /*  background: yellow;*/ }
+.col3414 .leftLabel input[type=text], .col3414 .leftLabel textarea, .col3414 .leftLabel select, .col3414 .leftLabel .selector { width: 72.5%; /* background: green;*/ }
+
+
+/*
+Composer Engage Form - Fields in the side callout box
+    Many potential layout configurations so the CSS is long-winded.
+    Use the commented-out colors if you need help 
+    determining what uses what lines of CSS.
+*/
+.formBox { clear: right; float: right; width: 300px; padding: 15px 20px; margin: 20px 0 20px 20px; border: 1px solid #dfdfdf; -webkit-box-shadow: 0 2px 4px #ddd; -moz-box-shadow: 0 2px 4px #ddd; box-shadow: 0 2px 4px #ddd; background: #fff; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmN2Y3ZjciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); background: -moz-linear-gradient(top, #fff 0%, #f7f7f7 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#f7f7f7)); background: -webkit-linear-gradient(top, #fff 0%,#f7f7f7 100%); background: -o-linear-gradient(top, #fff 0%,#f7f7f7 100%); background: -ms-linear-gradient(top, #fff 0%,#f7f7f7 100%); background: linear-gradient(to bottom, #fff 0%,#f7f7f7 100%); }
+
+.formBox input[type=text], .formBox textarea, .formBox select, .formBox .selector { width: 96.5%; margin-bottom: 0; /*background: red;*/ }
+.formBox input[type=submit] { clear: both; float: left; margin-top: 5px; }
+
+.formBox .col2 input[type=text], .formBox .col2 textarea, .formBox .col2 select, .formBox .col2 .selector { width: 92%; /*background: red; */ }
+.formBox .col2 .leftLabel input[type=text], .formBox .col2 .leftLabel textarea, .formBox .col2 .leftLabel select, .formBox .col2 .leftLabel .selector { width: 66%; /* background: yellow; */ }
+
+.formBox .col3 input[type=text], .formBox .col3 textarea, .formBox .col3 select, .formBox .col3 .selector { width: 88%; /* background: orange; */ }
+.formBox .col3 .leftLabel input[type=text], .formBox .col3 .leftLabel textarea, .formBox .col3 .leftLabel select, .formBox .col3 .leftLabel .selector { width: 62%; /* background: green; */ }
+
+.formBox .col2313 > div:first-child input[type=text], .formBox .col2313 > div:first-child textarea, .formBox .col2313 > div:first-child select, .formBox .col2313 > div:first-child .selector { width: 94.5%; /* background: blue; */ }
+.formBox .col2313 > div:first-child .leftLabel input[type=text], .formBox .col2313 > div:first-child .leftLabel textarea, .formBox .col2313 > div:first-child .leftLabel select, .formBox .col2313 > div:first-child .leftLabel .selector { width: 68.5%; /* background: purple; */ }
+
+.formBox .col2313 input[type=text], .formBox .col2313 textarea, .formBox .col2313 select, .formBox .col2313 .selector { width: 87.5%; /*  background: teal; */ }
+.formBox .col2313 .leftLabel input[type=text], .formBox .col2313 .leftLabel textarea, .formBox .col2313 .leftLabel select, .formBox .col2313 .leftLabel .selector { width: 62%; /* background: pink; */ }
+
+.formBox .col3414 > div:first-child input[type=text], .formBox .col3414 > div:first-child textarea, .formBox .col3414 > div:first-child select, .formBox .col3414 > div:first-child .selector { width: 83%; /* background: brown; */ }
+.formBox .col3414 > div:first-child .leftLabel input[type=text], .formBox .col3414 > div:first-child .leftLabel textarea, .formBox .col3414 > div:first-child .leftLabel select, .formBox .col3414 > div:first-child .leftLabel .selector { width: 57%; /* background: black; */ }
+
+.formBox .col3414 input[type=text], .formBox .col3414 textarea, .formBox .col3414 select, .formBox .col3414 .selector { width: 95%; /*  background: lightblue; */ }
+.formBox .col3414 .leftLabel input[type=text], .formBox .col3414 .leftLabel textarea, .formBox .col3414 .leftLabel select, .formBox .col3414 .leftLabel .selector { width: 69%; /* background: lightgreen; */ }
+
+.formBox .leftLabel input[type=text], .formBox .leftLabel textarea, .formBox .leftLabel select, .formBox .leftLabel .selector { width: 66%; /* background: yellow; */ }
+
+
+/*
+Composer Engage Form - Fields on landing page form box
+    Many potential layout configurations so the CSS is long-winded.
+    Use the commented-out colors if you need help 
+    determining what uses what lines of CSS.
+*/
+.landingPage .formBox .leftLabel input[type=text], .landingPage .formBox .leftLabel textarea, .landingPage .formBox .leftLabel select, .landingPage .formBox .leftLabel .selector { width: 71%; /* background: yellow; */ }
+
+
+
+/*	Header
+----------------------------*/
+.siteHeader { position: relative; z-index: 2; margin: 20px auto 30px; width: 960px; height: 90px; background: #fff; background: rgba(255,255,255,.95); -webkit-box-shadow: 0 0 25px rgba(0,0,0,.1); -moz-box-shadow: 0 0 25px rgba(0,0,0,.1); box-shadow: 0 0 25px rgba(0,0,0,.1); }
+.siteHeader .logo { float: left; display: block; margin: 8px 0 0 20px; }
+.primaryNavigation { float: right; width: 680px; margin-top: 10px; }
+.primaryNavigation > ul > li { float: left; margin-right: 27px; padding: 0; }
+.primaryNavigation > ul > li > a { display: block; padding: 0 3px; font: bold 1.250em/76px Arial; color: #333; border-bottom: 4px solid transparent; text-shadow: 1px 1px 1px rgba(255,255,255,.4); }
+.primaryNavigation > ul > li > a:hover, .primaryNavigation > ul > li > a.on, .primaryNavigation > ul > li.mm-state-active > a { color: #00b1e3; border-bottom-color: #00b1e3; }
+.primaryNavigation > ul > li > a:hover, .primaryNavigation > ul > li > a.on, .primaryNavigation > ul > li.mm-state-active-persistant > a { color: #00b1e3; border-bottom-color: #00b1e3; }
+.primaryNavigation > div { display: none; }
+.utilityNavigation { position: absolute; top: -20px; right: -15px; width: 712px; height: 29px; font: normal 1.167em/29px 'Avenir LT W01 85 Heavy'; border-bottom: 1px solid #0080ab; color: #fff; -webkit-box-shadow: 0 2px 8px rgba(0,0,0,.2); -moz-box-shadow: 0 2px 8px rgba(0,0,0,.2); box-shadow: 0 2px 8px rgba(0,0,0,.2); background: #0093c2; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYjhlYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDkzYzIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); background: -moz-linear-gradient(top, #00b8ea 0%, #0093c2 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00b8ea), color-stop(100%,#0093c2)); background: -webkit-linear-gradient(top, #00b8ea 0%,#0093c2 100%); background: -o-linear-gradient(top, #00b8ea 0%,#0093c2 100%); background: -ms-linear-gradient(top, #00b8ea 0%,#0093c2 100%); background: linear-gradient(to bottom, #00b8ea 0%,#0093c2 100%); }
+.utilityNavigation:before { content: ''; position: absolute; left: -12px; top: 0; width: 12px; height: 30px; background: url(http://www.silverpop.com/img/utilnav_slant.png); }
+.no-cssgradients .utilityNavigation { background: url(http://www.silverpop.com/img/fallbacks/bg_utilitynav.png) repeat-x; }
+.utilityNavigation ul, .utilityNavigation ul > li { display: inline; }
+.utilityNavigation ul > li { display: inline-block; height: 30px; padding: 0 4px 0 10px; background: url(http://www.silverpop.com/img/utilnav_divider.png) no-repeat left center; position: relative; }
+.utilityNavigation a { color: #fff; text-transform: uppercase; font-size: 0.714em; }
+.utilityNavigation a:hover { color: #6ff; }
+.utilityNavigation .button { margin: 0 10px; padding: 6px 6px 3px 32px; border-bottom: 1px solid transparent; }
+.utilityNavigation .button:hover { -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; background-color: #0096c8; -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.4); -moz-box-shadow: inset 0 0 4px rgba(0,0,0,.4); box-shadow: inset 0 0 4px rgba(0,0,0,.4); border-bottom-color: #52b6d7; }
+.utilityNavigation .button.demo { background-image: url(http://www.silverpop.com/img/icon_demo_small.png); background-position: 6px 4px; background-repeat: no-repeat; }
+.utilityNavigation .phone { padding: 0 4px; }
+.utilityNavigation .phone * { display: inline; }
+.clientLoginDrop { display: none; position: absolute; top: 30px; left: 0; width: 250px; background: #00AEE0; -webkit-box-shadow: 0 2px 3px rgba(0,0,0,.3); -moz-box-shadow: 0 2px 3px rgba(0,0,0,.3); box-shadow: 0 2px 3px rgba(0,0,0,.3); overflow: hidden; /*-webkit-transition: all .3s cubic-bezier(0.085, 0.570, 0.315, 0.985); -moz-transition: all .3s cubic-bezier(0.085, 0.570, 0.315, 0.985); -ms-transition: all .3s cubic-bezier(0.085, 0.570, 0.315, 0.985); -o-transition: all .3s cubic-bezier(0.085, 0.570, 0.315, 0.985); transition: all .3s cubic-bezier(0.085, 0.570, 0.315, 0.985);*/ }
+.clientLoginDrop fieldset { padding: 10px 15px; }
+.clientLoginDrop label { color: #fff; }
+.clientLoginDrop .selector { width: 208px !important; }
+.clientLoginDrop .selector > span { color: #333; font: normal 12px/26px Arial; }
+.clientLoginDrop .loginButton { clear: both; }
+.clientLoginDrop input[type=submit] { margin: 5px 0; display: block; }
+.clientLogin { -webkit-transition: all .4s cubic-bezier(0.085, 0.570, 0.315, 0.985); -moz-transition: all .4s cubic-bezier(0.085, 0.570, 0.315, 0.985); -ms-transition: all .4s cubic-bezier(0.085, 0.570, 0.315, 0.985); -o-transition: all .4s cubic-bezier(0.085, 0.570, 0.315, 0.985); transition: all .4s cubic-bezier(0.085, 0.570, 0.315, 0.985); }
+.clientLogin.open { padding: 0 10px; background: #00AEE0; }
+.clientLogin.open > a { color: #6ff; }
+.clientLogin .collapse { display: block; position: absolute; top: 10px; right: 10px; padding: 2px 6px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; background: #666; font: normal 0.917em 'Avenir LT W01 35 Light'; color: #fff; }
+.clientLogin .collapse:hover { background: #fff; color: #00AEE0; }
+.instanceOption { display: none; float: left; width: 100%; padding: 0; }
+.socialBtns { float: right; }
+.socialBtns li { background: 0; padding: 0; }
+.socialBtns a { display: inline-block; position: relative; top: -2px; }
+.socialBtns a:hover img { -webkit-box-shadow: 0 0 10px #6ff; -moz-box-shadow: 0 0 10px #6ff; box-shadow: 0 0 10px #6ff; }
+
+
+/*  Meganav
+----------------------------*/
+.mm-drops { position: absolute; top: 100%; left: 0; width: 100%; }
+.mm-drops h2 { margin: 0; font: normal 1.500em/35px 'Avenir LT W01 85 Heavy'; height: 35px; overflow: hidden; }
+.mm-drops h2 > span { display: inline-block; width: 395px; padding: 0 20px; color: #515353; letter-spacing: .5px; background: url(http://www.silverpop.com/img/bg_mm_headline_shade.png) no-repeat; background-size: 100% 100%; }
+.no-backgroundsize .mm-drops h2 > span { background: #c8ebf8; }
+.mm-drops h3 { font: normal 1.333em 'Avenir LT W01 85 Heavy'; color: #0064ca; }
+.mm-drops h3 strong { display: block; font-weight: normal; font-size: 1.667em; }
+.mm-drops li { padding: 5px 0 5px 14px; }
+.mm-drops li:before { content: "\f054"; font-family: FontAwesome; margin-left: -12px; float: left; color: #6D6D6D; }
+.mm-drops a { display: block; color: #0064ca; }
+.mm-drops > div { float: left; background: url(http://www.silverpop.com/img/bg_mm.png) repeat-x; padding-bottom: 40px; -webkit-box-shadow: 0 4px 4px rgba(0,0,0,.2); -moz-box-shadow: 0 4px 4px rgba(0,0,0,.2); box-shadow: 0 4px 4px rgba(0,0,0,.2);
+background: -moz-linear-gradient(top,  rgba(165,217,236,1) 0%, rgba(251,254,255,0.99) 7%, rgba(251,254,255,0.89) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(165,217,236,1)), color-stop(7%,rgba(251,254,255,0.99)), color-stop(100%,rgba(251,254,255,0.89))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(165,217,236,1) 0%,rgba(251,254,255,0.99) 7%,rgba(251,254,255,0.89) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(165,217,236,1) 0%,rgba(251,254,255,0.99) 7%,rgba(251,254,255,0.89) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(165,217,236,1) 0%,rgba(251,254,255,0.99) 7%,rgba(251,254,255,0.89) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(165,217,236,1) 0%,rgba(251,254,255,0.99) 7%,rgba(251,254,255,0.89) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a5d9ec', endColorstr='#e3fbfeff',GradientType=0 ); /* IE6-9 */
+}
+.no-boxshadow .mm-drops > div { border: solid #ccc; border-width: 0 1px 1px; }
+.mm-drops > div > div { border-left: 1px dotted #6f6f70; margin: 40px 0 0 -1px; min-height: 201px; }
+.mm-drops > div > div:first-child, .mm-drops > div > h2 + div { border-left: 0; margin-left: 0; }
+.mm-drops > div > div > *:first-child { margin-top: -20px; margin-bottom: 10px; }
+.mm-feature { color: #999; font: normal 1.250em 'Avenir LT W01 65 Medium'; }
+.mm-feature img { display: block; margin: 0 auto 15px; max-width: 210px; }
+.mm-feature .quotee { font: normal 0.667em/1.3 Arial; }
+.mm-feature .more { color: #999; float: right; background-position: 100% -44px; }
+.mm-feature .more:hover { color: #00B1E3; background-position: 100% -22px; }
+.mm-cols4 > div { float: left; width: 19%; padding: 0 3%; }
+.mm-cols3 > div { float: left; width: 27.3%; padding: 0 3%; }
+.mm-cols2 > div { float: left; width: 42%; padding: 0 4%; }
+.mm-solutions { width: 850px; margin-left: 45px; }
+.mm-solutions h2 { margin-left: 235px; }
+.mm-products { width: 680px; margin-left: 15px; }
+.mm-services { width: 500px; margin-left: 85px; position:absolute; left:175px; }
+.mm-services h2 { margin-left: 155px; }
+.mm-clients { width: 500px; margin-left: 360px; }
+.mm-clients h2 { float: right; }
+.mm-partners { width: 500px; margin-left: 450px; }
+.mm-partners h2 span { float: right; }
+.mm-resources { width: 850px; margin-left: 85px; }
+.mm-resources h2 { margin-left: 313px; }
+.mm-resources h2 span { float: right; margin-right: 102px; }
+.mm-about { width: 850px; margin-left: 85px; }
+.mm-about h2 span { float: right; margin-right: 28px; }
+.mm-column {  margin-bottom: 3%!important;}
+.mm-footer { width: 94%!important; box-sizing: border-box; margin-left: 3%!important; margin-right: 3%!important; border-top: 1px #000 dotted; clear: both; overflow: hidden; padding-top: 40px !important; display: block; float:none!important; border-left: 0!important; min-height:0!important; padding-left: 0!important; padding-right: 0!important;
+ }
+
+
+/*	Interior Hero Layouts
+----------------------------*/
+.hero { height: 410px; margin-top: -140px; min-width: 960px; position: relative; background-repeat: no-repeat; background-position: center top; }
+.hero + .main .secondaryNavigation { margin-top: -270px; min-height: 270px; }
+.heroContent { overflow: hidden; clear: both; position: absolute; left: 50%; bottom: 20px; margin-left: -245px; max-height: 280px; width: 725px; text-shadow: 1px 2px 2px rgba(0,0,0,.2); }
+.heroContent.dark * { color: #333; }
+.heroContent.light * { color: #fff; }
+.heroContent > h1 { margin: 0; font: normal 4.500em 'Avenir LT W01 85 Heavy'; }
+.heroContent > h2 { margin: 0; font: normal 2em 'Avenir LT W01 65 Medium'; letter-spacing: 0.5px; }
+
+.heroResources { padding: 20px; }
+.light .heroResources { background: rgba(0,0,0,.6); text-shadow: 1px 1px 1px rgba(0,0,0,.3); }
+.no-rgba .light .heroResources { background: url(http://www.silverpop.com/img/fallbacks/bg_000000_60.png); }
+.dark .heroResources { background: rgba(255,255,255,.9); text-shadow: 1px 1px 1px rgba(0,0,0,.1); }
+.no-rgba .dark .heroResources { background: url(http://www.silverpop.com/img/fallbacks/bg_ffffff_90.png); }
+.dark .heroResources .btnPill { color: #fff; }
+.heroResources h4 { text-transform: uppercase; color: #f1f1f1; }
+.heroResources h1 { margin: 10px 0; font: normal 2.667em 'Avenir LT W01 85 Heavy'; color: #f1f1f1; }
+.heroResources p { margin-bottom: 0; color: #f1f1f1; font: normal 1.250em 'Avenir LT W01 65 Medium'; }
+.heroResources time { font: normal 1.333em 'Avenir LT W01 85 Heavy'; }
+
+
+/*	Main/Interior Layout
+----------------------------*/
+.main { margin: 0 auto; width: 960px; position: relative; z-index: 0; }
+.mainWrap { float: left; width: 100%; background: #fff; margin-bottom: 70px; -webkit-box-shadow: 0 0 25px rgba(0,0,0,.1); -moz-box-shadow: 0 0 25px rgba(0,0,0,.1); box-shadow: 0 0 25px rgba(0,0,0,.1); }
+.mainContent { float: right; width: 690px; padding: 35px 35px 25px 0; position: relative; }
+.mainContent h1 { color: #333; padding: 0 0 25px; margin: 0; background: url(http://www.silverpop.com/img/shelf_left.png) 0 100% no-repeat; }
+.mainContent .leadIn p, .mainContent .leadIn li { font-size: 1.250em; font-family: 'Avenir LT W01 65 Medium'; }
+.mainContent .leadIn li li { font-size: 1em; }
+
+/*	Full Width Layout
+----------------------------*/
+.fullwidth .breadcrumbs { padding: 8px 185px 8px 35px; width: 740px; }
+.fullwidth .mainContent { float: none; width: auto; padding: 35px 35px 60px 35px; }
+
+
+/*	Blog Header
+----------------------------*/
+.blogHeader { position: relative; z-index: 2; margin: 20px auto 30px; padding: 20px auto 30px; width: 960px; height: 308px; background: #fff; background: rgba(255,255,255,.95); -webkit-box-shadow: 0 0 25px rgba(0,0,0,.1); -moz-box-shadow: 0 0 25px rgba(0,0,0,.1); box-shadow: 0 0 25px rgba(0,0,0,.1); }
+.blogHeader .logo { float: left; display: block; margin: 8px 0 0 20px; }
+.blogHeader > h2 { font-family: 'Avenir LT W01 35 Light'; font-size: 30px; color: #333333; float: right; clear: right; margin: 0; padding: 10px 18px 0 0; }
+.blogHeader > h3 { font-family: 'Avenir LT W01 35 Light'; font-size: 18px; color: #333333; float: right; clear: right; margin: 0; padding: 10px 18px 0 0; }
+.blogHeader .banner { float: left; position: relative; width: 936px; height: 180px; padding: 40px 12px 12px; }
+.blogHeader .bannerInfo { position: absolute; bottom: 35px; left: 33px; max-height: 170px; overflow: hidden; }
+.blogHeader .bannerInfo img { max-width: 895px; }
+.blogHeader .banner .bannerInfo > h3 { font: bold 36px 'Avenir LT W01 35 Light'; color: #0da7ef; text-shadow: 0px 1px 0px #fff; }
+.blogHeader .banner .bannerInfo > p { font: normal 20px 'Avenir LT W01 35 Light'; color: #5b6163; text-shadow: 0px 1px 0px #fff; width: 430px; margin-bottom: 16px; }
+.blogHeader .banner .bannerInfo > .btnMore { color: #fff; text-transform: uppercase; padding: 0 18px 0 7px; margin: 0; width: auto; height: auto; font: bold 12px/25px Arial; background: #8986cb; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzg5ODZjYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjU1JSIgc3RvcC1jb2xvcj0iIzg5ODZjYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjU5JSIgc3RvcC1jb2xvcj0iIzg3ODNjOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijk1JSIgc3RvcC1jb2xvcj0iIzUyNDc4YiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3NTZlYTEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); background: -moz-linear-gradient(top, #8986cb 0%, #8986cb 55%, #8783c8 59%, #52478b 95%, #756ea1 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8986cb), color-stop(55%,#8986cb), color-stop(59%,#8783c8), color-stop(95%,#52478b), color-stop(100%,#756ea1)); background: -webkit-linear-gradient(top, #8986cb 0%,#8986cb 55%,#8783c8 59%,#52478b 95%,#756ea1 100%); background: -o-linear-gradient(top, #8986cb 0%,#8986cb 55%,#8783c8 59%,#52478b 95%,#756ea1 100%); background: -ms-linear-gradient(top, #8986cb 0%,#8986cb 55%,#8783c8 59%,#52478b 95%,#756ea1 100%); background: linear-gradient(to bottom, #8986cb 0%,#8986cb 55%,#8783c8 59%,#52478b 95%,#756ea1 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8986cb', endColorstr='#756ea1',GradientType=0 ); }
+.blogHeader .banner .bannerInfo > .btnMore:hover, .blogHeader .banner .bannerInfo > .btnMore:focus { background: #fff; color: #06e; }
+
+
+/*	Blog General
+----------------------------*/
+.blog .breadcrumbs { padding: 8px 185px 8px 25px; width: 750px; }
+.blog .mainContent { float: left; width: 600px; padding: 20px 0 60px 25px; width: 585px; }
+.blog .subContent { float: right; clear: none; width: 308px; padding: 20px 20px 20px 10px; background: none; overflow: hidden; }
+.socialFrame, .blogShareBox { height: 6em; padding-left: 9em; }
+.fb-like { position: relative; top: -3px; }
+.twitter-share-button { position: relative; top: 0px; }
+
+/* Blog Side Column 
+----------------------------*/
+.blog .subContent h4 { font-size: 18px; }
+.blog .subContent figure { position: relative; margin: 25px 0 25px -6px; }
+.blog .subContent > ul { list-style: none; padding-left: 0; margin-top: 5px; }
+.blog .subContent > ul > li { line-height: 1.2; }
+.blog .subContent > ul > li > a { font-size: 14px; }
+.blog .subContent .popularCategories > li:last-child { font-weight: bold; }
+.blog .subContent .newsletterSignup { margin: 0 0 10px -6px; background: url(http://www.silverpop.com/Global/Backgrounds/bg_blog_signupbox.png) no-repeat; }
+.blog .subContent .newsletterSignup input[type=text] { width: 172px; }
+.blog .subContent .sidebarBanner {width: 300px; margin-right: 8px; overflow:hidden; margin-bottom: 25px; margin-top: 15px; float: right;}
+.blog .subContent .sidebarBanner img {display: block; }
+
+/*	Blog Page Tools
+----------------------------*/
+.blog .pageTools { position: absolute; top: 7px; right: 0; margin: 0; padding: 0; list-style: none; }
+.blog .pageTools li { float: right; margin: 0; padding: 0; }
+.blog .pageTools li > a { display: block; height: 14px; width: 18px; margin: 3px 0 0 3px; font: normal 1em/22px 'Avenir LT W01 85 Heavy'; text-transform: uppercase; color: #bfbebf; background: url(http://www.silverpop.com/img/bg_blog_share.png) no-repeat; }
+.blog .pageTools li > a:hover { color: #00b1e3; }
+.blog .pageTools li > a > span { background: 0; position: absolute; height: 22px; }
+.blog .pageTools li > span { color: #bfbebf; text-transform: uppercase; font-weight: bold; display: block; padding-top: 1px; }
+.blog .pageTools li > input[type="text"] { float: left; width: 100px; height: 13px; margin-top: -2px; border-top: 1px solid #d2d2d2; border-left: 1px solid #fff; border-bottom: 1px solid #fff; padding: 4px 32px 4px 10px; border-right: 0; font-size: 12px; color: #999999; -webkit-border-radius: 12px; border-radius: 12px; -webkit-box-shadow: inset 1px -1px 3px 0px #f3f3f3; -moz-box-shadow: inset 1px -1px 3px 0px #f3f3f3; box-shadow: inset 1px -1px 3px 0px #f3f3f3; -webkit-transition: all 0.7s ease 0s; -moz-transition: all 0.7s ease 0s; -o-transition: all 0.7s ease 0s; -ms-transition: all 0.7s ease 0s; transition: all 0.7s ease 0s; }
+.blog .pageTools li > input[type="text"]:hover, .blog .pageTools li > input[type="text"]:focus { width: 200px; }
+.blog .pageTools li > input[type="submit"] { position: absolute; right: 35px; top: 1px; border: 0; display: block; width: 15px; height: 15px; font-size: 0; text-align: -9999em; padding: 0; margin: 0; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; background: url(http://www.silverpop.com/img/btn_search.png) 0px 0px no-repeat; }
+.blog .pageTools li > input[type="submit"]:hover, .blog .pageTools li > input[type="submit"]:focus { background-position: 0px -15px; }
+.blog .pageTools li:first-child { padding: 0px 27px 0 24px; }
+.blog .pageTools li:first-child a { background-position: 0 0; }
+.blog .pageTools li:first-child a:hover { background-position: 0 -90px; }
+.blog .pageTools li:first-child + li a { background-position: 0 0px; }
+.blog .pageTools li:first-child + li a:hover { background-position: 0 -20px; }
+.blog .pageTools li:first-child + li + li a { background-position: 100% -40px; padding-right: 0; }
+.blog .pageTools li:first-child + li + li a:hover { background-position: 100% -60px; }
+
+
+/*	Blog Item Summary
+----------------------------*/
+.blog .tags { padding: 2px 0 16px; border-top: 0; }
+.blog .blogPostList > li { float: left; width: 100%; }
+.blog .blogItem { position: relative; display: block; padding-top: 40px; margin-bottom: 10px; background: url(http://www.silverpop.com/img/shelf_left.png) no-repeat; }
+.blog .blogItem:first-child { background: 0; padding-top: 0; }
+.blog .blogItemInfo { min-height: 106px; position: relative; clear: both; display: inline-block; margin: 8px 0; }
+.blog .blogItemInfo > a:first-child { position: absolute; top: 0px; left: 0; }
+.blog .blogItemInfo > a > img { border: 1px solid #000; margin: 0; padding: 0; }
+.blog .blogItemInfo > h5 { float: left; text-transform: capitalize; display: block; width: 82%; clear: both; margin-left: 105px; padding-bottom: 1px; }
+.blog .blogItemInfo > span { float: left; display: block; width: 82%; clear: both; margin-left: 105px; padding-bottom: 8px; font-size: 12px; }
+.blog .blogItemInfo .addthis_toolbox { border: none; float: left; display: block; width: auto; clear: both; margin: 0 0 10px 105px; padding: 2px 0; min-height: 64px; height: 70px; }
+/*.blog .blogItemInfo .addthis_toolbox > div, .blog .blogItemInfo .addthis_toolbox > span, .blog .blogItemInfo .addthis_toolbox > iframe { float: left !important; margin-right: 5px !important; }*/
+.addthis_toolbox > div, .addthis_toolbox > span, .addthis_toolbox > iframe { float: left !important; margin-right: 5px !important; }
+.blog .blogItemInfo > p { float: left; margin: 0 0 10px; }
+.blog .blogItemInfo > div { float: left; margin: 10px 0; }
+.blog .blogItemInfo > .blogContent { margin: 0 0 10px 105px; }
+/*.blog .blogItemInfo > div > p { float: left; margin: 0 0 10px; }*/
+.blog .blogContent + a { clear: left; display: block; float: left; }
+.blog .blogContent img { max-width: 478px !important; height: auto !important; }
+.blog .blogContent iframe, .blog .blogContent object, .blog .blogContent embed { max-width: 478px !important; }
+.blog .blogBottomShare { clear: both; padding-bottom: 35px; float: left; width: 100%; }
+.blog .blogBottomShare h3 { display: inline-block; vertical-align: middle; margin-right: 10px; }
+.blog .blogBottomShare ul { display: inline-block; vertical-align: middle; margin: 0; padding: 0; list-style: none; }
+.blog .blogBottomShare li { float: left; padding: 0 5px 0 0; }
+.blog .blogBottomShare .share { display: block; width: 32px; height: 32px; text-decoration: none; background-repeat: no-repeat; background-position: center; }
+.blog .blogBottomShare .share.facebook { background: url(http://www.silverpop.com/img/facebook_xform.png); }
+.blog .blogBottomShare .share.linkedin { background: url(http://www.silverpop.com/img/linkedin_xform.png); }
+.blog .blogBottomShare .share.google { background: url(http://www.silverpop.com/img/google_xform.png); }
+.blog .blogBottomShare .share.yahoomail { background: url(http://www.silverpop.com/img/yahoo_xform.png); }
+.blog .blogBottomShare .share.twitter { background: url(http://www.silverpop.com/img/twitter_xform.png); }
+
+.blogEditorPosts h3 { margin-bottom: 15px; }
+.blogEditorPosts .blogEditor img { float: left; width: 91px; }
+.blogEditorPosts .blogEditor .bio { min-height: 105px; margin: 0 0 20px 110px; }
+.blogEditorPosts > ul { clear: both; margin: 0; padding: 0; list-style: none; }
+.blogEditorPosts > ul > li { background: url(http://www.silverpop.com/img/shelf_left.png) 0 0 no-repeat; padding: 20px 0; }
+.blogEditorPosts .continueReading { font-weight: bold; }
+.blogEditorPosts .tags { float: none; clear: both; font-size: 10px; font-weight: bold; }
+.blogEditorPosts .tags ul { display: inline; font-weight: normal; padding-left: 5px; }
+
+
+/*	Profile / Opt
+----------------------------*/
+/*
+.updateProfile > h3 { padding-bottom: 5px; }
+.updateProfile > h4 { padding-bottom: 5px; }
+.updateProfile ul { list-style: none; display: block; clear: both; padding: 0 0 20px; margin: 0; }
+.updateProfile ul li > input[type="text"] { width: 250px; }
+.updateProfile ul li > select { width: 250px; }
+.updateProfile ul li > .selector { display: inline-block; margin-bottom: 0; } 
+.updateProfile ul li > h4 > label { float: left; display: inline-block; width: auto; font: bold 1.0em Arial; padding: 5px 11px 0 0; }
+.updateProfile ul li > input[type="checkbox"] + label { font-family: 'Avenir LT W01 35 Light'; font-size: 1.1em; padding-left: 6px; width: auto; }
+.updateProfile .copy p { font-size: 1.333em; font-family: 'Avenir LT W01 65 Medium'; padding: 0 0 20px 0; }
+.updateProfile .copy p:last-child { margin: 0; }
+.updateProfile > input[type="submit"] { position: relative; display: block; }
+.updateProfile .btnPill { width: 100px; height: 30px; box-shadow: 0 3px 2px rgba(0,0,0,.5), -1px -1px 1px rgba(255,255,255,.5) !important; border-bottom: 1px solid #2e2e2e; border-left: 1px solid #2e2e2e; border-top: 1px solid #7b7b7b; border-right: 1px solid #7b7b7b; -moz-border-radius: 28px; border-radius: 28px; padding: 0 !important; text-align: center !important; text-transform: uppercase; color: #fff !important; letter-spacing: normal !important; background: #484848 !important; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ4NDg0OCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzNiM2IzYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iIzMyMzEzMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzODM4MzgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)  !important; background: -moz-linear-gradient(top,  #484848 0%, #3b3b3b 50%, #323131 51%, #383838 100%)  !important; background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#484848), color-stop(50%,#3b3b3b), color-stop(51%,#323131), color-stop(100%,#383838)) !important; background: -webkit-linear-gradient(top,  #484848 0%,#3b3b3b 50%,#323131 51%,#383838 100%) !important; background: -o-linear-gradient(top,  #484848 0%,#3b3b3b 50%,#323131 51%,#383838 100%) !important; background: -ms-linear-gradient(top,  #484848 0%,#3b3b3b 50%,#323131 51%,#383838 100%) !important; background: linear-gradient(to bottom,  #484848 0%,#3b3b3b 50%,#323131 51%,#383838 100%) !important; }
+.updateProfile .btnPill:hover, .updateProfile .btnPill:focus { background: #0098c4 !important; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwOThjNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjclIiBzdG9wLWNvbG9yPSIjMDBhM2QyIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNjclIiBzdG9wLWNvbG9yPSIjMDBhM2QyIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA5NjY4MSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=) !important; background: -moz-linear-gradient(top,  #0098c4 0%, #00a3d2 7%, #00a3d2 67%, #096681 100%) !important; background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0098c4), color-stop(7%,#00a3d2), color-stop(67%,#00a3d2), color-stop(100%,#096681)) !important; background: -webkit-linear-gradient(top,  #0098c4 0%,#00a3d2 7%,#00a3d2 67%,#096681 100%) !important; background: -o-linear-gradient(top,  #0098c4 0%,#00a3d2 7%,#00a3d2 67%,#096681 100%) !important; background: -ms-linear-gradient(top,  #0098c4 0%,#00a3d2 7%,#00a3d2 67%,#096681 100%) !important; background: linear-gradient(to bottom,  #0098c4 0%,#00a3d2 7%,#00a3d2 67%,#096681 100%) !important; }
+.updateProfile .btnPillOrange { margin: -10px 0 45px; border-top: 1px solid #eeac48; border-left: 1px solid #eeac48; border-bottom: 1px solid #964700; border-right: 1px solid #964700; background: #eb8c00 !important; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ViOGMwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQlIiBzdG9wLWNvbG9yPSIjZWY4ZTAwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTclIiBzdG9wLWNvbG9yPSIjZjI4ZDAwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjZWQ4NzAwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNzQlIiBzdG9wLWNvbG9yPSIjZDE2YjAwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2I4NTgwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=) !important;; background: -moz-linear-gradient(top,  #eb8c00 0%, #ef8e00 4%, #f28d00 17%, #ed8700 30%, #d16b00 74%, #b85800 100%) !important;; background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eb8c00), color-stop(4%,#ef8e00), color-stop(17%,#f28d00), color-stop(30%,#ed8700), color-stop(74%,#d16b00), color-stop(100%,#b85800)) !important;; background: -webkit-linear-gradient(top,  #eb8c00 0%,#ef8e00 4%,#f28d00 17%,#ed8700 30%,#d16b00 74%,#b85800 100%) !important;; background: -o-linear-gradient(top,  #eb8c00 0%,#ef8e00 4%,#f28d00 17%,#ed8700 30%,#d16b00 74%,#b85800 100%) !important;; background: -ms-linear-gradient(top,  #eb8c00 0%,#ef8e00 4%,#f28d00 17%,#ed8700 30%,#d16b00 74%,#b85800 100%) !important;; background: linear-gradient(to bottom,  #eb8c00 0%,#ef8e00 4%,#f28d00 17%,#ed8700 30%,#d16b00 74%,#b85800 100%) !important;; filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb8c00', endColorstr='#b85800',GradientType=0 ) !important;; }
+.updateProfile .btnPillOrange:hover, .updateProfile .btnPillOrange:focus { border-bottom: 1px solid #2e2e2e; border-left: 1px solid #2e2e2e; border-top: 1px solid #7b7b7b; border-right: 1px solid #7b7b7b; background: #484848 !important; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ4NDg0OCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzNiM2IzYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iIzMyMzEzMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzODM4MzgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)  !important; background: -moz-linear-gradient(top,  #484848 0%, #3b3b3b 50%, #323131 51%, #383838 100%)  !important; background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#484848), color-stop(50%,#3b3b3b), color-stop(51%,#323131), color-stop(100%,#383838)) !important; background: -webkit-linear-gradient(top,  #484848 0%,#3b3b3b 50%,#323131 51%,#383838 100%) !important; background: -o-linear-gradient(top,  #484848 0%,#3b3b3b 50%,#323131 51%,#383838 100%) !important; background: -ms-linear-gradient(top,  #484848 0%,#3b3b3b 50%,#323131 51%,#383838 100%) !important; background: linear-gradient(to bottom,  #484848 0%,#3b3b3b 50%,#323131 51%,#383838 100%) !important; } 
+.updateProfile .profileIndent { margin-left: 50px !important; }
+*/
+.profileInfo { padding: 0 !important; }
+.profileInfo li { padding: 1px 3px 20px !important; }
+.profileInfo .lblFName { padding-right: 6px; }
+.profileInfo .lblLName { padding-right: 9px; }
+.profileInfo .lblEmail { padding-right: 44px; }
+.profileInfo .lblCompany { padding-right: 17px; }
+.profileInfo .lblPhone { padding-right: 36px; }
+.profileName { display: inline-block !important; width: 100%; }
+.profileName li { float: left; padding-right: 5px; }
+.profileName li > a { font-size: .766em; }
+.profileEmail { padding: 0 0 25px !important; display: inline-block !important; }
+.profileEmail li { float: left; padding-right: 5px; }
+.profileEmail li > a { font-size: .766em; }
+.profileFunction li > h4 label { padding-right: 18px !important; }
+.profileReceive li { display: inline-block; width: 100%; }
+.profileReceive li > input[type="checkbox"] { float: left; margin-top: 3px; }
+.profileTopics { padding: 14px !important; margin: 4px 0 20px !important; width: 77%; display: inline-block !important; background: #5890a7; -webkit-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.3); box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.3); }
+.profileTopics li { display: inline-block; width: 26%; padding-right: 25px !important; margin: 0; }
+.profileTopics li > input[type="checkbox"] { float: left; margin-top: 3px; }
+.profileTopics li > label { color: #fff; }
+.confirmProfile h4 { padding-bottom: 6px; }
+.confirmProfile ul li { list-style: disc; padding: 4px 0px; margin-left: 16px; }
+
+/* At the top of main content below hero/breadcrumbs, large figure to the right, prominent text to the left */
+.pageFeature { float: left; width: 100%; }
+h1 + .pageFeature { padding-top: 15px; }
+.pageFeature h1 { background: 0; padding: 0; }
+.pageFeature figure { float: right; width: 340px; position: relative; }
+.pageFeature figure img { max-width: 340px; }
+.pageFeature figure.resourceLaunch img { cursor: pointer; }
+.pageFeature figure iframe { width: 340px; height: 191px; margin-bottom: -5px; }
+.pageFeature figcaption { background-color: #218CBF; /*margin-top:44px;*/ }
+.pageFeature img + figcaption {margin-top:0}
+.pageFeature figcaption span { display: block; font-size: 1.333em; padding: 8px 10px; color: #fff; font-weight: bold; background-image: url(http://www.silverpop.com/img/bg_caption_webbing.png); }
+.pageFeature figcaption span strong { display: block; font-size: 0.766em; color: #fff; font-weight: normal; }
+.pageFeature figcaption span strong em { padding: 0 0 0 6px; margin: 0 0 0 8px; border-left: 1px solid #fff; }
+.pageFeature figure.staticImg { position: relative; }
+.pageFeature figure.staticImg figcaption { background: rgba(0, 0, 0, .5); color: #fff; position: absolute; bottom: 0; width: 320px; padding: 5px 10px; font-size: 15px; font-weight: bold; }
+.pageFeature figure.staticImg figcaption strong { display: block; font-weight: normal; font-size: 12px; }
+.pageFeature .copy { float: left; width: 320px; }
+.pageFeature .copy p { margin-top: 0; }
+.pageFeature .copy p, .pageFeature .copy li { font-size: 1.250em; font-family: 'Avenir LT W01 65 Medium'; padding: 0; }
+.pageFeature .copy > p:first-child { margin-top: 0; }
+.pageFeature .copy li { padding: 8px 0; /*font: normal 1.250em 'Avenir LT W01 35 Light';*/ }
+.pageFeature .copy li li { font-size: 1em; }
+.pageFeature h2 { margin: 0 0 10px 0; font-size: 2.667em; }
+
+.featureImagery { list-style: none; margin: 0; padding: 0; height: auto; overflow: hidden; }
+.featureImagery li { list-style: none; margin: 0; padding: 0; }
+.pageFeature .bx-pager { position: absolute; top: 161px; left: 0; z-index: 10; padding: 7px 0 7px 7px; background: rgba(0,0,0,.5); }
+.no-rgba .pageFeature .bx-pager { background: url(http://www.silverpop.com/img/fallbacks/bg_000000_60.png); }
+.pageFeature .bx-pager-item { float: left; margin-right: 7px; }
+.pageFeature .bx-pager-item a { text-indent: -9999em; display: block; height: 10px; width: 10px; background: #00B1E3; }
+.pageFeature .bx-pager-item a.active { background: #fff; }
+
+.subContent { clear: both; padding: 25px 35px 35px; overflow: hidden; background: url(http://www.silverpop.com/img/shelf_full.png) center top no-repeat; }
+.subContent h2 { margin-top: 0; }
+
+/* Normal stacked list, thumb to the left, text to the right */
+.pageList { margin: 0; padding: 0 0 20px; list-style: none; float: left; width: 100%; }
+.pageList > li { clear: both; float: left; width: 100%; border-bottom: 1px solid #eee; padding: 25px 0; position: relative; }
+.pageList > li:first-child { padding-top: 0; }
+.pageList figure { float: left; width: 210px; position: relative; padding-bottom: 8px; }
+.pageList figure img { max-width: 210px; }
+.pageList figcaption { padding: 5px; color: #fff; font-weight: bold; background-color: #218CBF; background-image: url(http://www.silverpop.com/img/bg_caption_webbing.png); }
+.pageList .btnPlay { height: 89%; }
+.pageList .copy { margin-left: 230px; }
+.pageList .copy h3 img { display: block; margin-bottom: 10px; }
+.pageList .blogPosts { margin: 0; padding: 5px 0 10px; list-style: none; }
+.pageList .blogPosts span { margin-left: 5px; padding-left: 8px; border-left: 1px solid #999; font-style: italic; color: #999; }
+.pageList .blogPosts a { display: block; font-weight: bold; color: #00B1E3; }
+
+.pageList .bx-pager { position: absolute; top: 91px; left: 0; z-index: 10; padding: 7px 0 7px 7px; background: rgba(0,0,0,.5); }
+.no-rgba .pageList .bx-pager { background: url(http://www.silverpop.com/img/fallbacks/bg_000000_60.png); }
+.pageList .bx-pager-item { float: left; margin-right: 7px; }
+.pageList .bx-pager-item a { text-indent: -9999em; display: block; height: 5px; width: 5px; background: #00B1E3; }
+.pageList .bx-pager-item a.active { background: #fff; }
+
+/* Normal grid list, thumb to the left, text to the right, 2 cols */
+.grid2Col > li { float: none; clear: none; display: inline-block; width: 49.5%; vertical-align: top; padding: 0 0 35px; border: 0; }
+.grid2Col > li .copy { padding-right: 20px; }
+.grid2Col > li .copyOnly { padding-right: 40px; }
+
+/* Normal grid list, thumb to the left, text to the right, 3 cols */
+.grid3Col > li { float: none; clear: none; display: inline-block; width: 32.5%; vertical-align: top; padding: 0 0 25px; border: 0; }
+.grid3Col > li .copy { padding-right: 20px; margin: 0; }
+.grid3Col > li .copyOnly { padding-right: 40px; margin: 0; }
+
+/* Stacked list, smaller thumb to the right, text to the left (ex: product features) */
+.thumbRight > li, .thumbRight > li:first-child { padding: 0; border: 0; }
+.thumbRight figure { float: right; width: 150px; padding-bottom: 25px; /*-webkit-box-shadow: 0 0 6px #ccc; -moz-box-shadow: 0 0 6px #ccc; box-shadow: 0 0 6px #ccc;*/ }
+.thumbRight .copy { margin-left: 0; margin-right: 180px; border-top: 1px solid #eee; padding: 20px 0; }
+
+/* Sort by select for stacked list */
+.pageSelect { float: right; margin: 7px 0 0 0; width: auto; /*position: absolute;top: 75px;right: 30px;*/ }
+.pageSelect label { float: left; width: auto; padding: 4px 10px; }
+.pageSelect .selector { width: 160px !important; float: left; }
+
+/* Whitepaper/Webinar stacked thumb lists */
+.resourceList { padding-top: 20px; list-style: none; }
+.resourceList figure, .resourceList img { width: 150px; }
+.resourceList .copy { margin-left: 170px; }
+.resourceList .copy > span:first-child, .resourceList .copy time { }
+.resourceList .copy time { color: #00a3d2; font: normal 1.083em 'Avenir LT W01 65 Medium'; text-transform: uppercase; }
+.resourceList .btnPillWrapper { float: left; clear: left; margin: 0 3px; padding: 10px 0 15px; text-align: center; width: 144px; }
+.resourceList .btnPillWrapper .btnPill { width: 120px; padding: 0; }
+.resourceList .btnDetail { margin: 0 30px 0 0; }
+
+
+/* Client Case Study list */
+.clientLogoList { float: left; width: 100%; }
+.clientLogoList li { float: none; width: 690px; height: 140px; overflow: hidden; padding: 0; }
+.clientLogoList figure { width: 150px; }
+.clientLogoList figure img { display: block; margin: 20px auto 0; max-width: 150px; max-height: 100px; }
+.clientLogoList .copy { margin-left: 170px; }
+.clientLogoList .copy h3 { margin: 20px 0 5px; }
+.clientLogoList .copy p { margin: 0; }
+
+
+/*	Breadcrumbs
+----------------------------*/
+.breadcrumbs { margin: 0 auto; padding: 8px 185px 8px 235px; width: 540px; list-style: none; background: #F3F3F3 url(http://www.silverpop.com/img/bg_breadcrumbs.png) 100% 100% no-repeat; }
+.breadcrumbs li { position: relative; display: inline; color: #b5b5b5; }
+.breadcrumbs li:before { content: "\\"; padding: 7px; }
+.breadcrumbs a { color: #b5b5b5; margin: 0; }
+.breadcrumbs a:hover { text-decoration: underline; }
+.breadcrumbs li:first-child:before { display: none; }
+.breadcrumbs li:first-child a { margin-left: 0; }
+
+
+/*	Page Toolbar
+----------------------------*/
+.pageTools { position: absolute; top: -28px; right: 0; margin: 0; padding: 0; list-style: none; }
+.pageTools li { float: right; margin-right: 25px; padding: 0; }
+.pageTools li > a { display: block; height: 22px; width: 24px; font: normal 1em/22px 'Avenir LT W01 85 Heavy'; text-transform: uppercase; color: #bfbebf; background: url(http://www.silverpop.com/img/icons_pagetools.png) no-repeat; }
+.pageTools li > a:hover { color: #00b1e3; }
+.pageTools li > a > span { background: 0; position: absolute; height: 22px; }
+.pageTools li:first-child a { background-position: 0 0; }
+.pageTools li:first-child a:hover { background-position: 0 -90px; }
+.pageTools li:first-child + li a { background-position: 0 -30px; }
+.pageTools li:first-child + li a:hover { background-position: 0 -120px; }
+.pageTools li:first-child + li + li a { background-position: 100% -60px; padding-right: 45px; }
+.pageTools li:first-child + li + li a:hover { background-position: 100% -150px; }
+
+
+/*	Tag Lists
+----------------------------*/
+.tags { clear: both; float: left; width: 100%; padding-top: 8px; border-top: 1px dotted #ccc; }
+.tags h5 { float: left; text-transform: none; margin: 1px 5px 0 0; }
+.tags ul { margin: 0; padding: 0; list-style: none; }
+.tags li { padding: 0; float: left; }
+.tags li:before { content: ', '; float: left; }
+.tags li a { margin-left: 4px; }
+.tags li:first-child:before { content: ''; }
+.tags li:first-child a { margin-left: 0; }
+
+
+/*	Ratings
+----------------------------*/
+.rating { display: inline-block; }
+.rating ol { display: inline-block; vertical-align: middle; margin: 0; padding: 0; list-style: none; }
+.rating li { float: left; height: 10px; width: 12px; padding: 0; background: url(http://www.silverpop.com/img/stars.png); overflow: hidden; text-indent: -9999em; cursor: pointer; }
+.rating li.full { background-position: -40px 0; }
+.rating li.half { background-position: -60px 0; }
+.rating li.rated { background-position: -20px 0; }
+.rating li:hover { background-position: -20px 0; }
+.numComments { display: inline-block; vertical-align: middle; font-size: 10px; font-weight: bold; margin-left: 4px; padding: 0 3px; border: 1px solid #ccc; color: #666; position: relative; top: 1px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+
+
+/*	Pagination
+----------------------------*/
+.pagination, PagingContainer { padding: 4px 0; }
+.pagination span, .PagingContainer a.SelectedPagingItem, .PagingContainer a.SelectedPagingItem:hover { background: #00b6ef; border: 1px solid #0097c6; color: #fff; display: inline-block; width: 24px; padding: 3px 1px 3px 0; margin: 0 3px 0 0; -webkit-border-radius: 2px; border-radius: 2px; text-align: center; }
+.pagination a, .PagingContainer a { cursor: pointer; background: #f5f5f5; border: 1px solid #ebebeb; display: inline-block; width: 24px; padding: 3px 1px 3px 0; margin: 0 3px 5px 0; -webkit-border-radius: 2px; border-radius: 2px; text-align: center; }
+.pagination a:hover, .pagination a:focus, .pagination a.active, .PagingContainer a:hover { background: #00b6ef; border: 1px solid #0097c6; color: #fff; }
+.pagination em { display: inline-block; color: #999; padding: 0 10px; }
+.paginationLarge { padding: 0; }
+.paginationLarge span { font-size: 18px; padding: 0 12px 0 0; }
+.paginationLarge a { font-size: 15px; padding: 0 12px 0 0; color: #999; }
+.paginationLarge a:hover, .pagination a:focus { color: #00b1e3; }
+.paginationLarge a.active { color: #000; font-weight: bold; }
+
+
+/*	Secondary Nav
+----------------------------*/
+.secondaryNavigation { float: left; width: 235px; min-height: 170px; background: url(http://www.silverpop.com/img/bg_secondary_nav.png) repeat-y; position: relative; margin-top: -34px; }
+.secondaryNavigation li { position: relative; padding: 0; }
+.secondaryNavigation a { color: #617981; display: block; }
+.secondaryNavigation a:hover { color: #00b1e3; }
+.secondaryNavigation > ul { width: 171px; }
+.secondaryNavigation > ul > li { border-top: 1px dotted #999; padding: 0; }
+.secondaryNavigation > ul > li:first-child { border-top: 0; padding-top: 0; }
+.secondaryNavigation > ul > li.children:before { content: ''; position: absolute; top: 12px; left: 15px; width: 0; height: 0; border-top: 5px inset transparent; border-bottom: 5px inset transparent; border-left: 7px solid #c0c0c0; }
+.secondaryNavigation > ul > li.open:before { content: ''; position: absolute; top: 13px; left: 13px; width: 0; height: 0; border-left: 5px inset transparent; border-right: 5px inset transparent; border-top: 7px solid #333; }
+.secondaryNavigation > ul > li > a { padding: 6px 5px 6px 30px; font-family: 'Avenir LT W01 85 Heavy'; font-size: 14px; }
+.secondaryNavigation > ul > li.on > a, .secondaryNavigation > ul > li.open > a { color: #333; background: url(http://www.silverpop.com/img/bg_secondary_nav_on.png) repeat-y; }
+.secondaryNavigation > ul > li.open > a + ul > li:first-child { border-top: 1px dotted #999; padding-top: 10px; }
+.secondaryNavigation > ul > li > ul { overflow: hidden; background: url(http://www.silverpop.com/img/bg_secondarynav_subs.png) repeat-y; }
+.secondaryNavigation > ul > li > ul li.children:before { content: ''; position: absolute; top: 10px; left: 15px; width: 0; height: 0; border-top: 4px inset transparent; border-bottom: 4px inset transparent; border-left: 5px inset #bfbebf; }
+.secondaryNavigation > ul > li > ul li.open:before { content: ''; position: absolute; top: 12px; left: 15px; width: 0; height: 0; border-left: 4px inset transparent; border-right: 4px inset transparent; border-top: 5px inset #333; }
+.secondaryNavigation > ul > li > ul a { font-family: 'Avenir LT W01 65 Medium'; font-size: 13px; padding: 0 5px 0 30px; margin-bottom: 10px; }
+.secondaryNavigation > ul > li > ul li.on a { color: #00b1e3; }
+.secondaryNavigation > ul ul ul { padding: 0 0 0 10px; }
+
+
+/*	Search 
+----------------------------*/
+.searchBox { height: 27px; padding: 5px 8px 0; position: relative; background: #3e3e3e; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNlM2UzZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMzA0MDQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); background: -moz-linear-gradient(top, #3e3e3e 0%, #030404 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3e3e3e), color-stop(100%,#030404)); background: -webkit-linear-gradient(top, #3e3e3e 0%,#030404 100%); background: -o-linear-gradient(top, #3e3e3e 0%,#030404 100%); background: -ms-linear-gradient(top, #3e3e3e 0%,#030404 100%); background: linear-gradient(to bottom, #3e3e3e 0%,#030404 100%); }
+.searchBox input[type="text"].round { width: 138px; height: 22px; line-height: 22px; padding: 0 32px 0 8px; border: 0; -webkit-box-shadow: inset 1px 2px 3px #bbb; -moz-box-shadow: inset 1px 2px 3px #bbb; box-shadow: inset 1px 2px 3px #bbb; }
+.searchBox input[type="submit"] { position: absolute; right: 48px; top: 8px; border: 0; display: block; width: 14px; height: 15px; font-size: 0; text-align: -9999em; padding: 0; margin: 0; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; background: #f1f1f1 url(http://www.silverpop.com/img/btn_search.png) 0 0 no-repeat; }
+.searchBox input[type="submit"]:hover, .searchBox input[type="submit"]:focus { background: #f1f1f1 url(http://www.silverpop.com/img/btn_search.png) 0 -15px no-repeat; }
+.searchBox a { float: right; background: #666; color: #fff; font: normal 1.5em/21px 'Avenir LT W01 85 Heavy'; padding: 1px 8px 0 7px; -webkit-border-radius: 23px; -moz-border-radius: 23px; border-radius: 23px; }
+.searchBox a:hover { background: #00b1e3; }
+
+
+/*	Sidebar 
+----------------------------*/
+.sidebar { position: fixed; width: 225px; min-height: 600px; top: 0; right: 50%; z-index: 4; margin-right: -720px; }
+.sidebar.lowHeight { position: absolute; }
+.sidebar > h4 { border: solid #fff; border-width: 1px 0; margin-top: -1px; position: relative; z-index: 1; }
+.sidebar > h4 a, .sidebar > h4 span { border: solid #d3d3d3; border-width: 1px 0; display: block; background: #d9dada; padding: 10px 15px; font: bold 0.750em Arial; text-transform: uppercase; color: #333; }
+.sidebar > div { position: relative; z-index: 0; margin-top: -1px; }
+.sidebar .sidebarHandle { position: absolute; top: 100px; left: -30px; width: 30px; height: 50px; text-align: center; display: none; cursor: pointer; -webkit-box-shadow: -1px 1px 2px #333, 0 0 50px rgba(0,0,0,.6); -moz-box-shadow: -1px 1px 2px #333, 0 0 50px rgba(0,0,0,.6); box-shadow: -1px 1px 2px #333, 0 0 50px rgba(0,0,0,.6); -webkit-transition: all ease 1s; -moz-transition: all ease 1s; -ms-transition: all ease 1s; -o-transition: all ease 1s; transition: all ease 1s; -webkit-border-top-left-radius: 10px; -webkit-border-bottom-left-radius: 10px; -moz-border-radius-topleft: 10px; -moz-border-radius-bottomleft: 10px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; background: #00aee0; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYWVlMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDgwYWIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); background: -moz-linear-gradient(top, #00aee0 0%, #0080ab 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00aee0), color-stop(100%, #0080ab)); background: -webkit-linear-gradient(top, #00aee0 0%, #0080ab 100%); background: -o-linear-gradient(top, #00aee0 0%, #0080ab 100%); background: -ms-linear-gradient(top, #00aee0 0%, #0080ab 100%); background: linear-gradient(to bottom, #00aee0 0%, #0080ab 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aee0', endColorstr='#0080ab', GradientType=0 ); }
+.sidebar .sidebarHandle:before { font-family: FontAwesome; content: "\f060"; color: #fff; font-size: 24px; line-height: normal; position: relative; top: 12px; text-shadow: 1px 1px 1px rgba(0,0,0,.3), -1px -1px -1px rgba(255,255,255,.3); }
+.sidebar .sidebarHandleActive { display: block; }
+.sidebar .sidebarHandleOpen { -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; -webkit-transition: all ease 1s; -moz-transition: all ease 1s; -ms-transition: all ease 1s; -o-transition: all ease 1s; transition: all ease 1s; }
+.sidebar .sidebarHandleOpen:before { content: "\f061"; }
+.recommended { margin: 0; padding: 0; list-style: none; }
+.recommended li { padding: 0; }
+.recommended li a { display: block; overflow: hidden; line-height: 1.4; }
+.recommended .copy { padding-bottom: 5px; }
+.recommended .copy + span { font-size: 0.917em; display: block; font-weight: bold; float: left; }
+.recommended figure { float: right; width: 60px; margin-left: 10px; }
+.recommended figure img { width: 60px; }
+.recommended h4, .recommended h5 { display: inline; font: normal 0.917em Arial; text-transform: none; }
+.recommended h5 { font-weight: bold; }
+.recommended h5:after { content: ': '; }
+.recommended p { margin: 0; }
+.personalized { padding: 10px; border: 1px solid rgba(255,255,255,.3); -webkit-box-shadow: 0 0 5px rgba(0,0,0,.3); -moz-box-shadow: 0 0 5px rgba(0,0,0,.3); box-shadow: 0 0 5px rgba(0,0,0,.3); background: #ececec; background: rgba(236, 236, 236, .9); }
+.personalized h2 { margin-top: 0; font: normal 20px 'Avenir LT W01 35 Light'; color: #333; }
+.personalized h2 strong { font-family: 'Avenir LT W01 85 Heavy'; font-weight: normal; color: #06c; }
+.personalized input[type=text] { width: 94%; }
+.personalized input[type=text].inline { color: #06c; width: 20px; display: inline; text-overflow: ellipsis; }
+.personalized input[type=text].inline + strong { }
+.personalized .subLink { display: inline-block; width: 49%; font-size: 0.917em; margin-top: 10px; white-space: nowrap; }
+.personalized div.selector { width: 100%; height: auto; background: 0; margin: 0 0 -3px; padding: 0; border: 0; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; }
+.personalized div.selector > span { color: #333; white-space: nowrap; font: normal 20px 'Avenir LT W01 65 Medium'; }
+.eventHighlight { position: relative; padding: 10px; border: 1px solid rgba(255,255,255,.5); -webkit-box-shadow: 0 0 5px rgba(0,0,0,.3); -moz-box-shadow: 0 0 5px rgba(0,0,0,.3); box-shadow: 0 0 5px rgba(0,0,0,.3); background: #ececec; background: rgba(236, 236, 236, .9); }
+.eventHighlight time { position: absolute; z-index: 0; top: 10px; left: 15px; color: #333; font: normal 1em/1.1 'Avenir LT W01 85 Heavy'; text-transform: uppercase; display: block; padding-top: 23px; height: 55px; width: 79px; text-align: center; background: url(http://www.silverpop.com/img/sidebar_event_date.png) no-repeat; }
+.eventHighlight time span + span { display: block; font-size: 1.750em; letter-spacing: -1px; }
+.eventHighlight img { /*position: relative; z-index: 1;*/ float: right; margin: 5px 5px 0 0; width: 50%; }
+.eventHighlight .btnMore { position: relative; z-index: 0; top: -4px; display: block; clear: both; padding: 6px 8px; margin-bottom: 10px; -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.15); -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.15); box-shadow: 1px 2px 3px rgba(0,0,0,.15); border: 1px solid #98a7af; background: #feffff; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZlZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwJSIgc3RvcC1jb2xvcj0iI2ZjZmNmYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjM4JSIgc3RvcC1jb2xvcj0iI2ViZWJlYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjU1JSIgc3RvcC1jb2xvcj0iI2U0ZTRlNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjgxJSIgc3RvcC1jb2xvcj0iI2U0ZTRlNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijk4JSIgc3RvcC1jb2xvcj0iI2VjZWNlYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlOGU4ZTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); background: -moz-linear-gradient(top, #feffff 0%, #fcfcfc 10%, #ebebeb 38%, #e4e4e4 55%, #e4e4e4 81%, #ececec 98%, #e8e8e8 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#feffff), color-stop(10%,#fcfcfc), color-stop(38%,#ebebeb), color-stop(55%,#e4e4e4), color-stop(81%,#e4e4e4), color-stop(98%,#ececec), color-stop(100%,#e8e8e8)); background: -webkit-linear-gradient(top, #feffff 0%,#fcfcfc 10%,#ebebeb 38%,#e4e4e4 55%,#e4e4e4 81%,#ececec 98%,#e8e8e8 100%); background: -o-linear-gradient(top, #feffff 0%,#fcfcfc 10%,#ebebeb 38%,#e4e4e4 55%,#e4e4e4 81%,#ececec 98%,#e8e8e8 100%); background: -ms-linear-gradient(top, #feffff 0%,#fcfcfc 10%,#ebebeb 38%,#e4e4e4 55%,#e4e4e4 81%,#ececec 98%,#e8e8e8 100%); background: linear-gradient(to bottom, #feffff 0%,#fcfcfc 10%,#ebebeb 38%,#e4e4e4 55%,#e4e4e4 81%,#ececec 98%,#e8e8e8 100%); }
+.eventHighlight .btnMore:before { bottom: 5px; right: 5px; color: #00b7f1; text-shadow: -1px -1px 1px #0295c3; font-size: 75px; overflow: hidden; }
+.eventHighlight .btnMore:hover:before { color: #fff; text-shadow: -1px -1px 1px #ccc; }
+.eventHighlight .btnMore h5 { text-transform: none; font-size: 0.917em; }
+.madeForYou { position: relative; padding-left: 5px; }
+.madeForYou:before, .madeForYou > div:before { position: absolute; height: auto; width: auto; overflow: hidden; font-family: FontAwesome; font-size: 32px; overflow: hidden; text-shadow: -1px 0px 1px #fff; }
+.madeForYou:before { color: #92a0a8; content: "\f0dd"; top: -25px; left: 1px; }
+.madeForYou > div:before { color: #b6bcbf; content: "\f0d8"; bottom: -18px; left: -5px; z-index: -1; }
+.madeForYou .recommended { margin-left: 5px; border-left: 2px solid #2ed1fa; border-right: 1px solid #ddd; height: auto !important; }
+.madeForYou .recommended a { padding: 10px 15px; border-top: 1px solid #b3b3b3; border-bottom: 1px solid #fff; position: relative; background: #fff; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMWYxZjEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); background: -moz-linear-gradient(top, #fff 0%, #f1f1f1 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#f1f1f1)); background: -webkit-linear-gradient(top, #fff 0%,#f1f1f1 100%); background: -o-linear-gradient(top, #fff 0%,#f1f1f1 100%); background: -ms-linear-gradient(top, #fff 0%,#f1f1f1 100%); background: linear-gradient(to bottom, #fff 0%,#f1f1f1 100%); }
+.madeForYou .recommended a:hover { background: #fff; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiMmUzZjIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); background: -moz-linear-gradient(top, #fff 0%, #b2e3f2 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#b2e3f2)); background: -webkit-linear-gradient(top, #fff 0%,#b2e3f2 100%); background: -o-linear-gradient(top, #fff 0%,#b2e3f2 100%); background: -ms-linear-gradient(top, #fff 0%,#b2e3f2 100%); background: linear-gradient(to bottom, #fff 0%,#b2e3f2 100%); }
+.madeForYou .recommended a:hover:before { content: ''; width: 0; height: 0; border-top: 7px outset transparent; border-bottom: 7px outset transparent; border-left: 5px solid #2ed1fa; position: absolute; left: 0; top: 50%; margin-top: -6px; }
+.madeForYou .hoverscroll { position: relative; }
+.madeForYou .hoverscroll .fixed-listcontainer { overflow: hidden; height: 220px !important; }
+.madeForYou .bx-viewport { overflow: hidden; }
+.madeForYou .fixed-arrow, .madeForYou .bx-controls-direction a { text-indent: -9999em; position: absolute; cursor: pointer; z-index: 1; height: 31px; width: 215px; right: 0; background: url(http://www.silverpop.com/img/sidebar_scroller_arrows.png) no-repeat; }
+.madeForYou .fixed-arrow.top, .madeForYou .bx-controls-direction .bx-prev { top: 0; background-position: 0 0; }
+.madeForYou .fixed-arrow.top:hover, .madeForYou .bx-controls-direction .bx-prev:hover { top: 0; background-position: 0 -100px; }
+.madeForYou .fixed-arrow.bottom, .madeForYou .bx-controls-direction .bx-next { bottom: 0; background-position: 0 -70px; }
+.madeForYou .fixed-arrow.bottom:hover, .madeForYou .bx-controls-direction .bx-next:hover { bottom: 0; background-position: 0 -169px; }
+.sidebarFooter { position: relative; padding: 10px 10px 12px; border: 1px solid rgba(255,255,255,.5); -webkit-box-shadow: 0 0 5px rgba(0,0,0,.3); -moz-box-shadow: 0 0 5px rgba(0,0,0,.3); box-shadow: 0 0 5px rgba(0,0,0,.3); background: #ececec; background: rgba(236, 236, 236, .9); }
+.sidebarFooter > div:before { content: ''; position: relative; z-index: 1; display: block; height: 36px; background: #d9dada; border: solid #fff; border-width: 1px 0; margin: -11px -11px 10px; }
+.sidebarFooter p { margin-top: 0; }
+.sidebarFooter ul { margin: -10px 0 0; padding: 0 0 5px; list-style: none; background: url(http://www.silverpop.com/img/line_dotted_darkgray.png) 0 62px repeat-x; overflow: hidden; }
+.sidebarFooter li { float: left; width: 95px; padding: 15px 0 0; }
+.sidebarFooter li a { color: #333; font-size: 10px; }
+.sidebarFooter .btnGray { display: block; padding-left: 0; padding-right: 0; margin: 0; text-align: left; }
+.sidebarFooter .btnGray span { display: block; background: url(http://www.silverpop.com/img/icon_sidebar_btns.png) no-repeat; }
+.sidebarFooter .btnPillGray { display: block; padding-left: 0; padding-right: 0; text-align: center; }
+.sidebarFooter li:first-child, .sidebarFooter li:first-child + li { padding-bottom: 15px; }
+.sidebarFooter li:first-child + li, .sidebarFooter li:first-child + li + li + li { float: right; }
+.sidebarFooter li:first-child a span { background-position: 5px center; text-indent: 32px; }
+.sidebarFooter li:first-child + li a span { background-position: -275px center; text-indent: 30px; }
+.panelDownloadLink { overflow: auto; }
+.sidebarLoading { display: block; margin: 5px 20px; padding: 5px 0; text-align: center; font-size: 1.1em; background: #fff; border: #d9dbda solid 1px; }
+.sidebarLoading img { position: relative; top: -2px; }
+/*
+.sidebarNameSubmit {cursor:pointer; display:block; text-align:right; margin:1px 4px; color:#00b1e3; font-size:11px;}
+*/
+.sidebarNameSubmit { margin-top: 15px; }
+
+
+/*	Footer
+----------------------------*/
+.siteFooter { clear: both; overflow: hidden; background: #7F7F7F url(http://www.silverpop.com/Global/Backgrounds/bg_footer.png) center top no-repeat; -webkit-box-shadow: 0 -20px 80px #fff; -moz-box-shadow: 0 -20px 80px #fff; box-shadow: 0 -20px 80px #fff; }
+.siteFooterWrap { margin: 0 auto; width: 960px; padding: 20px 0; color: #e2e3e4; }
+.aboutSilverpop { float: left; width: 48%; padding-right: 2%; }
+.aboutSilverpop p { margin: 0; color: #ddd; font: normal 1.167em/1.4 'Avenir LT W01 65 Medium'; letter-spacing: 1px; }
+.footerNav { float: right; width: 48%; padding-left: 2%; }
+.footerNav ul { margin: 0; padding: 0; list-style: none; }
+.footerNav li { line-height: 1.1; padding: 0; }
+.footerNav a:hover { text-decoration: underline; }
+.footerNav > ul { margin-top: 18px; border-top: 1px dotted #aaa; }
+.footerNav > ul > li { float: left; padding-left: 15px; max-width: 110px; font-size: 0.917em; font-family: 'Avenir LT W01 85 Heavy'; color: #fff; display: block; margin: -18px 0 12px; letter-spacing: 1px; }
+.footerNav > ul > li:first-child { padding-left: 0; }
+.footerNav > ul > li > ul { margin-top: 15px; }
+.footerNav > ul > li > ul a { font-size: 0.833em; font-family: arial; color: #e2e3e4; display: block; margin: 6px 0 0; }
+.footerContact { float: right; max-width: 145px; margin-top: 10px; padding: 5px 10px; background: #218cbf; color: #fff; font-family: 'Avenir LT W01 35 Light'; }
+.footerContact * { display: inline; }
+.footerContact p { margin: 0; line-height: 1.4; }
+.footerContact span { font-family: 'Avenir LT W01 85 Heavy'; }
+.footerContact span.phone span span a { display: none; }
+.footerContact a { margin-left: 8px; position: relative; top: 1px; display: inline-block; height: 15px; width: 25px; background: url(http://www.silverpop.com/img/icon_footer_email.png); text-indent: -9999em; }
+.copyright { clear: both; padding-top: 8px; font-size: 0.833em; }
+.copyright p { margin: 0; }
+
+
+/*	Comments
+----------------------------*/
+.commentArea { clear: both; }
+.commentArea > h3 { display: inline-block; vertical-align: middle; }
+.leaveComment { margin: 10px 0; padding: 5px 15px 15px; list-style: none; overflow: hidden; background: #f5f5f5; }
+.leaveComment input[type=text], .leaveComment textarea { margin-bottom: 10px; }
+.leaveComment > li { position: relative; }
+.leaveComment > li:first-child, .leaveComment > li:first-child + li { float: left; width: 48%; margin-left: 4%; }
+.leaveComment > li:first-child { margin-left: 0; }
+.leaveComment > li:first-child input[type=text], .leaveComment > li:first-child + li input[type=text] { width: 97%; }
+.leaveComment > li.comments { clear: both; }
+.leaveComment > li span[id*="rfv"] { position: absolute; top: 1px; left: -10px; font-size: 20px; font-weight: bold; }
+.leaveComment input[type=submit] { float: right; margin: 0; }
+.postedComments { margin-top: 30px; }
+.postedComments ol { clear: both; margin: 0; padding: 0; list-style: none; }
+.postedComments li { clear: both; border-top: 1px solid #ddd; padding: 10px 0 5px; }
+.postedComments li li { border: 0; }
+.postedComment > li:first-child, .leaveComment > li:first-child + li .postedComments ol > li:first-child { border-top: 0; }
+.postedComments ol ol { margin-left: 20px; }
+.postedComments ol ol li { padding-bottom: 0; }
+.postedComments h3 { margin: 0; }
+.postedComments h3 + p { margin-top: 0; }
+.postedComments p { width: 70%; margin: 0; padding: 12px 0 8px 0; }
+.postedComments time { float: right; color: #999; }
+.commentActions { margin-top: -5px; padding: 10px 0; }
+.commentActions a { margin-left: 5px; padding-left: 8px; border-left: 1px solid #ccc; }
+.commentActions a:first-child { margin-left: 0; padding-left: 0; border: 0; }
+.replyComment { margin: 0; padding: 5px 15px 15px; background: #f9f9f9; border: 1px solid #f5f5f5; -webkit-border-radius: 2px; border-radius: 2px; display: none; }
+.replyComment ol { clear: both; margin: 0 !important; padding: 0; list-style: none; }
+.replyComment ol li { clear: none; }
+.replyComment ol li:last-child { display: block; text-align: right; }
+.replyComment li:first-child + li { margin-left: 5%; }
+.replyComment li:first-child, .replyComment li:first-child + li { float: left; width: 47.1%; }
+.replyComment > li:first-child input[type=text], .replyComment > li:first-child + li input[type=text] { width: 97%; }
+.replyComment input[type=text], .replyComment textarea { margin-bottom: 10px; }
+.replyComment input[type=submit] { margin: 0 -1px 0 0; }
+
+
+/*	Hero Rotator
+---------------------------- */
+.heroRotator { position: relative; z-index: 1; height: 530px; min-width: 960px; margin: -140px 0 0; }
+.heroRotator .bx-wrapper { position: absolute; top: 0; left: 0; height: 530px; width: 1600px; }
+.heroSliders { position: absolute; top: 0; left: 50%; height: 530px; margin-left: -800px; width: 1600px; height: 530px; }
+.heroSliders ul { margin: 0; padding: 0; list-style: none; height: 530px; overflow: hidden; position: absolute; }
+.heroSliders li { padding: 0; overflow: hidden; height: 530px; width: 1600px; position: relative; }
+.heroSliders .msgBox { position: absolute; top: 150px; left: 320px; float: left; padding: 30px 40px; max-width: 880px; background: #fff; background: rgba(255,255,255,.90); -webkit-box-shadow: 0 0 5px rgba(0,0,0,.3); -moz-box-shadow: 0 0 5px rgba(0,0,0,.3); box-shadow: 0 0 5px rgba(0,0,0,.3); }
+.no-rgba .heroSliders .msgBox { background: url(http://www.silverpop.com/img/fallbacks/bg_ffffff_90.png); }
+.heroSliders .msgBox h2 { position: relative; font: normal 3.250em/1 'Avenir LT W01 35 Light'; margin: 0 0 10px; color: #056693; }
+.heroSliders .msgBox p { position: relative; font: normal 2em/1.2 'Avenir LT W01 35 Light'; margin: 0; letter-spacing: -1px; color: #056693; }
+.heroSliders .msgBox img { float: left; margin-right: 15px; }
+.heroSliders .msgBox .btnPill { position: absolute; bottom: -14px; right: 30px; text-transform: uppercase; }
+.heroSliders .bx-pager { margin: 0 auto; position: absolute; z-index: 20; bottom: 0; left: 50%; margin-left: -480px; margin-bottom: -8px; float: left; height: 14px; background: #fff; border: 1px solid #e3e4e6; -webkit-border-radius: 14px; -moz-border-radius: 14px; border-radius: 14px; -webkit-box-shadow: 1px 2px 4px rgba(0,0,0,.1); -moz-box-shadow: 1px 2px 4px rgba(0,0,0,.1); box-shadow: 1px 2px 4px rgba(0,0,0,.1); display: inline; padding: 0; }
+.heroSliders .bx-pager > div { float: left; height: 26px; padding: 0 10px; margin-top: -6px; }
+.heroSliders .bx-pager > div a { display: block; height: 26px; width: 50px; text-indent: -9999em; background: url(http://www.silverpop.com/img/bg_home_rotator_dots.png) 50% 0 no-repeat; }
+.heroSliders .bx-pager > div > a.active { background-position: 50% -30px; }
+.ribbonParalax { position: absolute; top: 0; left: 0; height: 530px; width: 1600px; overflow: hidden; }
+.ribbonParalax img { position: absolute; left: 0; top: 0; display: none; }
+
+
+/*	Homepage
+----------------------------*/
+.more { position: relative; display: inline-block; text-transform: uppercase; color: #fff; font: normal 11px/22px 'Avenir LT W01 85 Heavy'; letter-spacing: 1px; padding-right: 18px; }
+.more:before { content: "\f0d8"; position: absolute; bottom: 3px; right: 3px; height: 14px; width: 16px; overflow: hidden; color: #fff; font-family: FontAwesome; font-size: 75px; overflow: hidden; text-shadow: -1px -1px 1px #ccc; }
+.more:hover:before { color: #ccc; text-shadow: -1px -1px 1px #aaa; }
+.homeContent { float: left; width: 100%; padding-bottom: 70px; }
+.homeContent ul { margin: 0; padding: 0; list-style: none; }
+.homeContent > h1, .homeContent > h2 { clear: both; margin: 0; padding: 25px 0 15px; text-align: center; }
+.homeContent > h2 { padding: 20px 0; font-size: 2.167em; }
+.homeProducts li { float: left; width: 33.3%; padding: 0; }
+.homeProducts li > div { display: block; position: relative; height: 270px; width: 255px; padding: 45px 30px 0; background-repeat: no-repeat; background-position: center top; color: #fff; overflow: hidden; }
+.homeProducts li:first-child > div { margin-left: -6px; }
+.homeProducts li:first-child + li > div { margin: 0 auto; }
+.homeProducts li:first-child + li + li > div { float: right; margin-right: -6px; }
+.homeProducts h3 { margin: 0 0 10px; padding: 0 0 10px; font: normal 1.833em/1.2 'Avenir LT W01 35 Light'; border-bottom: 1px dotted #fff; color: #fff; }
+.homeProducts h2 { margin: 0; padding: 0 0 5px; font: normal 2.500em/1.2 'Avenir LT W01 85 Heavy'; color: #fff; }
+.homeProducts p { margin: 0; font: normal 1.250em/1.2 'Avenir LT W01 65 Medium'; }
+.homeProducts p a { color: #fff; }
+.homeProducts .more { color: #fff; position: absolute; bottom: 20px; right: 20px; }
+.homeSolutions { clear: both; width: 914px; height: 170px; padding: 15px 30px 0 30px; margin-left: -8px; background: url(http://www.silverpop.com/Global/Backgrounds/bg_home_solutionsbox.png) bottom no-repeat; }
+.homeSolutions > ul { margin: 30px 0 20px; }
+.homeSolutions > ul > li { opacity: .4; display: inline-block; vertical-align: middle; padding: 0; }
+.homeSolutions > ul > li.ui-tabs-active { opacity: 1; }
+.homeSolutions > ul > li a { display: block; font: normal 1.333em/1 'Avenir LT W01 85 Heavy'; text-transform: uppercase; color: #333; padding-right: 50px; }
+.homeSolutions > ul > li img { margin-right: 10px; }
+.homeSolutions > div { clear: both; width: 725px; position: relative; padding-top: 8px; line-height: 1.2; }
+.homeSolutions h3, .homeSolutions p { margin: 0; display: inline; color: #fff; font: normal 1.333em/1.2 'Avenir LT W01 35 Light'; }
+.homeSolutions h3 { text-transform: uppercase; font-family: 'Avenir LT W01 85 Heavy'; padding-right: 5px; }
+.homeSolutions .more { color: #fff; position: absolute; bottom: -8px; right: -8px; }
+.homeCallouts { float: left; width: 632px; }
+.homeCallouts li { float: left; width: 316px; height: 308px; margin-top: 22px; }
+.homeCallouts li:first-child, .homeCallouts li:first-child + li { margin-top: 0; }
+.homeCallouts li:first-child > a, .homeCallouts li:first-child + li + li > a, .homeCallouts li:first-child > div, .homeCallouts li:first-child + li + li > div { margin-left: -6px; }
+.homeCallouts li:first-child + li > a, .homeCallouts li:first-child + li + li + li > a, .homeCallouts li:first-child + li > div, .homeCallouts li:first-child + li + li + li > div { float: right; margin-right: -6px; }
+.homeCallouts li > a { display: block; }
+.homeEvents { position: relative; float: right; width: 300px; height: 640px; background: #fff; }
+.homeEvents h2 { position: absolute; z-index: 1; top: 0; left: 0; width: 100%; margin: 0; text-transform: uppercase; font: normal 0.917em/35px 'Avenir LT W01 85 Heavy'; text-align: center; letter-spacing: 1px; color: #fff; background: #000; background: rgba(0,0,0,.6); }
+.no-rgba .homeEvents h2 { background: url(http://www.silverpop.com/img/fallbacks/bg_000000_60.png); }
+.homeEvents h3, .homeEvents h4, .homeEvents h5 { margin: 0; }
+.homeEvents .featuredEvent { background: #00A3D2 url(http://www.silverpop.com/img/bg_blue.png); color: #fff; overflow: hidden; }
+.homeEvents .eventImg { height: 170px; overflow: hidden; position: relative; }
+.homeEvents .eventImg img { position: absolute; left: 50%; top: 0; margin-left: -210px; max-width: 420px; }
+.homeEvents .eventDetail { font-family: 'Avenir LT W01 85 Heavy'; padding: 10px 10px 20px; }
+.homeEvents .eventDetail time { float: right; border-top: 18px solid #000; margin: -28px -10px 0 0; padding: 0 10px; position: relative; }
+.homeEvents .eventDetail time span:first-child { display: block; width: 100%; padding: 0 5px 5px; font: normal 0.917em/17px 'Avenir LT W01 85 Heavy'; text-transform: uppercase; letter-spacing: 1px; margin-top: -17px; }
+.homeEvents .eventDetail time span:first-child + span { font: normal 4.75em/1 'Avenir LT W01 35 Light'; display: block; height: 50px; }
+.homeEvents .eventDetail h3 { font-size: 2em; line-height: 1; color: #fff; }
+.homeEvents .eventDetail h4 { font-size: 1.167em; color: #fff; }
+.homeEvents .eventDetail h5 { font-size: 1em; color: #fff; padding-top: 30px; text-transform: uppercase; letter-spacing: 1px; }
+.homeEvents .eventTeaser { position: relative; padding: 20px 10px 12px; background: rgba(0,0,0,.2); font-family: 'AvenirLTW01-65MediumObl'; font-size: 1em; }
+.no-cssgradients .homeEvents .eventTeaser { background: #0082A8; }
+.homeEvents .eventTeaser h4, .homeEvents .eventTeaser a { color: #fff; }
+.homeEvents .eventTeaser p { margin: 0; }
+.homeEvents .eventTeaser .btnPill { position: absolute; top: -14px; left: 50%; margin-left: -50px; width: 100px; box-shadow: 0 3px 2px rgba(0,0,0,.5), -1px -1px 1px rgba(255,255,255,.5); padding: 0; text-align: center; text-transform: none; color: #fff; letter-spacing: normal; background: #484848; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ4NDg0OCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzNiM2IzYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iIzMyMzEzMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzODM4MzgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); background: -moz-linear-gradient(top, #484848 0%, #3b3b3b 50%, #323131 51%, #383838 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#484848), color-stop(50%,#3b3b3b), color-stop(51%,#323131), color-stop(100%,#383838)); background: -webkit-linear-gradient(top, #484848 0%,#3b3b3b 50%,#323131 51%,#383838 100%); background: -o-linear-gradient(top, #484848 0%,#3b3b3b 50%,#323131 51%,#383838 100%); background: -ms-linear-gradient(top, #484848 0%,#3b3b3b 50%,#323131 51%,#383838 100%); background: linear-gradient(to bottom, #484848 0%,#3b3b3b 50%,#323131 51%,#383838 100%); }
+.homeEvents .eventTeaser .btnPill:hover { background: #0098c4; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwOThjNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjclIiBzdG9wLWNvbG9yPSIjMDBhM2QyIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNjclIiBzdG9wLWNvbG9yPSIjMDBhM2QyIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA5NjY4MSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=); background: -moz-linear-gradient(top, #0098c4 0%, #00a3d2 7%, #00a3d2 67%, #096681 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0098c4), color-stop(7%,#00a3d2), color-stop(67%,#00a3d2), color-stop(100%,#096681)); background: -webkit-linear-gradient(top, #0098c4 0%,#00a3d2 7%,#00a3d2 67%,#096681 100%); background: -o-linear-gradient(top, #0098c4 0%,#00a3d2 7%,#00a3d2 67%,#096681 100%); background: -ms-linear-gradient(top, #0098c4 0%,#00a3d2 7%,#00a3d2 67%,#096681 100%); background: linear-gradient(to bottom, #0098c4 0%,#00a3d2 7%,#00a3d2 67%,#096681 100%); }
+.upcomingEvents { overflow: hidden; height: 261px; padding-right: 25px; }
+.upcomingEvents li { overflow: hidden; float: left; width: 100%; position: relative; border-bottom: 1px solid #ddd; padding: 0; }
+.upcomingEvents .more { display: block; min-height: 50px; padding: 12px 0 12px 85px; color: #000; font-family: inherit; font-size: inherit; /*background: url(http://www.silverpop.com/img/event_divit.png) 267px bottom no-repeat;*/ text-transform: none; }
+.upcomingEvents .more:hover { background-position: -320px bottom; }
+.upcomingEvents .more:hover time { color: #fff; background: #00a3d2; }
+.upcomingEvents .more:before { color: #ccc; text-shadow: -1px -1px 1px #aaa; }
+.upcomingEvents .more:hover:before { color: #00A3D2; text-shadow: -1px -1px 1px #0283a8; }
+.upcomingEvents time { position: absolute; left: 0; top: -1px; height: 100%; width: 70px; background: #f1f2f2; border-bottom: 1px solid #fff; }
+.upcomingEvents time span { position: absolute; left: 0; left: 0; width: 100%; text-align: center; text-transform: uppercase; }
+.upcomingEvents time span:first-child { top: 50px; font: normal 0.917em/1 'Avenir LT W01 85 Heavy'; }
+.upcomingEvents time span:first-child + span { top: 12px; font: normal 2.500em/1 'Avenir LT W01 35 Light'; letter-spacing: -1px; }
+.upcomingEvents time.multipleDates span:first-child { top: 44px; }
+.upcomingEvents time.multipleDates span:first-child + span { font-size: 1.833em; font-family: 'Avenir LT W01 65 Medium'; top: 18px; }
+.upcomingEvents h3 { font: normal 1.250em 'Avenir LT W01 85 Heavy'; }
+.upcomingEvents h4 { font-size: 1em; }
+.upcomingEvents h5 { font: normal 0.833em 'Avenir LT W01 85 Heavy'; color: #00a3d2; text-transform: uppercase; padding-bottom: 5px; }
+.mCustomScrollBox { overflow: visible !important; }
+.mCSB_container { width: auto; overflow: hidden; }
+.mCSB_container.mCS_no_scrollbar { margin-right: 0; }
+.mCS_disabled .mCSB_container.mCS_no_scrollbar, .mCS_destroyed .mCSB_container.mCS_no_scrollbar { margin-right: 30px; }
+.mCSB_scrollTools { width: 8px; height: 92%; top: 4%; right: -18px; }
+.mCSB_draggerContainer { height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.mCSB_draggerRail { width: 2px; height: 100%; margin: 0 auto; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; }
+.mCSB_dragger { cursor: pointer; width: 100%; height: 30px; }
+.mCSB_dragger .mCSB_dragger_bar { width: 4px; height: 100%; margin: 0 auto; text-align: center; }
+.mCSB_draggerRail { background: #f1f2f2; width: 8px; webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; -webkit-box-shadow: inset 1px 0 3px #aaa; -moz-box-shadow: inset 1px 0 3px #aaa; box-shadow: inset 1px 0 3px #aaa; }
+.mCSB_dragger .mCSB_dragger_bar { width: 8px; webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; background: #0eb8e6; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBlYjhlNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijk5JSIgc3RvcC1jb2xvcj0iIzAxODJhNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=); background: -moz-linear-gradient(top, #0eb8e6 0%, #0182a7 99%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0eb8e6), color-stop(99%,#0182a7)); background: -webkit-linear-gradient(top, #0eb8e6 0%,#0182a7 99%); background: -o-linear-gradient(top, #0eb8e6 0%,#0182a7 99%); background: -ms-linear-gradient(top, #0eb8e6 0%,#0182a7 99%); background: linear-gradient(to bottom, #0eb8e6 0%,#0182a7 99%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0eb8e6', endColorstr='#0182a7',GradientType=0 ); }
+.homeCaseStudies { float: left; width: 642px; margin-left: -5px; height: 320px; position: relative; background: url(http://www.silverpop.com/Global/Backgrounds/bg_home_casestudiesbox.png) no-repeat; }
+.homeCaseStudies h2 { position: absolute; z-index: 1; top: 45px; left: 45px; margin: 0; text-transform: uppercase; font: normal 1em 'Avenir LT W01 85 Heavy'; letter-spacing: 1px; color: #fff; }
+.homeCaseStudies h2 ~ a { position: absolute; z-index: 10; top: 38px; display: block; text-indent: -9999em; background: url(http://www.silverpop.com/img/home_casestudiesbox_arrows.png) no-repeat; height: 27px; width: 14px; }
+.homeCaseStudies #prevCaseStudy { left: 25px; }
+.homeCaseStudies #nextCaseStudy { left: 148px; background-position: -16px 0px; }
+.homeCaseStudies > ul { position: absolute; bottom: 5px; left: 0; margin-left: 5px; }
+.homeCaseStudies > ul > li { position: relative; float: left; width: 25%; background: #fff url(http://www.silverpop.com/img/home_casestudiesbox_dividers.png) left center no-repeat; padding: 0; }
+.homeCaseStudies > ul > li:first-child { background-image: none; }
+.homeCaseStudies > ul > li > a { display: block; overflow: hidden; height: 88px; width: 158px; position: relative; opacity: .5; }
+.homeCaseStudies > ul > li > a:hover { opacity: 1; }
+.homeCaseStudies > ul > li > a * { position: absolute; top: 50%; left: 50%; }
+.homeCaseStudies > ul > li > a img { max-height: 60px; max-width: 130px; }
+.homeCaseStudies > ul > li > a canvas + img, .homeCaseStudies > ul > li > a img:first-child + img { visibility: hidden; }
+.homeCaseStudies > ul > li.ui-tabs-active:before { content: ''; height: 0; width: 0; border-left: 10px outset transparent; border-right: 10px outset transparent; border-bottom: 7px solid #fff; position: absolute; top: -7px; left: 50%; margin-left: -10px; }
+.homeCaseStudies > ul > li.ui-tabs-active > a { opacity: 1; }
+.homeCaseStudies > ul > li.ui-tabs-active > a canvas + img, .homeCaseStudies > ul > li.ui-tabs-active > a img:first-child + img { visibility: visible; }
+.homeCaseStudies > div { position: relative; height: 220px; padding: 0 25px; margin-bottom: 88px; }
+.homeCaseStudies .teaser { position: absolute; bottom: 25px; left: 25px; width: 260px; }
+.homeCaseStudies .teaser h3, .homeCaseStudies .teaser p { margin: 0; padding: 0; color: #333; }
+.homeCaseStudies .teaser h3 { font: normal 1.333em 'Avenir LT W01 85 Heavy'; text-transform: uppercase; padding-bottom: 5px; }
+.homeCaseStudies .teaser p { font: normal 1.333em 'Avenir LT W01 65 Medium'; }
+.homeCaseStudies .metric { position: absolute; top: 45px; right: 45px; color: #333; padding-left: 48px; font: normal 1.429em/1 'Avenir LT W01 85 Heavy'; text-transform: uppercase; text-align: right; }
+.homeCaseStudies .metric em { display: block; font: normal 3.667em 'Avenir LT W01 35 Light'; text-align: left; text-transform: lowercase; letter-spacing: -1px; padding-left: 45px; }
+.homeCaseStudies .metric em.up { background: url(http://www.silverpop.com/Global/Backgrounds/bg_arrow_up.png) 0 center no-repeat; }
+.homeCaseStudies .metric em.down { background: url(http://www.silverpop.com/Global/Backgrounds/bg_arrow_down.png) 0 center no-repeat; }
+.homeCaseStudies .more { color: #fff; position: absolute; bottom: 10px; right: 20px; }
+.homeSideCallout { float: right; width: 305px; }
+.homeWebinars { position: relative; clear: both; float: left; width: 308px; min-height: 216px; margin-top: 30px; padding-bottom: 80px; background: #fff url(http://www.silverpop.com/img/bg_upcoming_webinars_divider.jpg) center bottom no-repeat; }
+.homeWebinars h2 { position: absolute; top: 0; left: 0; width: 100%; margin: 0; text-transform: uppercase; font: normal 0.917em/35px 'Avenir LT W01 85 Heavy'; text-align: center; letter-spacing: 1px; color: #fff; background: #000; background: rgba(0,0,0,.6); }
+.no-rgba .homeWebinars h2 { background: url(http://www.silverpop.com/img/fallbacks/bg_000000_60.png); }
+.homeWebinars ul { float: left; width: 100%; background: url(http://www.silverpop.com/Global/Backgrounds/bg_home_webinars.jpg) no-repeat; }
+.homeWebinars li { float: left; width: 42%; padding: 33px 4% 15px; margin-top: 35px; }
+.homeWebinars li > h3 { margin: 0; padding: 5px 0; color: #fff; font: normal 1.66em/1.2 'Avenir LT W01 85 Heavy'; text-shadow: 1px 2px 1px rgba(0,0,0,.2); }
+.homeWebinars li > p { margin: 5px 0 0; color: #333; font: normal 1em/1.3 'Avenir LT W01 85 Heavy'; }
+.homeWebinars .register { position: absolute; top: 100%; left: 50%; width: 50%; height: 80px; margin-top: -80px; text-align: center; }
+.homeWebinars .register time { display: block; padding: 6px 0 5px; font-family: 'Avenir LT W01 85 Heavy'; font-size: 1.25em; color: #000; }
+.homeWebinars .register time span { font-size: 0.667em; text-transform: uppercase; }
+.homeWebinars .btnMore, .homeWebinars .btnMore:visited { color: #f67a06; }
+.homeWebinars .btnMore:before { color: #f67a06; text-shadow: -1px -1px 1px #cd6402; }
+.homeWebinars li:first-child .register { left: 0; }
+.homeWebinars li:first-child .btnMore { color: #56a704; }
+.homeWebinars li:first-child .btnMore:before { color: #56a704; text-shadow: -1px -1px 1px #438402; }
+.homeBottomCallout { float: left; width: 305px; margin: 25px 0 0 16px; }
+.homeBottomSideCallout { float: right; clear: right; margin: 12px -5px 0 0; }
+.headlinebox { display: block; position: relative; }
+.headlinebox h3 { font: normal 2.250em/1.25 'Avenir LT W01 35 Light'; color: #fff; position: absolute; top: 0; left: 0; height: 315px; padding: 28px 25px 0 35px; overflow: hidden; }
+.headlinebox .more { position: absolute; bottom: 15px; right: 8px; color: #fff; }
+
+
+/*  Newsletter sign-up (home & blog)
+----------------------------*/
+.newsletterSignup { float: right; width: 312px; height: 132px; margin: 25px -5px 7px 0; background: url(http://www.silverpop.com/Global/Backgrounds/bg_home_signupbox.png) no-repeat; }
+.newsletterSignup h2 { margin: 0; padding: 12px 20px 5px; color: #00b4ed; font-size: 2em; letter-spacing: 1px; }
+.newsletterSignup p { margin: 0; padding: 0 20px 3px; font-size: 1em; line-height: 1.4; }
+.newsletterSignup input[type=text] { margin: 5px 3px 0 15px; width: 182px; }
+.newsletterSignup input[type=submit] { font-size: 0.857em; line-height: 24px; padding: 0 10px; }
+
+
+/*  My History 
+----------------------------*/
+.historyModal { padding: 20px; }
+.myHistory { position: relative; }
+.myHistory .logUser { font: 11px Arial, Helvetica, Sans-serif; }
+.myHistory h1 { margin-top: 0; }
+.myHistory h1 > a { font: 12px Arial, Helvetica, Sans-serif; letter-spacing: normal; margin-left: 10px; }
+.historyList { height: 120px; }
+.logUser { padding: 18px 0 18px !important; }
+.logUser, .logUser ul { position: relative; display: inline-block; width: 100%; margin: 0; padding: 0; list-style: none; }
+.logUser > li { width: 46%; float: left; }
+.logUser > li:first-child { padding-right: 22px; }
+.logUser > li:first-child + li { padding-left: 22px; }
+.logUser > li > h4 { font-size: 14px; font-weight: bold; color: #99cc00; padding-bottom: 10px; }
+.logUser > li ul > li { line-height: 16px; padding: 3px 0 3px 22px; text-align: left; background: url(http://www.silverpop.com/img/bg_history.png) 0 -15px no-repeat; }
+.logUser > li:first-child + li ul > li { background-position: 0 3px; }
+.logUser > li ul > li > span:first-child { float: right; line-height: 16px; }
+.logUser > li ul > li > span:first-child + span { display: block; margin-right: 55px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+.teachUser, .teachUser ul { position: relative; display: inline-block; width: 100%; margin: 0; padding: 0; list-style: none; }
+.teachUser > li { width: 46%; float: left; }
+.teachUser > li:first-child { padding-right: 22px; }
+.teachUser > li:first-child + li { padding: 22px 0 0 22px; }
+.teachUser .selector { float: left; width: 240px !important; margin-top: 12px; }
+.teachUser .btnCircle { float: right; }
+.addProgramSuccess { background: #99cc00; color: white; text-align: center; padding: 5px; }
+
+
+/*	Products Overview
+----------------------------*/
+.productOverview figure img { cursor: pointer; }
+.productOverviewFeature { padding-bottom: 40px; }
+
+
+/*	Solutions Overview
+----------------------------*/
+.solutionIntro { clear: both; float: left; width: 320px; }
+.solutionIntro a { font-weight: bold; }
+.solutionIntro h1 { font: normal 2.625em/1.2 'Avenir LT W01 35 Light'; padding-bottom: 5px; background: none; }
+.solutionIntro p { font: normal 1.250em 'Avenir LT W01 35 Light'; }
+.solutionCallout { float: right; width: 280px; margin-top: 15px; padding: 20px 15px; background: url(http://www.silverpop.com/img/bg_bluenotchbox.png) no-repeat; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; font: normal 1em 'Avenir LT W01 85 Heavy'; }
+.solutionCallout h5 { border-bottom: 1px dotted #fff; padding: 0 0 5px; color: #fff; text-transform: uppercase; }
+.solutionCallout ul { margin: 0; padding-left: 0; }
+.solutionCallout li { position: relative; display: inline-block; vertical-align: top; color: #fff; width: 45%; padding: 0 1% 0 3%; margin-top: 10px; list-style: none; }
+.solutionCallout li:before { content: '\2022 '; position: absolute; top: 0; left: 0; color: #fff; }
+.solutionCallout li a { color: #fff; }
+
+
+/*	Solutions Detail
+----------------------------*/
+.solutionDetailInfo { float: left; width: 300px; padding-right: 40px; }
+.solutionDetailInfo > div > div { border-top: 1px solid #d8d8d8; padding: 20px 0 10px; }
+.solutionDetailInfo > div:first-child > div { padding-top: 0; border-top: 0; }
+.solutionDetailIndustry { width: 165px; float: left; padding-bottom: 20px; }
+.solutionDetailIndustry > ul { list-style: none; padding: 0; }
+.solutionDetailProducts { width: 165px; float: left; }
+.solutionDetailProducts h4 a { display: block; color: #fff; text-shadow: 0px 1px 1px #666666; padding: 0 0 7px 0; margin: 0 0 7px 0; border-bottom: 1px dotted #fff; }
+.solutionDetailProducts p { color: #fff; font: normal .950em/1.2 Arial; line-height: 15px; margin-top: 7px; }
+.solutionDetailProducts > ul { list-style: none; padding: 0; }
+.solutionDetailProducts > ul > li { padding: 10px 10px 2px 10px; margin: 0 0 10px 0; width: 130px; height: 100px; background: #aaa; }
+.solutionDetailStudies { width: 165px; float: right; }
+.solutionDetailStudies img { margin: 0px 0 12px 0; max-width: 150px; }
+.solutionDetailStudies p { margin: 0; font: normal .950em/1.2 Arial; }
+.solutionDetailStudies > ul { list-style: none; background: url(../img/bg_casestudy.png) no-repeat 0 0; padding: 0px 8px; border-bottom: 1px solid #d8d8d8; border-right: 1px solid #d8d8d8; }
+.solutionDetailStudies > ul > li { border-bottom: 1px dotted #d8d8d8; margin: 0; padding: 13px 0 5px 0; }
+.solutionDetailStudies > ul > li:hover > span { color: #00B1E3; }
+.solutionDetailStudies > ul > li:last-child { border: 0; }
+.solutionDetailStudies > ul > li > div { background: url(../img/bg_grey_more.png) no-repeat right bottom; padding: 0 0 8px 0; font-size: 11px; }
+.solutionDetailStudies > ul > li a { color: #333; font-weight: bold; }
+
+
+/*	Solutions Client
+----------------------------*/
+.solutionClient .solutionClientIntro { width: 45%; float: left; }
+.solutionClient .solutionClientIntro p { font: normal 1.234em/1.5 Arial, Helvetica, sans-serif; padding: 8px 0 0; }
+.solutionClient figure { float: right; }
+.solutionClientResources h5 { padding: 10px 0 2px 0; }
+.solutionClientResources > ul { list-style: none; padding: 0; }
+.solutionClientResources > ul > li { width: 164px; display: inline-block; vertical-align: top; margin-left: 7px; }
+.solutionClientResources > ul > li:first-child { margin-left: 0; }
+.solutionClientResources > ul > li .copy { padding-right: 15px; }
+
+
+/*	Solutions Industry Overview
+----------------------------*/
+.solutionIndustryOverview { padding: 0; }
+.solutionIndustryOverview .solutionIndustryOverviewIntro { width: 45%; float: left; }
+.solutionIndustryOverview .solutionIndustryOverviewIntro > p { font: normal 1.234em/1.5 Arial, Helvetica, sans-serif; padding: 8px 0; }
+.solutionIndustryOverview figure { float: right; }
+.solutionIndustryOverviewIndustries > ul { list-style: none; padding: 0; }
+.solutionIndustryOverviewIndustries > ul > li { float: left; width: 435px; padding: 0 10px 20px 0; }
+.solutionIndustryOverviewIndustries > ul > li > img { float: left; padding: 0 15px 0 0; margin: 0 0 15px 0; }
+
+
+/*	Solutions Industry Detail
+----------------------------*/
+.solutionIndustryDetail { padding: 0; }
+.solutionIndustryDetail .solutionIndustryDetailContent { width: 55%; float: left; }
+.solutionIndustryDetail .solutionIndustryDetailContent > p { font: normal 1.234em/1.5 Arial, Helvetica, sans-serif; padding: 8px 0; }
+.solutionIndustryDetail .copy { margin-top: 14px; }
+.solutionIndustryDetail figure { float: right; margin-top: 20px; width: 265px; }
+.solutionIndustryDetail figure img { max-width: 265px; }
+.solutionIndustryDetail figure > div { position: absolute; width: 265px; background: url(../img/bg_figureHeader.png) no-repeat top left; }
+.solutionIndustryDetail figure > div > h5 { color: #fff; padding: 15px; margin: 0; }
+.solutionIndustryDetail figcaption > div { display: block; background-image: url(../img/bg_caption_webbing.png); }
+.solutionIndustryDetail figcaption > div > span { background-image: none; padding: 15px 15px 0; display: block; font-size: 1.333em; color: #fff; font-weight: bold; }
+.solutionIndustryDetail figcaption > div > span span { padding: 0; background: 0; }
+.solutionIndustryDetail figcaption > div > h3 { margin: 0; padding: 5px 15px 15px; color: #fff; }
+.solutionIndustryDetail figcaption > div > p { margin: 0; padding: 5px 15px 15px; color: #fff; }
+.solutionIndustryDetail figcaption > div > a { display: inline-block; font: bold 1em Arial; text-transform: uppercase; padding: 5px 15px; margin: 0 0 15px 185px; color: #fff; background: url(../img/bg_white_more.png) no-repeat right bottom; }
+.solutionIndustryDetailStories { clear: both; padding: 25px 0 0; }
+.solutionIndustryDetailStories .btnGray { float: right; }
+.partnerHighlight { clear: right; float: right; margin-top: 30px; border-top: 1px solid #ddd; }
+
+
+/*	Product Detail
+----------------------------*/
+.productDetailHeader { position: relative; width: 940px; height: 170px; margin: -35px 0 35px -214px; overflow: hidden; }
+.productDetailHeader h1 { font: normal 2.083em 'Avenir LT W01 65 Medium'; color: #fff; background: 0; padding: 0; position: absolute; bottom: 15px; left: 210px; }
+.packageOptions { clear: both; }
+.packageOptions > div h3 { background: url(http://www.silverpop.com/img/shelf_left.png) 0 0 no-repeat; padding: 30px 0 5px; }
+.packageOptions > div p { font-size: 1.333em; font-family: 'Avenir LT W01 65 Medium'; }
+.packageOptions ul { margin: 0; padding: 20px 0 0; list-style: none; }
+.packageOptions li { display: inline-block; vertical-align: top; padding: 15px 3% 20px; width: 40%; margin: 0 3% 25px 0; border: 1px solid #dfdfdf; background: #fff; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmN2Y3ZjciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); background: -moz-linear-gradient(top, #fff 0%, #f7f7f7 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#f7f7f7)); background: -webkit-linear-gradient(top, #fff 0%,#f7f7f7 100%); background: -o-linear-gradient(top, #fff 0%,#f7f7f7 100%); background: -ms-linear-gradient(top, #fff 0%,#f7f7f7 100%); background: linear-gradient(to bottom, #fff 0%,#f7f7f7 100%); box-shadow: 0 0 4px #ddd; }
+.packageOptions li h3 { margin: 0; color: #00b1e3; font: normal 2em 'Avenir LT W01 35 Light'; }
+.packageOptions li p { margin: 5px 0 25px; }
+.packageOptions li .btnMoreBlue { display: block; width: 150px; padding-left: 0; padding-right: 0; text-align: center; margin: 0 auto; }
+
+
+/*	Product Packages
+----------------------------*/
+.productPackageHeader { position: relative; margin: -35px 0 35px; height: 88px; width: 725px; }
+.productPackageHeader h1 { font: normal 1.75em 'Avenir LT W01 85 Heavy'; color: #fff; background: 0; padding: 0; position: absolute; bottom: 15px; left: 15px; }
+.productPackageList > ul { margin: 0; padding: 0; list-style: none; }
+.productPackageList > ul > li { padding: 20px 0; border-top: 1px solid #eee; float: left; width: 100%; }
+.productPackageList > ul > li:first-child { border: 0; }
+.productPackageList figure { float: right; padding: 30px 50px 0 30px; width: 230px; height: 280px; overflow: hidden; }
+.productPackageList figure h5 { color: #fff; padding-bottom: 8px; margin-right: 20px; border-bottom: 1px dotted #fff; }
+.productPackageList figure li, .productPackageList figure p, .productPackageList figure a { color: #fff; }
+.productPackageList figure p a { text-decoration: underline; }
+.productPackageList figure p a.btnPunched { text-decoration: none; }
+.productPackageList .copy { margin-right: 345px; }
+.productPackageList .copy p, .productPackageList .copy li { font-size: 1.333em; font-family: 'Avenir LT W01 65 Medium'; }
+.productPackageList .copy li { padding: 0; }
+
+
+/*	Resources Overview
+----------------------------*/
+.resourceShowcase { clear: both; float: left; width: 100%; }
+.resourceShowcase > ul { margin: 0; padding: 0; list-style: none; }
+.resourceShowcase > ul > li { float: left; width: 31%; margin-left: 3.5%; padding: 0; position: relative; }
+.resourceShowcase > ul > li:first-child { margin-left: 0; }
+.resourceShowcase > ul > li > img { width: 210px; height: 195px; display: block; }
+.resourceShowcase h5, .resourceShowcase h5 + span { display: inline; color: #00a3d2; font: normal 1.083em 'Avenir LT W01 65 Medium'; }
+.resourceShowcase h3 { padding-top: 5px; }
+.resourceShowcase .description { height: 110px; margin: 0 0 8px; padding: 15px 0 10px; border-bottom: 1px solid #eee; }
+.resourceShowcase .description p { margin: 0; }
+.resourceShowcase .rating { float: right; padding: 1px 1px 0 0; }
+.resourceShowcase .btnPillWrapper { position: absolute; top: 139px; left: 0px; background: rgba(0,0,0,0.6); margin: 0 3px; padding: 10px 0 15px; text-align: center; width: 204px; }
+.resourceShowcase .btnPillWrapper .btnPill { width: 120px; padding: 0; }
+.scribitFeed { padding-top: 30px; }
+.scrb-title { padding-top: 8px; }
+.scrb-widget-outer-container { width: 100%; }
+.scrb-widget { width: 900px !important; }
+.scrb-widget-container .scrb-item { width: 18.9%; margin-right: 9px; background: url(http://www.silverpop.com/img/scrb_line.jpg) right 0 no-repeat; }
+.scrb-widget-container .scrb-thumbnail { padding-bottom: 12px; }
+.scrb-widget-container .scrb-thumbnail img { max-width: 90px; max-height: 90px; -webkit-box-shadow: none; box-shadow: none; }
+.scrb-widget-container .scrb-title { font-size: 11px; color: #515151; text-decoration: none; }
+.scrb-widget-container .scrb-title strong { display: block; padding-top: 12px; font-weight: bold; }
+.scrb-widget-container div:last-child { display: none !important; }
+
+
+/*	Resources Landing Overview
+----------------------------*/
+.resourceShowcase2Col { float: left; width: 475px; display: inline-block; }
+.resourceShowcase2Col > ul { margin: 0; padding: 0; list-style: none; }
+.resourceShowcase2Col > ul > li { width: 210px; margin-right: 3.5%; margin-bottom: 22px; padding: 0; position: relative; display: inline-block; vertical-align: top; }
+.resourceShowcase2Col > ul > li > img { width: 210px; height: 195px; display: block; }
+.resourceShowcase2Col h5, .resourceShowcase2Col h5 + span { display: inline; color: #00a3d2; font: normal 1.083em 'Avenir LT W01 65 Medium'; }
+.resourceShowcase2Col h3 { padding-top: 5px; }
+.resourceShowcase2Col .description { height: 110px; margin: 0 0 8px; padding: 15px 0 10px; border-bottom: 1px solid #eee; }
+.resourceShowcase2Col .description p { margin: 0; }
+.resourceShowcase2Col .rating { float: right; padding: 1px 1px 0 0; }
+.resourceShowcase2Col .btnPillWrapper { position: absolute; top: 139px; left: 0px; background: rgba(0,0,0,0.6); margin: 0 3px; padding: 10px 0 15px; text-align: center; width: 204px; }
+.resourceShowcase2Col .btnPillWrapper .btnPill { width: 120px; padding: 0; }
+
+
+/*	Resources Landing
+----------------------------*/
+.resourceTopics { float: right; width: 27%; margin-top: -3px; }
+.resourceTopics h4 { font-size: 1em; text-transform: uppercase; padding-bottom: 10px; }
+.resourceTopics ul { margin: 0; padding: 0; list-style: none; }
+.resourceTopics li { padding: 5px 0; }
+.resourceTopics a { font-weight: bold; }
+.resourceCallout { float: right; width: 260px; padding: 25px 40px 20px; background: url(http://www.silverpop.com/img/bg_bluenotchbox.png) no-repeat; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+.resourceCallout h3 { border-bottom: 1px dotted #fff; padding: 0 0 5px; color: #fff; }
+.resourceCallout p, resourceCallout a { color: #fff; }
+
+
+/*	Resources Detail
+----------------------------*/
+.resourceDetail { float: left; width: 100%; padding: 20px 0 25px; }
+.resourceDetail img { float: left; width: 150px; }
+.resourceInfo { float: right; width: 515px; }
+.resourceInfo h2 { font: normal 2.333em 'Avenir LT W01 35 Light'; margin-top: 0; color: #333; }
+.resourceInfo h2 strong { display: block; font-family: 'Avenir LT W01 85 Heavy'; font-weight: normal; }
+.resourceInfo .btnPill { float: left; margin-right: 20px; }
+.resourceInfo .rating { padding-top: 3px; }
+.resourceInfo .rating li { background-position: 0 -19px; height: 17px; width: 17px; margin-right: 3px; }
+.resourceInfo .rating li.full { background-position: -40px -19px; }
+.resourceInfo .rating li.half { background-position: -60px -19px; }
+.resourceInfo .rating li.rated { background-position: -20px -19px; }
+.resourceInfo .rating li:hover { background-position: -20px -19px; }
+.resourceInfo .share { clear: both; margin: 0; padding: 20px 0 0; list-style: none; }
+.resourceInfo .share > li { float: left; padding: 0; }
+.resourceInfo .share > li.tw iframe { width: 97px !important; }
+.resourceInfo .share > li.gp > div, .resourceInfo .share > li.gp iframe { width: 77px !important; }
+
+
+/*	Resources List
+----------------------------*/
+.resourceListing .pageFeature { padding-bottom: 20px; }
+.resourceListing .resourceCallout { position: relative; clear: both; float: none; width: 610px; padding: 8px 40px; margin: 0 0 30px; }
+.resourceListing .resourceCallout h3 { border: 0; margin: 0; padding: 0 180px 0 0; font: normal 1.750em 'Avenir LT W01 35 Light'; }
+.resourceListing .resourceCallout p { margin: 0; padding: 0 180px 0 0; }
+.resourceListing .btnPillGray { position: absolute; top: 50%; margin-top: -14px; right: 40px; }
+.resourceListing .sort { float: right; width: 200px; margin-top: -66px; }
+.resources .sort h5 { float: left; padding: 6px 10px 0 0; }
+.resources .sort select, .resources .sort .selector { width: 120px !important; float: right; }
+.resources > h3 { background: url(http://www.silverpop.com/img/shelf_left.png) 0 100% no-repeat; padding-bottom: 40px; }
+
+
+/*	About 
+----------------------------*/
+.aboutCallout { float: right; width: 260px; margin-top: 10px; padding: 25px 25px; background-image: url(http://www.silverpop.com/Global/Backgrounds/bg_about_callout.png); background-repeat: no-repeat; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+.aboutCallout h5 { border-bottom: 1px dotted #fff; padding: 0 0 5px; color: #fff; text-transform: uppercase; }
+.aboutCallout ul { margin: 15px 0 0 0; padding-left: 0; }
+.aboutCallout li { color: #fff; /*width: 47%;*/ padding: 0; margin: 0; list-style-position: inside; font-family: 'Avenir LT W01 85 Heavy'; }
+.aboutCallout li a { color: #fff; }
+
+
+/* Contact
+----------------------------*/
+.contactPage h1 { margin-bottom: 15px; }
+.contactPage .formBox { margin: 0 0 20px; }
+.contactPage .copy { width: 330px; }
+.contactPage .copy > ul { margin: 0; padding: 10px 0 25px; list-style: none; }
+.contactPage .copy > ul span { font-size: 10px; font-weight: bold; padding: 0 5px 0 0; text-transform: uppercase; }
+.contactPage .copy > ul em { font-size: 14px; font-weight: bold; font-style: normal; }
+.contactPage .contactRep p { margin: 0; }
+.contactPage .contactRep img { float: left; padding: 0 15px 0 0; max-width: 90px; max-height: 100px; display: inline-block; width: 90px; }
+.contactPage .contactRep h3 { margin-left: 106px; }
+.contactPage .contactRep h3 span { width: 120px; display: inline-block; }
+.contactPage .contactRep ul { margin-left: 106px !important; }
+.contactPage .contactRep ul { padding: 12px 0 0; margin: 0; list-style: none; }
+.contactPage .contactRep ul > li { padding: 0; margin: 0; }
+.contactPage .contactRep ul > li:first-child { font-size: 14px; font-weight: bold; }
+
+
+/*	Services Overview
+----------------------------*/
+.serviceOverview { float: left; width: 45%; }
+.serviceOverview h2 { margin: 0; }
+.serviceOverview p, .serviceOverview li { font-size: 1.250em; font-family: 'Avenir LT W01 65 Medium'; }
+.serviceOverview strong { font-family: 'Avenir LT W01 85 Heavy'; }
+.serviceOverview figure { padding: 15px 0; }
+.serviceCallout { float: right; width: 310px; margin: -1px 0 0; }
+.serviceCallout figure { padding: 30px 50px 0 30px; width: 230px; height: 280px; overflow: hidden; }
+
+/*
+*/
+
+.serviceCallout h5 { border-bottom: 1px dotted #fff; padding: 0 0 10px; margin: 0 15px 0 0; color: #fff; }
+.serviceCallout p { color: #fff; margin-top: 10px; margin-left: 24px; }
+.serviceCallout p strong { font-size: 18px; float: left; margin: -6px 0 0 -25px; font-weight: bolder; }
+.serviceCallout .btnGray { color: #00b1e3 !important; }
+.servicesOverviewBody { clear: both; }
+.servicesOverviewBody > div:first-child { padding-top: 20px; }
+
+
+/*	Services Subpage
+----------------------------*/
+.serviceSubpage { padding: 15px 0; display: inline-block; }
+.serviceSubpage .serviceIntro { width: 49%; float: left; }
+.serviceSubpage .serviceIntro p, .serviceSubpage .serviceIntro li { font-size: 1.250em; font-family: 'Avenir LT W01 65 Medium'; padding: 0; }
+.serviceSubpage .serviceStatement { width: 49%; float: right; }
+.serviceSubpage .serviceStatement p { font: normal 26px 'Avenir LT W01 35 Light'; color: #00b1e3; text-align: center; padding: 26px 5px; border-top: 1px solid #00b1e3; border-bottom: 1px solid #00b1e3; margin: 6px 0; }
+.serviceSubpage .serviceStatement span { display: block; text-align: right; color: #999; }
+.serviceInfo { float: left; width: 45%; }
+.serviceInfo > ul { list-style: none; margin: 0; padding: 0 35px 0 0; }
+.serviceInfo > ul > li { border-top: 1px solid #d8d8d8; padding-top: 12px; }
+.serviceInfo > ul > li:first-child { border: 0; padding: 3px 0; }
+.serviceIndustryAndRelated { width: 165px; float: right; margin: 4px 20px 4px 0; }
+.serviceIndustryAndRelated > ul { list-style: none; padding: 0; margin-bottom: 25px; }
+.serviceIndustryAndRelated { width: 175px; float: right; margin-right: 25px; }
+.serviceIndustryAndRelated h4 a { display: block; color: #fff; text-shadow: 0px 1px 3px #666666; padding: 0 0 10px 0; margin: 0 0 8px 0; border-bottom: 1px dotted #fff; }
+.serviceIndustryAndRelated p { color: #fff; font: normal .950em/1.2 Arial; line-height: 15px; }
+.serviceIndustryAndRelated > ul.relatedProducts { list-style: none; padding: 0 10px 0 0; width: 165px; }
+.serviceIndustryAndRelated > ul.relatedProducts > li { padding: 10px; margin: 0 0 10px; background-repeat: no-repeat; height: 80px; }
+.serviceIndustryAndRelated > ul.relatedProducts > li p { margin: 0; }
+.serviceStudies { width: 175px; float: right; margin: 4px 0 14px 0; }
+.serviceStudies img { margin: 0px 0 12px 0; max-width: 158px; }
+.serviceStudies p { margin: 0; font: normal .950em/1.2 Arial; }
+.serviceStudies > ul { list-style: none; background: url(../img/bg_casestudy.png) no-repeat 0 0; padding: 0px 8px; border-bottom: 1px solid #d8d8d8; }
+.serviceStudies > ul > li { border-bottom: 1px dotted #d8d8d8; margin: 0; padding: 13px 0 5px 0; }
+.serviceStudies > ul > li:last-child { border: 0; }
+.serviceStudies > ul > li > div { background: url(../img/bg_grey_more.png) no-repeat right bottom; padding: 0 0 8px 0; }
+
+
+/*	Clients Overview
+----------------------------*/
+.clientOverview { float: left; width: 45%; }
+.clientOverview p { margin: 0; padding: 0 0 12px; }
+.clientOverview h2 { margin: 0; padding: 12px 0; }
+.clientOverview span { float: left; padding: 0 5px 0 0; font: bold 1.167em Arial; color: #333; margin: 0; }
+.clientOverview figure { padding: 15px 0; }
+/*
+.clientCallout { float: right; width: 311px; margin: -1px 0 0; }
+.clientCallout > figure { width: 311px; height: 311px; overflow: hidden; }
+*/
+.clientCases { clear: both; height: 350px; padding: 0 0 50px; }
+.clientCases .clientStudies { float: left; width: 570px; }
+.clientCases .clientStudies h3 { padding: 0 0 24px; }
+.clientCases .clientStudiesLeadIn { float: left; width: 100%; }
+.clientCases .clientStudiesLeadIn > p { float: left; display: inline-block; width: 340px; margin: 0; padding: 0 0 28px; clear: left; }
+.clientCases .clientStudies > ul { list-style: none; margin: 0; padding: 0; display: inline-block; }
+.clientCases .clientStudies > ul > li { float: left; width: 190px; height: 240px; padding: 0; margin: 0; }
+.clientCases .clientStudies > ul div { background: rgba(0,0,0,0.6); padding: 14px; height: 96px; display: block; margin: 116px 0 0; position: relative; }
+.clientCases .clientStudies > ul strong { font: bold 1em Arial; color: #00b7f1; }
+.clientCases .clientStudies > ul p { font-size: .9em; color: #fff; padding: 5px 0; margin: 0; }
+.clientCases .clientStudies > ul .more { float: right; margin: -8px -11px 0 0; bottom: 3px; position: absolute; right: 13px; }
+.clientCases .clientStudies > ul .more:before { color: #00B1E3; }
+.clientCases .clientStudies > ul .more:hover { color: #fff; }
+
+.clientCases .clientStudies .btnGray { float: right; }
+.clientCases figure { float: right; width: 265px; }
+.clientCases figure img { width: 265px; height: 215px; }
+.clientCases figure > div { /*position: absolute; width: 265px; background: rgba(0,0,0,0.6);*/ background: #000; }
+.clientCases figure > div:first-child { z-index: 2; }
+.clientCases figure > div > h5 { color: #fff; padding: 15px; margin: 0; }
+.clientCases figcaption > span { display: block; height: 212px; background-image: url(../img/bg_caption_webbing.png); position: relative; }
+.clientCases figcaption > span > h3 { background-image: none; padding: 15px 15px 0; display: block; font-size: 2em; color: #fff; }
+.clientCases figcaption > span > p { margin: 0; padding: 5px 15px 15px; color: #fff; }
+.clientCases figcaption > span > a { position: absolute; bottom: 10px; right: 10px; display: inline-block; font: bold 1em Arial; text-transform: uppercase; padding: 5px 15px; color: #fff; background: url(../img/bg_white_more.png) no-repeat right bottom; }
+.clientStories { clear: both; padding-top: 30px; }
+.clientStories h2 { float: left; clear: left; margin: 0; padding: 2px 0 18px 0; }
+.clientStories > a { float: right; margin: 0 0 0 10px; }
+
+
+/*	Success Story Sliders 
+----------------------------*/
+.successSlider { clear: both; margin-top: 20px; height: 130px; border: 1px solid #b2b2b2; background: url(../img/bg_successStories.jpg) repeat center; }
+.successSlider ul { text-align: center; margin: 0; padding: 0; overflow: hidden; height: 130px; }
+.successSlider li { list-style: none; margin: 12px 2px 0; padding: 0; height: 100px; width: 130px; display: inline-block; vertical-align: middle; text-align: center; line-height: 100px; color: #686f74; overflow: hidden; background: #fff; -webkit-box-shadow: 0 0 5px #ddd; -moz-box-shadow: 0 0 5px #ddd; box-shadow: 0 0 5px #ddd; }
+.successSlider li img { max-height: 80%; max-width: 80%; height: auto; width: auto; }
+.successSlider .bx-viewport { height: 130px !important; }
+.successSlider .bx-wrapper { clear: both; position: relative; }
+.successSlider .bx-wrapper ul { text-align: left; }
+.successSlider .bx-wrapper li { display: block; margin: 12px 0 0; }
+.successSlider .bx-wrapper li a { display: block; }
+.successSlider .bx-wrapper .bx-controls { position: absolute; top: 0; left: 0px; width: 100%; height: 0; }
+.successSlider .bx-wrapper .bx-controls .bx-prev, .successSlider .bx-wrapper .bx-controls .bx-next { position: absolute; display: block; height: 130px; width: 35px; top: 0; -webkit-box-shadow: 5px 0px 15px 0px rgba(0, 0, 0, 0.1); box-shadow: 5px 0px 15px 0px rgba(0, 0, 0, 0.1); background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjE0JSIgc3RvcC1jb2xvcj0iI2ZhZmFmYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQzJSIgc3RvcC1jb2xvcj0iI2U3ZTdlNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUyJSIgc3RvcC1jb2xvcj0iI2U0ZTRlNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc5JSIgc3RvcC1jb2xvcj0iI2U0ZTRlNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZWVlZWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); background: -moz-linear-gradient(top, #fff 0%, #fafafa 14%, #e7e7e7 43%, #e4e4e4 52%, #e4e4e4 79%, #eeeeee 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(14%,#fafafa), color-stop(43%,#e7e7e7), color-stop(52%,#e4e4e4), color-stop(79%,#e4e4e4), color-stop(100%,#eeeeee)); background: -webkit-linear-gradient(top, #fff 0%,#fafafa 14%,#e7e7e7 43%,#e4e4e4 52%,#e4e4e4 79%,#eeeeee 100%); background: -o-linear-gradient(top, #fff 0%,#fafafa 14%,#e7e7e7 43%,#e4e4e4 52%,#e4e4e4 79%,#eeeeee 100%); background: -ms-linear-gradient(top, #fff 0%,#fafafa 14%,#e7e7e7 43%,#e4e4e4 52%,#e4e4e4 79%,#eeeeee 100%); background: linear-gradient(to bottom, #fff 0%,#fafafa 14%,#e7e7e7 43%,#e4e4e4 52%,#e4e4e4 79%,#eeeeee 100%); }
+.successSlider .bx-wrapper .bx-controls .bx-prev { left: 0; }
+.successSlider .bx-wrapper .bx-controls .bx-next { right: 0; }
+.successSlider .bx-wrapper .bx-controls .bx-prev:before, .successSlider .bx-wrapper .bx-controls .bx-next:before { content: ""; position: absolute; top: 50%; left: 50%; display: block; height: 22px; width: 11px; margin: -11px 0 0 -5px; background: url(http://www.silverpop.com/img/bg_slider_arrows.png) no-repeat; }
+.successSlider .bx-wrapper .bx-controls .bx-prev:before { background-position: 1px 0; }
+.successSlider .bx-wrapper .bx-controls .bx-next:before { background-position: -11px 0; }
+.successSlider .bx-wrapper .bx-controls .bx-prev:hover:before { background-position: 1px -22px; }
+.successSlider .bx-wrapper .bx-controls .bx-next:hover:before { background-position: -11px -22px; }
+
+
+/*	Clients Details
+----------------------------*/
+.clientCaseNav { float: right; margin: -63px 0 0; }
+.clientCaseNav .btnGray { color: #000; }
+.clientCaseNav .btnGray:before { font-family: FontAwesome; font-weight: normal; font-size: 14px; display: inline-block; }
+.clientCaseNav .btnGray:first-child:before { content: "\f053"; }
+.clientCaseNav .btnGray:last-child:before { content: "\f054"; }
+.clientCaseCallout { float: right; width: 292px; margin: 20px 0 0; }
+.clientCaseCallout figure { padding: 50px 35px 0 45px; width: 212px; height: 242px; overflow: hidden; background: url(http://www.silverpop.com/img/white_teardrop.png) no-repeat right center; position: relative; }
+.clientCaseCallout figure a { font: bold .9em Arial; background: url(http://www.silverpop.com/img/btn_download.png) 30px 20px no-repeat; display: inline-block; padding: 5px 5px 52px; position: absolute; bottom: 13px; left: 90px; }
+.clientCaseCallout figure a:hover, .clientCaseCallout figure a:focus { background: url(http://www.silverpop.com/img/btn_download.png) -121px 20px no-repeat; }
+.clientCaseInfo { float: left; width: 54%; }
+.clientCaseInfo h3 { padding: 20px 0 0; }
+.clientCaseInfo .clientCaseStatement { padding: 15px 0; }
+.clientCaseInfo .clientCaseStatement p { font: normal 26px 'Avenir LT W01 35 Light'; color: #66cc33; text-align: center; padding: 30px 5px; border-top: 1px solid #66cc33; border-bottom: 1px solid #66cc33; margin: 0 0 10px; }
+.clientCaseInfo .clientCaseStatement p:before, .clientCaseInfo .clientCaseStatement p:after { content: "\""; }
+.clientCaseInfo .clientCaseStatement span { display: block; text-align: right; color: #999; }
+.clientCaseInfo .clientCaseStatement span:before { content: " - "; }
+.clientCaseTags { float: left; width: 100%; border-top: 1px dotted #d9d9d9; padding: 10px 0 0; margin: 10px 0 0; }
+
+
+/*	Clients Quote
+----------------------------*/
+.clientsQuote .pageFeature { padding-top: 15px; }
+.clientsQuote .pageFeature .copy h3 { margin-bottom: 10px; }
+.clientsQuote .pageList { border-top: 1px solid #eee; margin-top: 10px; padding-top: 30px; }
+.clientsQuote .pageList .copy > p:first-child { margin-top: 0; font-size: 1.250em; font-family: 'Avenir LT W01 65 Medium'; padding: 0; }
+.clientsQuote .pageList .copy em { color: #999; }
+.clientsQuote .pageList .copy h3 + p { margin-top: 0; }
+
+
+/*	Clients Video
+----------------------------*/
+.clientsVideo .pageFeature { padding-top: 15px; }
+.clientsVideo .pageFeature .copy h3 { margin-bottom: 10px; }
+.clientsVideo .pageList { border-top: 1px solid #eee; margin-top: 10px; padding-top: 30px; }
+.clientsVideo .pageList .copy > p:first-child { margin-top: 0; font-size: 1.250em; font-family: 'Avenir LT W01 65 Medium'; padding: 0; }
+.clientsVideo .pageList .copy em { color: #999; }
+.clientsVideo .pageList .copy h3 + p { margin-top: 0; }
+
+
+/* Clients List Grid (Quicksand) 
+----------------------------*/
+.logoGrid { position: relative; }
+.logoGrid .pageSelect { margin-top: -70px; }
+.image-grid { clear: right; width: auto; padding: 20px 0 0; margin: 0; }
+.image-grid:after { content: ""; display: block; height: 0; overflow: hidden; clear: both; }
+.image-grid li { list-style: none; width: auto; padding: 0; height: 98px; width: 150px; display: block; vertical-align: middle; float: left; text-align: center; line-height: 98px; color: #686f74; overflow: hidden; background: #fff; -webkit-box-shadow: 0 0 5px #ddd; -moz-box-shadow: 0 0 5px #ddd; box-shadow: 0 0 5px #ddd; margin: 10px; border: 1px solid #eee; }
+.image-grid li img { width: auto !important; height: auto !important; max-width: 75% !important; max-height: 75% !important; }
+.image-grid li strong { display: block; color: #fff; }
+
+
+/*	News Landing
+----------------------------*/
+.newsLandingIntro figure { position: absolute; top: 30px; right: 35px; width: 270px; padding: 20px 22px 16px; border: 1px solid #dfdfdf; -webkit-box-shadow: 1px 2px 9px 0px #f4f4f4; box-shadow: 1px 2px 9px 0px #f4f4f4; background: #ffffff; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmN2Y3ZjciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); background: -moz-linear-gradient(top, #ffffff 0%, #f7f7f7 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f7f7f7)); background: -webkit-linear-gradient(top, #ffffff 0%,#f7f7f7 100%); background: -o-linear-gradient(top, #ffffff 0%,#f7f7f7 100%); background: -ms-linear-gradient(top, #ffffff 0%,#f7f7f7 100%); background: linear-gradient(to bottom, #ffffff 0%,#f7f7f7 100%); }
+.newsLandingIntro figure:before { content: ''; display: block; float: right; width: 48px; height: 97px; background: url(http://www.silverpop.com/img/silverpop_symbol.png) right 0 no-repeat; }
+.newsLandingIntro .newsBoxCorner { position: absolute; top: -1px; left: -1px; width: 37px; height: 26px; display: block; background: url(http://www.silverpop.com/img/newsLandingBox.png) 0 0 no-repeat; }
+.newsLandingIntro .figSection p { font-size: 1.25em; font-family: 'Avenir LT W01 65 Medium'; width: 150px; margin: 0; padding: 0; }
+.newsLandingIntro .figSection p:last-child { width: 268px; }
+.newsLandingIntro .figSection a > strong { }
+.newsLandingIntro .figSection h5 { padding: 20px 0 10px; margin: 0 0 6px; background: url(http://www.silverpop.com/img/border_dotted.png) 0 bottom repeat-x; }
+.newsLandingIntro .figSection a strong { display: block; font-size: 14px; font-size: .8em; }
+.newsLandingIntro .figSection em { display: block; font-style: italic; padding: 0 0 1px; }
+.newsLandingIntro .figSection p:last-child em, .newsLandingIntro .figSection p:last-child a { font-size: 12px; }
+.newsLandingIntro .figSection p:last-child strong { padding-bottom: 2px; }
+.newsLanding > h3 { border-bottom: 1px solid #eeeeee; padding: 0 0 12px; margin: 0 0 24px; }
+.newsLanding > h3 .btnGray { float: right; margin: -5px 0 0; color: #000; }
+.newsLanding > h3 .btnGray:before { content: ''; width: 21px; height: 19px; background: url(http://www.silverpop.com/img/bg_archive.png) 0 0 no-repeat; float: left; margin: 4px 6px 0 0; }
+.newsLanding li h3 { font-family: 'Avenir LT W01 35 Light'; }
+.newsLanding li h5 { font: normal 1.167em 'Avenir LT W01 85 Heavy'; margin-bottom: 5px; }
+.newsLanding .stacked h3 { padding: 0 0 10px; }
+.newsLanding .stacked span { font-style: italic; }
+.newsLanding .stacked span:before { content: " - "; }
+.newsLanding .stacked .copy p { margin-top: 0; }
+.newsLanding .stacked strong { font-family: Arial; font-weight: bold; color: #000; }
+
+
+/*	News Coverage
+----------------------------*/
+.newsCoverage > h1 { padding: 0; background: none; }
+.newsCoverage > h3 { padding: 0 0 14px; }
+.newsCoverage > ul { margin: 0; padding: 0; list-style: none; }
+.newsCoverage h2 { margin-top: 0; }
+.newsCoverage .paginationLarge { padding: 10px 0 35px; background: url(http://www.silverpop.com/img/shelf_left.png) 0 72% no-repeat; }
+.newsCoverage .resourceList, .newsCoverage .resourceList li { padding: 0; }
+.newsCoverage .grid3Col img { padding: 0 0 4px; width: auto; max-width: 210px; }
+.newsCoverage .grid3Col .copy { clear: both; padding-bottom: 30px; }
+.newsCoverage .grid3Col h3 { padding: 0 0 5px; }
+.newsCoverage .grid3Col p { margin: 5px 0 0; }
+.newsCoverage .grid3Col span { font-style: italic; }
+.newsCoverage .grid3Col span:before { content: " - "; }
+
+
+/*	Press Listing
+----------------------------*/
+.pressListing > h1 { padding: 0; background: none; }
+.pressListing .paginationLarge { padding: 10px 0 25px; background: url(http://www.silverpop.com/img/shelf_left.png) 0 bottom no-repeat; }
+.pressListing .resourceList, .pressListing .resourceList li { padding: 0; }
+.pressListing .stacked { padding: 0; }
+.pressListing .stacked li { padding: 20px 0; border: 0; border-bottom: 1px solid #ddd; }
+.pressListing .stacked li .pressListDate { float: left; font: normal 1.5em 'Avenir LT W01 35 Light'; color: #999; }
+.pressListing .stacked li .pressListInfo { float: right; width: 86%; }
+.pressListing .stacked li a h3 { color: #00b1e3; }
+.pressListing .stacked li a:hover h3 { color: #06e; }
+.pressListing .stacked li p { margin-top: 5px; }
+
+
+/*	Press Releases
+----------------------------*/
+.pressReleaseNav { float: right; margin-left: 15px; }
+.pressReleaseNav .btnGray, .pressReleaseNav .btnGrid { color: #000; }
+.pressReleaseNav .btnGray:before { font-family: FontAwesome; font-weight: normal; font-size: 14px; display: inline-block; }
+.pressReleaseNav .btnGrayPrev:before { content: "\f053"; }
+.pressReleaseNav .btnGrayNext:before { content: "\f054"; }
+.pressReleaseAbout { padding: 10px 0; }
+.pressReleaseInfo h3 { font-size: 26px; padding: 15px 0 5px; }
+.pressReleaseInfo strong { font-weight: bold; }
+.pressReleaseInfo strong:after { content: " "; }
+.pressReleaseInfo em { font-size: 13px; padding: 0 0 14px; display: block; }
+.pressReleaseInfo p { font-size: 13px; margin: 0px; padding: 0 0 22px; }
+.pressReleaseAbout h5 { font-size: 13px; font-weight: bold; text-transform: none; }
+
+
+/*	Partners Overview
+----------------------------*/
+.partnerFeature { float: left; width: 46%; }
+.partnerCaseStudy { float: right; width: 46%; }
+.partnerCaseStudy .btnMore { font: bold 13px/28px Arial; }
+.partnerFeature h5, .partnerCaseStudy h5 { padding-bottom: 12px; }
+.partnerFeature p, .partnerCaseStudy p { font: normal 1.250em 'Avenir LT W01 65 Medium'; }
+.partnerFeature p strong, .partnerCaseStudy p strong { color: #000; }
+
+
+/*	Partners Detail
+----------------------------*/
+.partnerDetail img { padding: 15px 0; max-width: 210px; max-height: 145px; }
+
+
+/*	List
+----------------------------*/
+.listPage > h3 { padding: 20px 0 10px; }
+.listPage > .pageList li { border-bottom: 0; padding-bottom: 0; border-top: 1px solid #eee; }
+.listPage > .pageList li:first-child { padding-top: 25px; }
+.listPage > .pageList figure { padding-bottom: 25px; margin-right: 20px; width: auto; }
+.listPage > .pageList figure .pressListDate { font: normal 1.5em 'Avenir LT W01 35 Light'; color: #999; height: 110px; padding-right: 20px; }
+.listPage > .pageList .copy { margin-left: 0; padding-bottom: 25px; }
+.listPage .tags { display: none; }
+
+
+/*	Events Landing
+----------------------------*/
+.soonestEvent { float: left; width: 420px; padding-bottom: 40px; }
+.soonestEvent .theEvent { height: 290px; overflow: hidden; position: relative; }
+.soonestEvent .theEvent > div { position: absolute; bottom: 0; left: 0; padding: 10px 0 15px; width: 100%; background: #000; background: rgba(0,0,0,.6); }
+.soonestEvent .theEvent img { width: 420px; height: 290px; }
+.no-rgba .soonestEvent .theEvent > div { background: url(http://www.silverpop.com/img/fallbacks/bg_000000_60.png); }
+.soonestEvent h3, .soonestEvent h4, .soonestEvent h5 { color: #fff; padding: 0 15px; }
+.soonestEvent h3 { font-size: 2.333em; }
+.soonestEvent time { position: absolute; top: 0; right: 0; }
+.soonestEvent time span { display: block; color: #fff; padding: 0 10px; }
+.soonestEvent time span:first-child { background: #000; text-transform: uppercase; font: normal 1.167em/20px 'Avenir LT W01 85 Heavy'; }
+.soonestEvent time span:first-child + span { margin-top: 1px; font: normal 4.500em 'Avenir LT W01 35 Light'; background: rgba(0,0,0,.6); }
+.no-rgba .soonestEvent time span:first-child + span { background: url(http://www.silverpop.com/img/fallbacks/bg_000000_60.png); }
+.soonestEvent .eventTeaser { padding: 0 4%; }
+.soonestEvent .btnPill { color: #fff; }
+.webinarCallout { float: right; width: 212px; background: url(http://www.silverpop.com/img/bg_webinarCallout.png) no-repeat; }
+.webinarCallout img { display: block; max-width: 180px; margin: 30px auto 20px; }
+.webinarCallout .copy { padding: 0 20px; }
+.webinarCallout h3, .webinarCallout p { color: #fff; }
+.webinarCallout .more { float: right; }
+.webinarCallout .more:hover { color: #fff; }
+.webinarCallout ins { background: none; color: inherit; text-decoration: none; }
+.comingEvents { clear: both; overflow: hidden; padding-top: 30px; background: url(http://www.silverpop.com/img/shelf_left.png) no-repeat; }
+.comingEvents li { padding: 25px 0; border-top: 1px solid #eee; }
+.comingEvents li:first-child { border: 0; }
+.comingEvents img { width: 210px; }
+.comingEvents figure time { position: absolute; top: 5px; right: 5px; padding: 2px 5px 14px; min-width: 50px; color: #fff; text-align: center; background: #000; background: rgba(0,0,0,.6); }
+.no-rgba .comingEvents figure time { background: url(http://www.silverpop.com/img/fallbacks/bg_000000_60.png); }
+.comingEvents figure time span { color: #fff; }
+.comingEvents figure time span:first-child { position: absolute; bottom: 4px; left: 0; width: 100%; text-transform: uppercase; font-size: 0.917em; }
+.comingEvents figure time span:first-child + span { font: normal 3em 'Avenir LT W01 35 Light'; }
+.comingEvents .copy .location, .comingEvents .copy time { text-transform: uppercase; color: #00a3d2; font-weight: bold; }
+.comingEvents .copy time { margin-left: 7px; padding-left: 11px; border-left: 1px solid #00a3d2; }
+.comingEvents h3 { padding: 4px 0; }
+.comingEvents h4 { font-weight: normal; }
+
+
+/*	Search Results
+----------------------------*/
+.currentSearch { padding: 20px; margin-bottom: 40px; background: #feffff; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIyMyUiIHN0b3AtY29sb3I9IiNmZWZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI2MCUiIHN0b3AtY29sb3I9IiNlZmVmZWYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZThlOGU4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==); background: -moz-linear-gradient(top, #feffff 23%, #efefef 60%, #e8e8e8 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(23%,#feffff), color-stop(60%,#efefef), color-stop(100%,#e8e8e8)); background: -webkit-linear-gradient(top, #feffff 23%,#efefef 60%,#e8e8e8 100%); background: -o-linear-gradient(top, #feffff 23%,#efefef 60%,#e8e8e8 100%); background: -ms-linear-gradient(top, #feffff 23%,#efefef 60%,#e8e8e8 100%); background: linear-gradient(to bottom, #feffff 23%,#efefef 60%,#e8e8e8 100%); -webkit-box-shadow: 0 0 5px #ccc; -moz-box-shadow: 0 0 5px #ccc; box-shadow: 0 0 5px #ccc; }
+.currentSearch h1 { vertical-align: middle; display: inline-block; padding: 0; width: 14%; background: 0; line-height: 1; font-size: 2em; text-shadow: 1px 1px 1px rgba(255,255,255,.8); }
+.currentSearch input[type=text] { vertical-align: middle; width: 68%; padding: 8px 1.25%; margin-right: 2%; font-size: 14px; }
+.currentSearch input[type=submit] { vertical-align: middle; margin: 0; padding: 0; width: 12%; height: 32px; line-height: 32px; position: relative; top: -1px; }
+.currentResults { clear: both; }
+.currentResults ol { margin: 0; padding: 0 0 25px; list-style: none; float: left; width: 100%; }
+.currentResults li { padding: 25px 0; border-top: 1px solid #eee; }
+.currentResults h3 { margin: 0 0 5px; }
+.currentResults p { margin: 0; }
+.autoCompleteWrapper { position: absolute; top: 100%; width: 100%; }
+.autocompleteDropdown { background: #f5f5f5; padding: 0; margin: 0; list-style: none; -webkit-box-shadow: 0 5px 5px rgba(0,0,0,.4); -moz-box-shadow: 0 5px 5px rgba(0,0,0,.4); box-shadow: 0 5px 5px rgba(0,0,0,.4); }
+.autocompleteDropdown li { padding: 6px 10px; font-size: 11px; cursor: pointer; border-top: 1px solid #f1f1f1; border-bottom: 1px solid #ddd; -webkit-transition: all ease .1s; -moz-transition: all ease .1s; -ms-transition: all ease .1s; -o-transition: all ease .1s; transition: all ease .1s; }
+.highlightedDropdownAutoComplete { background: #2aa399; color: #fff; -webkit-transition: all ease .1s; -moz-transition: all ease .1s; -ms-transition: all ease .1s; -o-transition: all ease .1s; transition: all ease .1s; }
+
+
+/*	Marketing Single Landing Pgs
+----------------------------*/
+html.landingPg, html.landingPg body { overflow: visible; }
+.landingPage { width: 900px; margin: 40px auto 0; }
+.landingPage .mainWrap { border: 1px solid #fff; }
+.landingPage h2, .landingPage h3 { margin: 0; padding: 0; }
+.landingPage header { overflow: hidden; position: relative; width: 100%; }
+.landingPage header .textContent h2 { float: left; padding: 30px; width: 420px; min-height: 75px; margin: 0; color: #fff; font: normal 20px/25px 'Avenir LT W01 65 Medium', arial, helvetica, sans-serif; letter-spacing: .25px; background: url(http://www.silverpop.com/Global/Backgrounds/bg_landingpage_headline.jpg) repeat-y; }
+.landingPage header .logo { position: absolute; top: 0; right: 0; height: 100%; width: 420px; background: #fff; }
+.landingPage header .logo .logoWrapOuter { display: table; width: 100%; height: 100%; text-align: center; }
+.landingPage header .logo .logoWrapInner { display: table-cell; vertical-align: middle; }
+.landingPage header .logo img { max-height: 100px; max-width: 370px; }
+.landingPage section { overflow: hidden; background: url(http://www.silverpop.com/Global/Backgrounds/bg_landingpage_form.jpg) right repeat-y; }
+.landingPage .content { float: left; width: 420px; padding: 30px; background: #fff; margin-bottom: -3000px; padding-bottom: 3000px; }
+.landingPage .content > div { padding-bottom: 30px; }
+.landingPage .content h1 { font-size: 24px; margin-top: 0; }
+.landingPage .content p { font-size: 14px; margin-top: 0; }
+.landingPage .content img { clear: right; float: right; margin: 0 0 20px 25px; }
+.landingPage .formBox { clear: none; float: right; width: 360px; margin: 0; padding: 15px 30px 30px; color: #fff; background: 0; border: 0; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+.landingPage .formBox > div { padding-bottom: 30px; }
+.landingPage .formBox .textContent *, .landingPage .formBox label { color: #fff !important; }
+.landingPage .formBox .selector > span { color: #333; }
+.landingPage .formBox.xformSocial { width: 338px; margin: 0 0 15px; float: left; }
+.landingPage .engageForm h2 { color: #fff; margin-bottom: 10px; }
+.landingPage footer { clear: both; border-top: 7px solid #c7eafe; background: #007fc6 url(http://www.silverpop.com/Global/Backgrounds/bg_landingpage_footer.jpg) no-repeat; color: #fff; font-size: 10px; padding: 18px 30px; }
+.landingPage footer p { margin: 0; }
+.landingPage footer a { color: #fff; }
+
+
+.ie8bar img { width: 100%; }
+
+/* iFrame */
+.jobs iframe { height: 100%; overflow-x: hidden; }
+.jobs iframe html { overflow-x: hidden; }
+
+
+/*	IE 8 Fixes
+----------------------------*/
+.lt-ie9 .selector select { -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter: alpha(opacity=0); }
+.lt-ie9 .mainWrap, .lt-ie9 .siteHeader, .lt-ie9 .blogHeader { behavior: url(http://www.silverpop.com/pie.htc); zoom: 1; box-shadow: 0 0 15px #ddd; }
+.lt-ie9 input[type="text"].round { behavior: url(http://www.silverpop.com/pie.htc); zoom: 1; position: relative; }
+.lt-ie9 .searchBox { behavior: url(http://www.silverpop.com/pie.htc); zoom: 1; -pie-background: linear-gradient(#3e3e3e, #030404); }
+.lt-ie9 .searchBox a { behavior: url(http://www.silverpop.com/pie.htc); zoom: 1; }
+.lt-ie9 .heroNav ul { behavior: url(http://www.silverpop.com/pie.htc); zoom: 1; box-shadow: 1px 2px 4px #ccc; }
+.lt-ie9 .utilityNavigation .button:hover { background-color: #00ADDE; }
+.lt-ie9 .msgBox .btnPill { behavior: url(http://www.silverpop.com/pie.htc); zoom: 1; box-shadow: 1px 1px 2px #444; }
+.lt-ie9 .homeSolutions > ul > li a { color: #4c7e01; }
+.lt-ie9 .homeSolutions > ul > li img { filter: alpha(opacity=40); }
+.lt-ie9 .homeSolutions > ul > li.ui-tabs-active a { color: #333; }
+.lt-ie9 .homeSolutions > ul > li.ui-tabs-active img { filter: none; }
+.lt-ie9 .homeEvents .eventTeaser .btnPill { background: #000; }
+.lt-ie9 .homeEvents .eventTeaser .btnPill:hover { background: #00A3D2; box-shadow: 0 3px 2px #016886; }
+.lt-ie9 .homeWebinars li > span { margin-right: -12px; }
+.lt-ie9 .homeSignUp input[type=text] { width: 170px; }
+.lt-ie9 .pageTools li > a:hover { filter: none !important; }
+.lt-ie9 .formBox { behavior: url(http://www.silverpop.com/pie.htc); zoom: 1; -pie-background: linear-gradient(#fff, #f7f7f7); }
+.lt-ie9 .more:before { height: 13px; width: 18px; }
+.lt-ie9 .btnMore:before, .lt-ie9 .btnMoreBlue:before { height: 17px; width: 18px; }
+.lt-ie9 .btnGray { behavior: url(http://www.silverpop.com/pie.htc); box-shadow: 1px 1px 1px #dbdbdb; }
+.lt-ie9 .btnPill { behavior: url(http://www.silverpop.com/pie.htc); zoom: 1; position: relative; box-shadow: 1px 2px 2px #666; }
+.lt-ie9 .btnPill:hover { behavior: url(http://www.silverpop.com/pie.htc); zoom: 1; position: relative; -pie-background: linear-gradient(#67e6f9, #0193ba); }
+.lt-ie9 .btnPillGray { behavior: url(http://www.silverpop.com/pie.htc); zoom: 1; position: relative; box-shadow: 1px 2px 2px #666; }
+.lt-ie9 .btnPillGray:hover { behavior: url(http://www.silverpop.com/pie.htc); zoom: 1; position: relative; -pie-background: linear-gradient(#fff, #fff); }
+.lt-ie9 .madeForYou .recommended li { position: relative; }
+.lt-ie9 .madeForYou .recommended a { behavior: url(http://www.silverpop.com/pie.htc); zoom: 1; -pie-background: linear-gradient(#fff, #f1f1f1); }
+.lt-ie9 .madeForYou .recommended a:hover { -pie-background: linear-gradient(#fff, #b2e3f2); }
+.lt-ie9 .eventHighlight .btnMore { behavior: url(http://www.silverpop.com/pie.htc); zoom: 1; -pie-background: linear-gradient(#fff, #ddd); box-shadow: 1px 1px 1px #ccc; }
+.lt-ie9 .clientLogin .collapse { behavior: url(http://www.silverpop.com/pie.htc); zoom: 1; }
+.lt-ie9 .bx-pager { behavior: url(http://www.silverpop.com/pie.htc); zoom: 1; box-shadow: 0 0 5px #ccc; }
+.lt-ie9 .raisedBox { behavior: url(http://www.silverpop.com/pie.htc); zoom: 1; box-shadow: 0 0 5px #ccc; }
+.lt-ie9 .packageOptions li { behavior: url(http://www.silverpop.com/pie.htc); zoom: 1; -pie-background: linear-gradient(#fff, #f7f7f7); }
+.lt-ie9 .clientCases .clientStudies > ul div { background: url(../img/fallbacks/bg_000000_60.png); }
+.lt-ie9 .clientCases figure > div { background: url(../img/fallbacks/bg_000000_60.png); }
+.lt-ie9 .pageFeature figure.staticImg figcaption { background: url(../img/fallbacks/bg_000000_60.png); }
+.lt-ie9 .currentSearch { behavior: url(http://www.silverpop.com/pie.htc); zoom: 1; -pie-background: linear-gradient(#feffff, #efefef); }
+.lt-ie9 .ui-widget-overlay { background: url(../img/fallbacks/bg_000000_60.png); }
+.lt-ie9 .btnPillWrapper { background: url(../img/fallbacks/bg_000000_60.png); }
+.lt-ie9 .resourceList .btnPillWrapper { background: 0; }
+.lt-ie9 .resourceListing .btnPillGray { position: absolute; }
+.lt-ie9 .resourceDownload { behavior: url(http://www.silverpop.com/pie.htc); zoom: 1; }
+.lt-ie9 .resourceDownload input[type="submit"]:hover { background: #63E2F5; }
+.lt-ie9 .forceDownload .btnPill { border: 0 !important; }
+/*
+.lt-ie9 .resourceDownload .desc { height: 574px; }
+.lt-ie9 .resourceDownload .formBox { height: 574px; }
+*/
+.lt-ie9 .siteMsg { behavior: url(http://www.silverpop.com/pie.htc); zoom: 1; -pie-background: linear-gradient(#218cbf, #7db9e8); }
+.lt-ie9 .siteMsg .close { behavior: url(http://www.silverpop.com/pie.htc); zoom: 1; }
+.lt-ie9 .successSlider .bx-wrapper .bx-controls .bx-prev, .lt-ie9 .successSlider .bx-wrapper .bx-controls .bx-next { behavior: url(http://www.silverpop.com/pie.htc); zoom: 1; -pie-background: linear-gradient(#e4e4e4, #eeeeee); box-shadow: none; }
+
+/*	IE Topbar
+----------------------------*/
+
+.old-ie-warning { background: #ddd; padding: 7px 0; border-bottom: 1px solid #c4c4c4; border-top: 1px solid #e8e8e8; display: none; margin-bottom: 1px; }
+.old-ie-warning-inner { width: 960px; margin: 0 auto; overflow: auto; }
+.old-ie-warning-callout { width: 70%; float: left; font-weight: bold; }
+.old-ie-warning-action { width: 30%; float: left; clear: right; }
+.old-ie-warning-btn { display: block; float: left; margin: 4px; padding: 2px 6px; border: 1px solid #aaa; background: #bbb; font-weight: bold; width: 80px; text-align: center; color: #fff; }
+.old-ie-warning-btn:hover { cursor: pointer; border-color: #888; color: #fff; }
+.old-ie-warning-btn.old-ie-warning-btn-blue { background: #1bbbed; }
+
+/* Demo Modal */
+.demoModalFrame { width: 700px; height: 425px; border: none; }
+
+
+/*Sitemap page*/
+.sitemap .AspNet-TreeView-Root { display: inline-block; width: 24%; vertical-align:top; padding-bottom:30px; list-style:none;}
+.sitemap .AspNet-TreeView-Root > a { font: normal 2.250em/1.2 'Avenir LT W01 35 Light'; letter-spacing: -1px; }
+.sitemap .AspNet-TreeView-Root > ul > li > a{ font-weight: bold; }
+.sitemap .AspNet-TreeView-Collapse { display: none; }
+
+
+/*B2C Calculator*/
+
+.btoc-calc .header {background-color: navy; background-image: url('/img/bg_successStories.jpg'); width:100%; min-height:50px; max-height:75px; -moz-background-size:contain; -o-background-size:contain; background-size:contain; }
+.btoc-calc .header h2 {text-align:center; color:white; margin:0; padding-top:10px;}
+.btoc-calc .heading-content .subheading-area { padding: 10px 0; background-color:#00b1e3; }
+.btoc-calc .heading-content h4 {text-align:center; color:white; width:100%;}
+.btoc-calc .btoc-content .hero-banner img {max-width:100%;}
+.btoc-calc .btoc-content .header {width:100%;}
+
+.btoc-calc .btoc-content {width:95%; margin: 0 auto;background-color:#f9fcff; color:#333}
+.btoc-calc .calculator-body {width:90%; margin: 0 auto;  color:#333;}
+.btoc-calc .recover-area {min-height:100px;color:white; background-color:#f9fcff; background-image:url('/img/home_solutionsbox.png'); text-align: center;}
+.btoc-calc .recover-area h4 {color:white;}
+.btoc-calc .recover-area .recover-content {width:60%; margin: 0 auto; padding-top:15px;}
+.btoc-calc .recover-area .btn {margin-top:10px;}
+.btoc-calc .related-content {padding:15px 0;}
+.btoc-calc .related-content-area {background-color:rgb(201, 236, 245); text-align:center; color:#333}
+.btoc-calc .related-content-area .related-content-item .download-button { position:absolute; bottom:5px; margin-left:80px;}
+.btoc-calc .related-content-item {box-shadow: 1px 1px 4px 1px #999; background-color:white; color:white; display:inline-block; margin:10px 5px; border-bottom-left-radius:100px; border-bottom-right-radius:100px; border-top-left-radius:100px; width:200px; height:200px;}
+.btoc-calc .related-content-item img {width:85%; margin: 0 auto; padding-top:30px;}
+.btoc-calc .retail-area {color:white; background-color:navy; background-image:url('/img/bg_footer.png'); -moz-background-size:contain; -o-background-size:contain; background-size:contain;min-height:100px; text-align:center; padding-top:30px;}
+.btoc-calc .retail-area h4{color:white; padding-bottom:20px;}
+
+.btoc-calc .footer-content-area {color:white; background-color:#ccc; min-height:100px; text-align:center;}
+.btoc-calc .footer-content-area .footer-content {  text-align:center; margin: 0 auto; padding-top:10px;}
+
+.btoc-calc .calculator-body-row { display: table-row; }
+.btoc-calc .calculator-body-left {display:table-cell; width:50%;}
+.btoc-calc .calculator-body-output  {display:table-cell; text-align:center; padding-right: 15px; padding-top:8px;}
+.btoc-calc .calculator-body .btn {margin-bottom:20px;}
+
+.btoc-calc .calculator-body-row .client-invisible{ visibility:hidden;}
+
+.btoc-calc .share.facebook { background: url(http://www.silverpop.com/img/facebook_xform.png); }
+.btoc-calc .share.linkedin { background: url(http://www.silverpop.com/img/linkedin_xform.png); }
+.btoc-calc .share.google { background: url(http://www.silverpop.com/img/google_xform.png); }
+.btoc-calc .share.twitter { background: url(http://www.silverpop.com/img/twitter_xform.png); }
+.btoc-calc .btoc-share .share { display: inline-block; width: 32px; height: 32px; text-decoration: none; background-repeat: no-repeat; background-position: center; }
+
+.btoc-calc .btoc-share > ul {list-style-type:none; margin: 0; padding:10px 0 0 0 ;}
+.btoc-calc .btoc-share > ul li {display: inline;}
+
+.btoc-calc .secondary-body {color:#00a3d2;}

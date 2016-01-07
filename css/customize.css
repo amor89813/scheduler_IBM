@@ -1,0 +1,343 @@
+/* Row and Column */
+
+.row{
+	padding: 2px;
+	width:100%;
+}
+
+.col-md-2{
+	float: left;
+	display: inline-block;
+	margin-top: 25px;
+	width: 17%;
+	height: auto;
+}
+
+.col-md-3{
+	float: left;
+	display: inline-block;
+	margin-top: 25px;
+	width: 25%;
+	height: auto;
+}
+
+.col-md-4{
+	float: left;
+	display: inline-block;
+	margin-top: 25px;
+	width: 30%;
+	height: auto;
+}
+
+.col-md-6{
+	float: left;
+	display: inline-block;
+	margin-top: 25px;
+	width: 50%;
+	height: auto;
+}
+
+.col-md-9{
+	float: left;
+	display: inline-block;
+	margin-top: 25px;
+	width: 75%;
+	height: auto;
+}
+
+.col-md-10{
+	float: left;
+	display: inline-block;
+	margin-top: 25px;
+	width: 83%;
+	height: auto;
+}
+
+.col-md-12{
+	float: left;
+	display: inline-block;
+	margin-top: 25px;
+	width: 100%;
+	height: auto;
+}
+
+/* images & selection*/
+div#cross-icon{
+	float:right;
+	margin-right: 10%;
+	display:none;
+}
+div#cross-icon img{
+	height: 47px;
+}
+div#cross-icon img:hover{
+	cursor: hand;
+}
+
+#category_select .genius-button{
+	margin: 0 40% 4px 0;
+	width: 60%;
+	padding: 10px;
+	border-radius: 4px;
+	border: 1px solid #d6d6d6;
+}
+
+#category_select .genius-button:hover,
+#service_select .genius-button:hover{
+	cursor: hand;
+	border: 1px solid #158cfb;
+	
+}
+#category_select .genius-button:focus,
+#service_select .genius-button:focus{
+	box-shadow: 0px 0px 1px 1px #158cfb;	
+}
+
+#category_select #other.genius-button{
+	margin: 0 42% 0 auto;
+	width: 30%;
+	border-radius: 4px;
+}
+#service_select .genius-button{
+	padding: 10px;
+	margin-right: 10px;
+	border-radius: 4px;
+	border: 2px solid #d6d6d6;
+}
+
+.genius-button-image img{
+	padding-left: 25%;
+	padding-right: 25%;
+	width: 50%;
+	margin-bottom: 16px;
+	
+}
+.genius-button-message{
+	text-align: center;
+	font-size: 16px;
+}
+.confirm_img{
+	height:72px;
+
+}
+
+
+
+/* Panel control */
+#service_select{
+	display: none;
+}
+
+#schedule_call{
+	display: none;
+}
+
+
+#schedule_confirm{
+	display: none;
+}
+
+/* time select */
+#timepicker{
+	min-height: 100px;
+	max-height: 300px;
+	overflow: auto;
+    width: 90%;
+    border-bottom: 1px solid #bbb;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+
+.busyrow p{
+	font: 1.5em 'Avenir';
+    font-size: 14px;
+    background-color: #f5f5f5;
+    padding: 5px;
+    padding-left: 5%;
+    margin: 5px;
+}
+
+.timerow p{
+	font: 1.5em 'Avenir';
+    font-size: 15px;
+    background-color: #f5f5f5;
+    padding: 5px;
+    padding-left: 5%;
+    margin: 5px;
+    border-radius: 4px;
+    padding:10px;
+}
+
+.timerow p:hover{
+	font-size: 14px;
+	background-color: #43A2D8 !important;
+	cursor: hand;
+	color:white;
+}
+
+/* text */
+
+#category_select p,
+#service_select p,
+#schedule_call p,
+#schedule_confirm p{
+	font: 1.5em 'Avenir';
+	font-size: 14px;
+}
+
+#category_select h3,
+#service_select h3,
+#schedule_call h3,
+#schedule_confirm h3{
+	font: 1.5em 'Avenir';
+	font-size: 20px;
+}
+
+
+
+/* book button */
+#book {
+	-moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5));
+	background:-moz-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	background:-webkit-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	background:-o-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	background:-ms-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5',GradientType=0);
+	background-color:#79bbff;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+	margin-left:50%;
+	margin-right: auto;
+}
+#book:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff));
+	background:-moz-linear-gradient(top, #378de5 5%, #79bbff 100%);
+	background:-webkit-linear-gradient(top, #378de5 5%, #79bbff 100%);
+	background:-o-linear-gradient(top, #378de5 5%, #79bbff 100%);
+	background:-ms-linear-gradient(top, #378de5 5%, #79bbff 100%);
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff',GradientType=0);
+	background-color:#378de5;
+}
+#book:active {
+	position:relative;
+	top:1px;
+}
+
+/* front office */
+
+div#videodesk-post-header-schedule-timer{
+	background-color: white;
+}
+div#videodesk-post-header-schedule-timer .margin{
+	padding-top:5%;
+	background-color:white;
+}
+div#videodesk-post-header-schedule-timer .row{
+    background-color: #d3d3d3;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+div#videodesk-post-header-schedule-timer-icon{
+	display: inline-block;
+	width: 15%;
+}
+
+div#videodesk-post-header-schedule-timer-icon img{
+	width: 80%;
+	height: auto;
+}
+
+div#videodesk-post-header-schedule-timer-message #line1 p{
+	font-size: 13px;
+}
+
+div#videodesk-post-header-schedule-timer-message #line2 b,
+div#videodesk-post-header-schedule-timer-message #line2 span{
+	font-size: 13px;
+	font-weight: bold;
+}
+
+div#videodesk-post-header-schedule-timer-message #line3 p{
+	font-size: 11px;
+}
+
+div#videodesk-post-header-schedule-timer-test {
+	text-align: center;
+}
+
+
+
+
+
+div#videodesk-post-content-schedule-countdown .row{
+	float:right;
+	width:63%;
+}
+
+div#videodesk-post-content-schedule-countdown-icon{
+	padding:2px;
+}
+div#videodesk-post-content-schedule-countdown-icon img{
+	width: 35px;
+}
+div#videodesk-post-content-schedule-countdown-icon.col-md-2{
+	margin-left: -13%;
+}
+div#videodesk-post-content-schedule-countdown-message.col-md-10{
+	padding:10px;
+	width:75%;
+}
+
+div#videodesk-post-content-schedule-countdown-message p{
+	font-size : 15px;
+}
+div#videodesk-post-content-schedule-countdown-reminder p{
+    font-size: 16px;
+    width: 90%;
+    float: right;
+    margin-top: 15px;
+    color: #005AC2;
+    padding-bottom:10px;
+}
+
+div#videodesk-post-content-schedule-countdown-test p,
+div#videodesk-post-content-schedule-countdown-test a{
+	margin-left: 10%;
+}
+
+div#videodesk-post-content-schedule-countdown-how-it-work a{
+	font-size: 15px;
+	margin-left: 10%;
+	margin-top: 12px;
+}
+
+.row div#videodesk-post-content-schedule-countdown-how-it-work {
+	padding-bottom: 8px;	
+}
+
+/*hack of their web*/
+div#ctl00_ctl00_MainContent_Content_FormArea_ctl01_outerDiv.engageForm{
+	width:92%;
+}
+
