@@ -278,6 +278,7 @@ $(document).ready(function(){
 	    $('#schedule_call').slideToggle();
 	    $('#schedule_confirm').show();
 		$('#contact_title').text('Thank You!');
+		document.getElementById('header').scrollIntoView();
 		
 	    form.setData('name',$('#form_name').val());
 	    form.setData('email',$('#form_email').val());
