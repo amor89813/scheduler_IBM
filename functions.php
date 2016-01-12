@@ -18,6 +18,12 @@ switch($p['method']){
         $res = startCall($p);
         break;
         
+    case 'generateToken':
+        $res = generateToken($p);
+        break;
+    case 'updateToken':
+        $res = updateToken($p);
+        break;
     default:
         break;
         
@@ -31,7 +37,8 @@ function book($p){
     die("Impossible de se connecter : " . mysql_error());
     mysql_select_db("simplybook");
     
-    $token = $p['codeid'];
+    $code = $p['codeid'];
+    $token = $p['token'];
     $confirmed = true;
     $event = $p['event'];
     $unit = $p['unit'];
@@ -39,11 +46,11 @@ function book($p){
     $end_date_time = $p['time'];
     
     $sql = 'INSERT INTO `simplybook`.`booking` (`id`, `booking_id`, `event_id`, `unit_id`, `start_date_time`, `end_date_time`, `is_confirmed`, `code`, `token`,`hash`, `user_id`) VALUES ' ;
-    $sql .= '(NULL, '. $token .', '. $event.', '. $unit .', "'. $start_date_time .'", "'.$end_date_time .'", '. $confirmed .',"'. $token .'", "'. $token .'","abcdefg", 1111);' ;
+    $sql .= '(NULL, '. $code .', '. $event.', '. $unit .', "'. $start_date_time .'", "'.$end_date_time .'", '. $confirmed .',"'. $code .'", "'. $token .'","abcdefg", 1111);' ;
     
     mysql_query($sql);
     
-    return "succe";
+    return $sql;
 }
 
 function getBookingInfo($p){
@@ -52,7 +59,17 @@ function getBookingInfo($p){
     die("Impossible de se connecter : " . mysql_error());
     mysql_select_db("simplybook");
     
-    $sql = 'SELECT * FROM `simplybook`.booking WHERE token = "'. $p[ 'code' ] .'"' ;
+    switch($p['index']){
+        case 'code':
+            $sql = 'SELECT * FROM `simplybook`.booking WHERE code = "'. $p[ 'code' ] .'"' ;
+            break;
+        case 'token':
+            $sql = 'SELECT * FROM `simplybook`.booking WHERE token = "'. $p[ 'token' ] .'"';
+            break;
+        default:
+            break;
+    }
+    
     $result = mysql_query($sql);
 
     $row = mysql_fetch_array($result, MYSQL_ASSOC) ;
@@ -60,16 +77,35 @@ function getBookingInfo($p){
     
 }
 
+
 function startCall($p){
     
     mysql_connect("localhost", "videodesk", "ju87gtS") or
     die("Impossible de se connecter : " . mysql_error());
     mysql_select_db("simplybook");
     
-    $sql = 'UPDATE `simplybook`.booking set has_started = 1 WHERE token = "'. $p[ 'code' ] .'"' ;
+    $sql = 'UPDATE `simplybook`.booking set has_started = 1 WHERE code = "'. $p[ 'code' ] .'"' ;
     $result = mysql_query($sql);
 
     $row = mysql_fetch_array($result, MYSQL_ASSOC) ;
     return "success";
     
+}
+
+function generateToken($p){
+    $p = implode('|',$p);
+    return md5("$p");
+}
+
+function updateToken($p){
+    
+    mysql_connect("localhost", "videodesk", "ju87gtS") or
+    die("Impossible de se connecter : " . mysql_error());
+    mysql_select_db("simplybook");
+    
+    $sql = 'UPDATE `simplybook`.booking set token ="'. $p['new_token'] .'" WHERE token = "'. $p[ 'old_token' ] .'"' ;
+    $result = mysql_query($sql);
+
+    $row = mysql_fetch_array($result, MYSQL_ASSOC) ;
+    return "success";
 }

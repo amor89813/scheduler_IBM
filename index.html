@@ -22,6 +22,7 @@
     <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
     <!--<script src="https://widget-cdn.rpxnow.com/manifest/login?version=1.109.0_widgets_494" type="text/javascript"></script>-->
     <!--<script type="text/javascript" id="janrainAuthWidget" src="http://widget-cdn.rpxnow.com/js/lib/spopconfig/engage.js"></script>-->
+    
     <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
     <script type="text/javascript" async="" src="http://www.google-analytics.com/plugins/ua/linkid.js"></script>
     <script type="text/javascript" async="" src="https://us2.siteimprove.com/js/siteanalyze_6029532.js"></script>
@@ -30,7 +31,10 @@
     <script src="js/modernizr.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
-    
+    <script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="js/moment-timezone.js"></script>
+    <script type="text/javascript" src="js/jstz.min.js"></script>
+    <script type="text/javascript" src="js/timezone.picker.js"></script>
     <script type="text/javascript" src="js/jquery.datetimepicker.js"></script>
     <script type="text/javascript" src="js/jquery.countdown.min.js"></script>
     <script type="text/javascript" src="js/json-rpc-client.js"></script>
@@ -2693,7 +2697,7 @@ Creation Date: 01/27/2014
                         </div>
                         <div class="mm-column">
                             <h3><a href="http://www.silverpop.com/Software/email-marketing/">Email <br>Marketing</a></h3>
-                            <p>Send incredibly personal, relevant and timely messaging that incorporate customersÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ preferences and recent behaviors.</p>
+                            <p>Send incredibly personal, relevant and timely messaging that incorporate customersÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ preferences and recent behaviors.</p>
                             <ul>
                                 <li><a href="http://www.silverpop.com/Software/email-marketing/">Email Marketing</a>
                                 </li>
@@ -2836,7 +2840,7 @@ Creation Date: 01/27/2014
                         <div class="mm-feature mm-column">
                             <img src="http://www.silverpop.com/Global/Images/Clients/Logos/TI.png" alt="Silverpop client logo for Texas Instruments" style="border-width:0px;">
                             <div>
-                                <p>ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œMarketing Automation has allowed us to be very personal in terms of the message we send to our customers.&nbsp; Click through rates on some of our automated programs has tripled what we are used to seeing with traditional campaigns and our conversion rates are a lot higher.ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â&nbsp;</p>
+                                <p>ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“Marketing Automation has allowed us to be very personal in terms of the message we send to our customers.&nbsp; Click through rates on some of our automated programs has tripled what we are used to seeing with traditional campaigns and our conversion rates are a lot higher.ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â&nbsp;</p>
                                 <p>Kristin Lucido
                                     <br>Texas Instruments</p>
                                 <p>&nbsp;</p>
@@ -3288,6 +3292,9 @@ Creation Date: 01/27/2014
                                 </div>
 
                                 <div class="col-md-6">
+                                    <div id="timezonepicker">
+                                        <select class="form-control"></select>
+                                    </div>
                                     <div id="timepicker">
                                         <div class="timerow">
                                             <p>10:00 AM</p>
@@ -3482,7 +3489,7 @@ Creation Date: 01/27/2014
         <footer id="footer" class="siteFooter">
             <div class="siteFooterWrap">
                 <div class="aboutSilverpop">
-                    <p>Silverpop, an IBM Company, is a cloud-based digital marketing provider that offers email marketing, lead-to-revenue management and mobile engagement solutions. Silverpop Engage ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â the foundation of the IBM Marketing Cloud ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â uses customer data and individual behaviors, collected from a variety of sources, to inform and drive personalized interactions in real time. IBM Marketing Cloud powers the delivery of exceptional experiences for customers across the buyer journey by leveraging key data, providing analytical insights and automating relevant cross-channel interactions. As part of IBM Marketing Solutions, Silverpop helps make it easier to design meaningful customer experiences across applications, devices and time, accelerating todayÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢s results and tomorrowÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢s ambitions. Silverpop is trusted by more than 5,000 brands around the globe.</p>
+                    <p>Silverpop, an IBM Company, is a cloud-based digital marketing provider that offers email marketing, lead-to-revenue management and mobile engagement solutions. Silverpop Engage ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â the foundation of the IBM Marketing Cloud ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â uses customer data and individual behaviors, collected from a variety of sources, to inform and drive personalized interactions in real time. IBM Marketing Cloud powers the delivery of exceptional experiences for customers across the buyer journey by leveraging key data, providing analytical insights and automating relevant cross-channel interactions. As part of IBM Marketing Solutions, Silverpop helps make it easier to design meaningful customer experiences across applications, devices and time, accelerating todayÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s results and tomorrowÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s ambitions. Silverpop is trusted by more than 5,000 brands around the globe.</p>
                 </div>
                 <div class="footerNav">
                     <p></p>
@@ -3554,7 +3561,7 @@ Creation Date: 01/27/2014
                     </div>
                 </div>
                 <div class="copyright">
-                    <p>Ãƒâ€šÃ‚Â© 2015 Silverpop. All Rights Reserved.</p>
+                    <p>ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© 2015 Silverpop. All Rights Reserved.</p>
                 </div>
             </div>
         </footer>
@@ -4066,4 +4073,4 @@ Creation Date: 01/27/2014
 
 </body>
 
-</html>
+</html>{"changed":true,"filter":false,"title":"index.html","tooltip":"/www/envyaou/scratchpad/scheduler_IBM/index.html","value":" <html class=\" js flexbox flexboxlegacy canvas canvastext no-touch postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage border

@@ -30,23 +30,19 @@ function _videodeskGetAvailability(availability){
 
 function Form(){
         
-        this.currTime = new Date();
-        this.currDate = this.formatDate();
+        this.scheduler = new Scheduler();
         
         this.scheduled = false;
         this.bookingInfo = false;
         
-        this.formData = {};this.scheduler = new Scheduler();
+        this.formData = {};
+        this.currDate = this.scheduler.currMomentOb.format('YYYY-MM-DD');
         this.setData('date',this.currDate);
         this.initWorkCalendar();
         
 }
 
 jQuery.extend(Form.prototype,{
-    
-    formatDate : function(){
-        return this.currTime.getFullYear() + '-' + this.strPad(this.currTime.getMonth() + 1) + '-' + this.strPad(this.currTime.getDate());
-    },
     
     strPad : function(val){
         if (val > 9) {
@@ -137,32 +133,40 @@ jQuery.extend(Form.prototype,{
         
     },
     
-    getBookingInfo : function(codeid,triggerCountDown){
+    getBookingInfo : function(input,method,triggerCountDown){
         
+        triggerCountDown = typeof triggerCountDown !=='undefined' ? triggerCountDown : false;
         var instance = this;
         
-        codeid = typeof codeid !== 'undefined' ? codeid : window.location.search;
-        triggerCountDown = typeof triggerCountDown !=='undefined' ? triggerCountDown : false;
-        if(!codeid.length) return;
-        
-        codeid = codeid.substr(1).split('=');
-        
-        $.post( "functions.php", {
-    		    
-    		    method : 'getBookingInfo',
-    			code : codeid[1],
-    	        })
-    		    .done(function( data ) {
-    		        if(data){
-    		            
-                        instance.bookingInfo = JSON.parse(data);
-    		            instance.scheduled= true;
-    		            if(triggerCountDown) {
-    		                instance.initCountDown(instance.bookingInfo.start_date_time,instance.bookingInfo.token);    
-    		            }
-    		            
-    		        }
-    	});
+        switch(method){
+            
+            case 'code':
+                this.scheduler.getBookingInfo(input,'code',function(bookingInfo){
+                    
+                    if(!!bookingInfo){
+                        instance.scheduled = true;
+                        instance.bookingInfo = bookingInfo;
+                        res = triggerCountDown ? instance.initCountDown(bookingInfo.start_date_time,bookingInfo.code) : false;
+                        
+                    }else{
+                        instance.getBookingInfo(instance.scheduler.lastToken,'token',triggerCountDown);
+                    }
+                    
+                });
+                
+            break;
+            
+            case 'token':
+                
+                this.scheduler.getBookingInfo(input,'token',function(bookingInfo){
+                    instance.scheduled = true;
+                    instance.bookingInfo = bookingInfo;
+                    res = triggerCountDown ? instance.initCountDown(bookingInfo.start_date_time,bookingInfo.code) : false;
+                });
+                
+            break;
+            
+        }
         
         return instance;
     
@@ -173,7 +177,9 @@ jQuery.extend(Form.prototype,{
         var instance = this;
         if(!instance.scheduled) return;
         
-        $('#clock').countdown(start_date_time, {elapse: false}).on('update.countdown', function(event) {
+        $('#clock').countdown(start_date_time, {elapse: false})
+        
+        .on('update.countdown', function(event) {
             
             var $this = $(this);
             if (event.elapsed) {
@@ -185,11 +191,12 @@ jQuery.extend(Form.prototype,{
                 day = Math.floor(timeDiff / (1000 * 3600 * 24)); 
                
                 if(timeDiff > 10 * 60 * 1000){
+                    
                     if(!document.getElementById('videodesk-post-header-schedule-timer') && document.getElementById('videodesk-header')){
                         _vdk.ui.rem('header');
                         _vdk.ui.set("post-header","schedule_timer");
-                        $('div#line2 span').text(start_date_time);
-                    }   
+                    }
+                    $('div#line2 span').text(start_date_time);
                 }
                 else {
                     if(!document.getElementById('videodesk-post-content-schedule-countdown-message')){
@@ -199,9 +206,6 @@ jQuery.extend(Form.prototype,{
                     
                     $('div#videodesk-post-content-schedule-countdown-message p').text(event.strftime('You conversation will start in: %M:%S'));
                 }
-                
-                
-                
                 
             }
            
@@ -221,10 +225,12 @@ jQuery.extend(Form.prototype,{
         $('div#videodesk-post-content-schedule-countdown-message p').text('Launching the call...');
         
         if(!instance.bookingInfo){
-            instance.getBookingInfo(codeid);
+            instance.getBookingInfo(codeid,'code',false);
         }
         
         if(instance.bookingInfo.has_started == '0'){
+            
+            
             //alert("get here");
             $.post( "functions.php", {
     		    
@@ -254,9 +260,10 @@ jQuery.extend(Form.prototype,{
 $(document).ready(function(){
   
     window.form = new Form();
+    params = window.location.search;
+    params = params.substr(1).split('=');
     
-    form.getBookingInfo(undefined,true);
-    
+    form.getBookingInfo(params[1],'code',true);
     
     
 	$('#category_select .genius-button').click(function(){
@@ -289,6 +296,7 @@ $(document).ready(function(){
 		
 		start_date_time = form.formData.date +" "+ form.formData.time;
 		
+		$("#clock").removeData('jcdData');
 		form.initCountDown(start_date_time);
 	});	
 	
@@ -301,7 +309,12 @@ $(document).ready(function(){
 		$('#contact_title').text('Contact Us');
 	});	
 	
-
+    $("#timezonepicker select").timezones();
+    $('#timezonepicker select').val(form.scheduler.timezone);
+    $('#timezonepicker select').change(function(){
+        form.scheduler.timezone = $(this).val();
+    });
+    
 	$('#datepicker').datetimepicker({
         dayOfWeekStart : 7,
         lang:'en',
@@ -312,6 +325,7 @@ $(document).ready(function(){
         showSecond: true,
         ampm:true,
         inline:true,
+        className: 'vdk_scheduler',
         onGenerate : function(currentTime,input){
             $(this).find('.xdsoft_weekend').addClass('xdsoft_disabled');
         },
