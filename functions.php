@@ -44,9 +44,10 @@ function book($p){
     $unit = $p['unit'];
     $start_date_time = $p['time'];
     $end_date_time = $p['time'];
+    $timezone = $p['timezone'];
     
-    $sql = 'INSERT INTO `simplybook`.`booking` (`id`, `booking_id`, `event_id`, `unit_id`, `start_date_time`, `end_date_time`, `is_confirmed`, `code`, `token`,`hash`, `user_id`) VALUES ' ;
-    $sql .= '(NULL, '. $code .', '. $event.', '. $unit .', "'. $start_date_time .'", "'.$end_date_time .'", '. $confirmed .',"'. $code .'", "'. $token .'","abcdefg", 1111);' ;
+    $sql = 'INSERT INTO `simplybook`.`booking` (`id`, `booking_id`, `event_id`, `unit_id`, `start_date_time`, `end_date_time`, `is_confirmed`, `code`, `token`,`hash`, `user_id`,`timezone`) VALUES ' ;
+    $sql .= '(NULL, '. $code .', '. $event.', '. $unit .', "'. $start_date_time .'", "'.$end_date_time .'", '. $confirmed .',"'. $code .'", "'. $token .'","abcdefg", 1111,"'.$timezone.'");' ;
     
     mysql_query($sql);
     

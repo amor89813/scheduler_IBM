@@ -3,11 +3,17 @@ function Scheduler(){
     var simplybook = new Simplybook();
     this.client = simplybook.client;
     this.agents = this.getAgentList();
+    this.simplybookTimezone = 'America/New_York';
     
-    this.timezone = jstz.determine().name();
+    this.defaultTimezone = jstz.determine().name();
+    this.timezone = this.defaultTimezone;
     this.currMomentOb = this.getMomentOb();
+    this.currDate = this.currMomentOb.format("YYYY-MM-DD");
+    this.currTime = this.currMomentOb.format("HH:mm:ss");
     this.interval = 30 * 60* 1000;
+    
     this.lastToken = this.getCookieByName('_vdk_scheduler_token');
+    
     this.events = {
         'video' : '1',
         'text'  : '2'
@@ -18,27 +24,37 @@ function Scheduler(){
     this.count = 1;
 }
 
-
-Scheduler.prototype.getTimeMatrixByDate = function(date,event){
+/** generate the time matrix for the front-end to use
+ *  @param {string} event - name of the event for ex.'video' or 'chat'
+ *  @param {string} date - date that customer select on the datetimepicker default to current date
+ *  @param {string} time - start time to calculate the time matrix, default to 
+ */
+Scheduler.prototype.getTimeMatrix = function(event,date,time){
     
+    date = typeof date !== 'undefined' ? date : this.currDate;
+    hour = this.getMomentOb().format('HH');
+    hour = Number(hour)+1;
+    time = typeof time !== 'undefined' ? time : (date === this.currDate ? hour+':00:00' : '00:00:00');
+    
+    start_time_moment = this.getMomentOb(date + " " + time);
+    end_time_moment = this.getMomentOb(start_time_moment.format('YYYY-MM-DD 23:59:59'));
+    
+    start_time = start_time_moment.tz(this.simplybookTimezone).unix();
+    end_time = end_time_moment.tz(this.simplybookTimezone).unix();
+    
+    console.log(date);
+    console.log(time);
     var timeMatrix = {};
     
-    for(var agentId in this.agents){
-       
-       var temp = this.client.getStartTimeMatrix(date,date,this.events[event],agentId,this.count);
-       for(var key in temp){
-           temp = temp[key];
-       }
-       
-       for(var i=0; i<temp.length; i++){
-          
-          if(temp[i] in timeMatrix){
-             timeMatrix[temp[i]]++;
-          }
-          else{
-              timeMatrix[temp[i]] = 1;
-          }
-       }
+    for(t = start_time; t <= end_time; t=t+this.interval/1000){
+        m = moment.unix(t);
+        temp_time = m.tz(this.simplybookTimezone).format('YYYY-MM-DD HH:mm:ss');
+        console.log(temp_time);
+        agents = this.getAvailableAgentsByTime(event,temp_time);
+        if(!agents.length) continue;
+        temp_time = m.tz(this.timezone);
+        timeMatrix[temp_time.format('HH:mm:ss')] = temp_time.format('hh:mm A (z)') + " ( " + agents.length + " agents available)";
+        
     }
     
     return timeMatrix;
@@ -107,7 +123,7 @@ Scheduler.prototype.getBookingInfo = function(input,index,callback){
 
 }
 
-Scheduler.prototype.getAvailableAgentsByTime = function(time,event){
+Scheduler.prototype.getAvailableAgentsByTime = function(event,time){
     return this.client.getAvailableUnits(this.events[event],time,this.count);
 }
 
@@ -126,21 +142,27 @@ Scheduler.prototype.getAgentList = function(){
 
 Scheduler.prototype.book = function(event,agentId,date,time,customerInfo,addtionalFields,callback){
     
+    
+    
+    simplybook_moment = this.getMomentOb(date +" "+ time,this.simplybookTimezone);
+    simplybook_date = simplybook_moment.format('YYYY-MM-DD');
+    simplybook_time = simplybook_moment.format('HH:mm:ss');
+    
+    //this.client.book(this.events[event],agentId,simplybook_date,simplybook_time,customerInfo,addtionalFields);
     var instance = this;
     
-    //this.client.book(this.events[event],agentId,date,time,customerInfo,addtionalFields);
-
     $.post( "functions.php", {
 		    
 		    method : 'book',
 			unit: agentId,
-			event: this.events[event],
+			event: instance.events[event],
 			name: customerInfo['name'],
 			email: customerInfo['email'],
 			phone: customerInfo['phone'],
 			time : (date + " " + time),
 			codeid: addtionalFields['05413026b0f9bfd0bfcc5d6eef62f2ee'],
-			token : this.token
+			token : instance.token,
+			timezone : instance.timezone,
 	        })
 		    .done(function( data ) {
 		        
@@ -148,6 +170,8 @@ Scheduler.prototype.book = function(event,agentId,date,time,customerInfo,addtion
 		        end_time = start_time.setTime(start_time.getTime() + this.interval);
 		        instance.setCookie('_vdk_scheduler_token',instance.token,{expires : end_time});
 		        instance.lastToken = instance.token;
+		        //update the token to avoid duplicate booking
+		        instance.generateToken();
 		        if(typeof callback === 'function'){
 		            callback(data);
 		        }
@@ -191,8 +215,7 @@ Scheduler.prototype.removeCookie = function(name){
 
 Scheduler.prototype.generateToken = function(start_time){
 
-    
-    
+
     time = typeof start_time !== 'undefined' ? start_time : new Date();
     browser  = this.detectBrowser();
     
@@ -202,7 +225,7 @@ Scheduler.prototype.generateToken = function(start_time){
 		    
 		    time : time,
 		    browser : browser,
-		    timezone : this.timezone,
+		    timezone : this.defaultTimezone,
 		    method: 'generateToken'
 	        })
 		    .done(function( data ) {
@@ -248,9 +271,10 @@ Scheduler.prototype.detectBrowser = function(){
 }
 
 
-Scheduler.prototype.getMomentOb = function(time){
-    time = typeof time !== 'undefined' ? time : new Date();
-    return moment.tz(time.toISOString(),this.timezone);
+Scheduler.prototype.getMomentOb = function(time,timezone){
+    time = typeof time !== 'undefined' ? new Date(time) : new Date();
+    timezone = typeof timezone !== 'undefined' ? timezone : this.timezone;
+    return moment.tz(time.toISOString(),timezone);
     
 }
 
@@ -275,7 +299,12 @@ function Simplybook(){
         'api_login': 'videodesk',
         'api_key': 'fdbfb24dd3ff2cf95bf4f4c49a86628eb3448ae673a5569ff0d6ef6e98cdb328'
 	};
-
+    
+    this.addtionalFields = {
+        addtional_field_1 : '05413026b0f9bfd0bfcc5d6eef62f2ee',
+        addtional_field_2 : 'e2620d472b63972d2fb4f8029e865a23',
+    };
+    
 	this.client = null;
 	this.initClient();
 	
