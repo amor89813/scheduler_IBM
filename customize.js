@@ -128,13 +128,15 @@ jQuery.extend(Form.prototype,{
             '05413026b0f9bfd0bfcc5d6eef62f2ee': codeid,
             'e2620d472b63972d2fb4f8029e865a23': start_time
         }
-        var res = this.scheduler.book('video',agentId,date,time,customerInfo,addtionalFields);
         
-        this.scheduled = true;
+        var instance = this;
         
-        $("#clock").removeData('jcdData');
-		this.initCountDown(bookingInfo);
-		
+        var res = this.scheduler.book('video',agentId,date,time,customerInfo,addtionalFields,function(){
+            
+            $("#clock").removeData('jcdData');
+		    instance.getBookingInfo(instance.scheduler.lastToken,'token',true);
+        });
+        
         return this;
         
     },
@@ -220,7 +222,7 @@ jQuery.extend(Form.prototype,{
            
         }).on('finish.countdown', function(event){
                 
-            instance.initCall(bookingInfo.codeid);
+            instance.initCall(bookingInfo.code);
         });
         
         return instance;
@@ -237,7 +239,7 @@ jQuery.extend(Form.prototype,{
             instance.getBookingInfo(codeid,'code',false);
         }
         
-        if(instance.bookingInfo.has_started == '0'){
+        if(typeof instance.bookingInfo.has_started !== 'undefined' && bookingInfo.has_started === '0'){
             
             
             //alert("get here");
@@ -248,6 +250,7 @@ jQuery.extend(Form.prototype,{
     	        })
     		    .done(function( data ) {
     		        if(data){
+    		        
         		        setTimeout(function(){
                             _vdk.setContextParameter('selected_agent', '624bd406a327e088e9ccd3592b79ac2a') ;
                             _vdk.makeCall('video',0,1);
