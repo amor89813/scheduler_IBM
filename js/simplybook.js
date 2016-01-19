@@ -34,7 +34,7 @@ Scheduler.prototype.getTimeMatrix = function(event,date,time){
     date = typeof date !== 'undefined' ? date : this.currDate;
     hour = this.getMomentOb().format('HH');
     hour = Number(hour)+1;
-    time = typeof time !== 'undefined' ? time : (date === this.currDate ? hour+':00:00' : '00:00:00');
+    time = typeof time !== 'undefined' ? time : (date === this.currDate ? hour+':00:00' : '10:00:00');
     
     start_time_moment = this.getMomentOb(date + " " + time);
     end_time_moment = this.getMomentOb(start_time_moment.format('YYYY-MM-DD 23:59:59'));
@@ -144,11 +144,11 @@ Scheduler.prototype.book = function(event,agentId,date,time,customerInfo,addtion
     
     
     
-    simplybook_moment = this.getMomentOb(date +" "+ time,this.simplybookTimezone);
+    simplybook_moment = this.getMomentOb(date +" "+ time,this.timezone).tz(this.simplybookTimezone);
     simplybook_date = simplybook_moment.format('YYYY-MM-DD');
     simplybook_time = simplybook_moment.format('HH:mm:ss');
     
-    //this.client.book(this.events[event],agentId,simplybook_date,simplybook_time,customerInfo,addtionalFields);
+    this.client.book(this.events[event],agentId,simplybook_date,simplybook_time,customerInfo,addtionalFields);
     var instance = this;
     
     $.post( "functions.php", {
@@ -272,9 +272,10 @@ Scheduler.prototype.detectBrowser = function(){
 
 
 Scheduler.prototype.getMomentOb = function(time,timezone){
-    time = typeof time !== 'undefined' ? new Date(time) : new Date();
+    curr = new Date();
+    time = typeof time !== 'undefined' ? time : curr.toISOString();
     timezone = typeof timezone !== 'undefined' ? timezone : this.timezone;
-    return moment.tz(time.toISOString(),timezone);
+    return moment.tz(time,timezone);
     
 }
 

@@ -74,28 +74,38 @@ jQuery.extend(Form.prototype,{
     },
     
     //update the timeMatrix
-    updateWorkCalendar: function(event,date,time){
+    updateWorkCalendar: function(event,date,time,frombook){
         
-        $('#timepicker').html('');
-        
-        this.timeMatrix = this.scheduler.getTimeMatrix(event,date,time);
-        
-        
-        if(jQuery.isEmptyObject(this.timeMatrix)){
-            var row = "<div class='busyrow'><p>Sorry, all slot are busy. Please choose another date.</p></div>";
-            $('#timepicker').html(row);
-            return this;
+        var instance = this;
+        if(typeof frombook === 'undefined' || frombook === false){
+            $("body").css("cursor", "progress");
         }
+        setTimeout(function(){
+            
+            $('#timepicker').html('');
         
-        for(var timeSlot in this.timeMatrix){
+            instance.timeMatrix = instance.scheduler.getTimeMatrix(event,date,time);
             
             
-            var row = "<div class='timerow' value='"+timeSlot+"'><p>"+this.timeMatrix[timeSlot]+"</p></div>";
+            if(jQuery.isEmptyObject(instance.timeMatrix)){
+                var row = "<div class='busyrow'><p>Sorry, all slot are busy. Please choose another date.</p></div>";
+                $('#timepicker').html(row);
+                return instance;
+            }
+            
+            for(var timeSlot in instance.timeMatrix){
+                
+                
+                var row = "<div class='timerow' value='"+timeSlot+"'><p>"+instance.timeMatrix[timeSlot]+"</p></div>";
+            
+                $('#timepicker').append(row);
+            }
+            $("body").css("cursor", "default");
+            return instance;
+            
+            
+        },1000)
         
-            $('#timepicker').append(row);
-        }
-        
-        return this;
     },
     
     setData : function(name,val){
@@ -185,9 +195,10 @@ jQuery.extend(Form.prototype,{
         var instance = this;
         if(!instance.scheduled) return;
         
-        momentOb = this.scheduler.getMomentOb(bookingInfo.start_date_time,bookingInfo.timezone).tz(this.scheduler.defaultTimezone);
-        start_date_time = momentOb.format('YYYY-MM-DD HH:mm:ss');
-        ui_date_time = momentOb.format('LLL (z)')
+        momentOb = this.scheduler.getMomentOb(bookingInfo.start_date_time,bookingInfo.timezone)
+        ui_date_time = momentOb.format('LLL (z)');
+        start_date_time = momentOb.tz(this.scheduler.defaultTimezone).format('YYYY-MM-DD HH:mm:ss');
+        
         $('#clock').countdown(start_date_time, {elapse: false})
         
         .on('update.countdown', function(event) {
@@ -210,6 +221,7 @@ jQuery.extend(Form.prototype,{
                     $('div#line2 span').text(ui_date_time);
                 }
                 else {
+                    
                     if(!document.getElementById('videodesk-post-content-schedule-countdown-message')){
                         _vdk.ui.rem('post-header');
                         _vdk.ui.set('post-content','schedule_countdown');
@@ -294,17 +306,18 @@ $(document).ready(function(){
 	
 	$('#book').click(function(){
 	    
+	    form.setData('name',$('#form_name').val());
+	    form.setData('email',$('#form_email').val());
+	    form.setData('comment',$('#form_comment').val());
+	    form.submit();
+	    
+	    
 	    $('#schedule_call').slideToggle();
 	    $('#schedule_confirm').show();
 		$('#contact_title').text('Thank You!');
 		document.getElementById('header').scrollIntoView();
 		
-	    form.setData('name',$('#form_name').val());
-	    form.setData('email',$('#form_email').val());
-	    form.setData('comment',$('#form_comment').val());
-	    
-	    form.submit();
-	    form.updateWorkCalendar('video',form.formData.date);
+	    form.updateWorkCalendar('video',form.formData.date,undefined,true);
 		
 	});	
 	
